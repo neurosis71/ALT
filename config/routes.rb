@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
-  get 'dashboard/index'
+  get 'about/index'
   end
 
   get 'welcome/index'
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   #admin routes
   namespace :admin do
-    get '', to: 'dashboard#index', as: '/'
+    get '', to: 'about#index', as: '/'
   end
 
   # Example of regular route:
