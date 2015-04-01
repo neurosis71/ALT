@@ -1,0 +1,36 @@
+<%= form_for :about do |f| %>
+
+    <div class="about_fr">
+      <%= f.label :about_fr%>
+      <%= f.text_area :about_fr, size: "60x12" %>
+    </div>
+
+    <div class="about_en">
+      <%= f.label :about_en%>
+      <%= f.text_area :about_en, size: "60x12" %>
+    </div>
+
+    <div class="career_fr">
+      <%= f.label :career_fr%>
+      <%= f.text_area :career_fr, size: "60x12" %>
+    </div>
+
+    <div class="career_en">
+      <%= f.label :career_en%>
+      <%= f.text_area :career_en, size: "60x12" %>
+    </div>
+
+    <div class="interests_fr">
+      <%= f.label :interests_fr%>
+      <%= f.text_area :interests_fr, size: "60x12" %>
+    </div>
+
+    <div class="interests_en">
+      <%= f.label :interests_en%>
+      <%= f.text_area :interests_en, size: "60x12" %>
+    </div>
+
+    <div class="submit">
+      <%= f.submit %>
+    </div>
+<% end %>

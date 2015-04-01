@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  namespace :admin do
-  get 'about/index'
-  end
-
-  get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -13,8 +8,13 @@ Rails.application.routes.draw do
 
   #admin routes
   namespace :admin do
-    get '', to: 'about#index', as: '/'
+    #root
+    get '', to: 'about#show', as: '/'
+
+    #about
+    match '/about/:id/edit' => 'about#update', :via => :post
     resources :about
+    resources :resume
   end
 
   # Example of regular route:
