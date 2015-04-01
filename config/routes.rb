@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   #admin routes
   namespace :admin do
     get '', to: 'about#index', as: '/'
+    resources :about
   end
 
   # Example of regular route:
