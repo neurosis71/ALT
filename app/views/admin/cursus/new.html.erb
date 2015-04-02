@@ -1,0 +1,38 @@
+<h1>New cursus entry</h1>
+
+<%= form_for(@cursu, url: admin_cursus_create_path) do |f| %>
+
+    <div class="date">
+      <%= f.label :date%>
+      <%= f.text_field :date %>
+    </div>
+
+    <div class="school">
+      <%= f.label :school%>
+      <%= f.text_field :school %>
+    </div>
+
+    <div class="location_fr">
+      <%= f.label :location_fr%>
+      <%= f.text_field :location_fr %>
+    </div>
+
+    <div class="location_en">
+      <%= f.label :location_en%>
+      <%= f.text_field :location_en%>
+    </div>
+
+    <div class="description_fr">
+      <%= f.label :description_fr%>
+      <%= f.text_area :description_fr, size: "60x12" %>
+    </div>
+
+    <div class="description_en">
+      <%= f.label :description_en%>
+      <%= f.text_area :description_en, size: "60x12" %>
+    </div>
+
+    <div class="submit">
+      <%= f.submit %>
+    </div>
+<% end %>

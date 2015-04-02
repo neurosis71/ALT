@@ -1,0 +1,35 @@
+<h1>Cursus Delete View</h1>
+
+<p>
+  <strong>Date:</strong>
+  <%= @cursu.date %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @cursu.school %>
+</p>
+
+<p>
+  <strong>Location_fr:</strong>
+  <%= @cursu.location_fr %>
+</p>
+
+<p>
+  <strong>Location_en:</strong>
+  <%= @cursu.location_en %>
+</p>
+
+<p>
+  <strong>Description_fr:</strong>
+  <%= @cursu.description_fr %>
+</p>
+
+<p>
+  <strong>Description_en:</strong>
+  <%= @cursu.description_en %>
+</p>
+
+<%= link_to 'Delete', admin_cursu_destroy_path(:id => @cursu.id) %> |
+<%= link_to 'Edit', edit_admin_cursu_path(@cursu) %> |
+<%= link_to 'Back', admin_resume_index_path %>

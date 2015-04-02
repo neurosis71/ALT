@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -14,7 +16,14 @@ Rails.application.routes.draw do
     #about
     match '/about/:id/edit' => 'about#update', :via => :post
     resources :about
+
+    #resume
     resources :resume
+
+    #cursus
+    resources :cursus
+    get 'cursus/:id/delete' => 'cursus#delete', :as => :cursu_delete
+    get 'cursus/:id/destroy' => 'cursus#destroy', :as => :cursu_destroy
   end
 
   # Example of regular route:
