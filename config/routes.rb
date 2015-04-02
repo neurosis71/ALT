@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -24,6 +22,11 @@ Rails.application.routes.draw do
     resources :cursus
     get 'cursus/:id/delete' => 'cursus#delete', :as => :cursu_delete
     get 'cursus/:id/destroy' => 'cursus#destroy', :as => :cursu_destroy
+
+    #experience
+    resources :experience
+    get 'experience/:id/delete' => 'experience#delete', :as => :experience_delete
+    get 'experience/:id/destroy' => 'experience#destroy', :as => :experience_destroy
   end
 
   # Example of regular route:

@@ -1,0 +1,34 @@
+<h1>Experience Show View</h1>
+
+<p>
+  <strong>Date:</strong>
+  <%= @experience.date %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @experience.company %>
+</p>
+
+<p>
+  <strong>Location_fr:</strong>
+  <%= @experience.location_fr %>
+</p>
+
+<p>
+  <strong>Location_en:</strong>
+  <%= @experience.location_en %>
+</p>
+
+<p>
+  <strong>Description_fr:</strong>
+  <%= @experience.description_fr %>
+</p>
+
+<p>
+  <strong>Description_en:</strong>
+  <%= @experience.description_en %>
+</p>
+
+<%= link_to 'Edit', edit_admin_experience_path(@experience) %> |
+<%= link_to 'Back', admin_resume_index_path %>

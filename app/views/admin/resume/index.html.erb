@@ -33,6 +33,7 @@
 
 <div class="box">
   <h1>Professional Experience</h1>
+  <%= link_to 'New', new_admin_experience_path %>
   <table>
     <thead>
     <tr>
@@ -53,6 +54,9 @@
           <td><%= professional_experience.company %></td>
           <td><%= professional_experience.location_fr %></td>
           <td><%= professional_experience.location_en %></td>
+          <td><%= link_to 'Show', admin_experience_path(professional_experience) %></td>
+          <td><%= link_to 'Edit', edit_admin_experience_path(professional_experience) %></td>
+          <td><%= link_to 'Delete', admin_experience_delete_path(professional_experience) %></td>
         </tr>
     <% end %>
     </tbody>
