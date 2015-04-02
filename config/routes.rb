@@ -27,6 +27,11 @@ Rails.application.routes.draw do
     resources :experience
     get 'experience/:id/delete' => 'experience#delete', :as => :experience_delete
     get 'experience/:id/destroy' => 'experience#destroy', :as => :experience_destroy
+
+    #skills
+    resources :skills
+    get 'skills/:id/delete' => 'skills#delete', :as => :skill_delete
+    get 'skills/:id/destroy' => 'skills#destroy', :as => :skill_destroy
   end
 
   # Example of regular route:

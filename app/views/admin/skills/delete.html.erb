@@ -1,0 +1,15 @@
+<h1>Skill Delete View</h1>
+
+<p>
+  <strong>Description_fr:</strong>
+  <%= @skill.description_fr %>
+</p>
+
+<p>
+  <strong>Description_en:</strong>
+  <%= @skill.description_en %>
+</p>
+
+<%= link_to 'Delete', admin_skill_destroy_path(:id => @skill.id) %> |
+<%= link_to 'Edit', edit_admin_skill_path(@skill) %> |
+<%= link_to 'Back', admin_resume_index_path %>

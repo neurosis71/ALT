@@ -65,6 +65,7 @@
 
 <div class="box">
   <h1>Skills</h1>
+  <%= link_to 'New', new_admin_skill_path %>
   <table>
     <thead>
     <tr>
@@ -79,8 +80,11 @@
     <tbody>
     <% @skills.each do |skill| %>
         <tr>
-          <td><%= skill.date %></td>
-          <td><%= skill.school %></td>
+          <td><%= skill.description_fr %></td>
+          <td><%= skill.description_en %></td>
+          <td><%= link_to 'Show', admin_skill_path(skill) %></td>
+          <td><%= link_to 'Edit', edit_admin_skill_path(skill) %></td>
+          <td><%= link_to 'Delete', admin_skill_delete_path(skill) %></td>
         </tr>
     <% end %>
     </tbody>

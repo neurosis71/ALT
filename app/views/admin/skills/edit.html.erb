@@ -1,0 +1,18 @@
+<h1>Edit skill View</h1>
+
+<%= form_for(@skill, url: admin_skill_path) do |f| %>
+
+    <div class="description_fr">
+      <%= f.label :description_fr%>
+      <%= f.text_area :description_fr, size: "60x12" %>
+    </div>
+
+    <div class="description_en">
+      <%= f.label :description_en%>
+      <%= f.text_area :description_en, size: "60x12" %>
+    </div>
+
+    <div class="submit">
+      <%= f.submit %>
+    </div>
+<% end %>
