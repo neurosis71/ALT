@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20150330144406) do
   end
 
   create_table "albums", force: :cascade do |t|
-    t.string   "name_fr"
-    t.string   "name_en"
+    t.string   "name_fr", null: false
+    t.string   "name_en", null: false
     t.string   "main_image"
     t.text     "description_fr"
     t.text     "description_en"
@@ -36,10 +36,10 @@ ActiveRecord::Schema.define(version: 20150330144406) do
   end
 
   create_table "cursus", force: :cascade do |t|
-    t.date     "date"
-    t.string   "school"
-    t.string   "location_fr"
-    t.string   "location_en"
+    t.date     "date", null: false
+    t.string   "school", null: false
+    t.string   "location_fr", null: false
+    t.string   "location_en", null: false
     t.text     "description_fr"
     t.text     "description_en"
     t.datetime "created_at",     null: false
@@ -47,15 +47,15 @@ ActiveRecord::Schema.define(version: 20150330144406) do
   end
 
   create_table "images", force: :cascade do |t|
-    t.string   "path"
+    t.string   "path", null: false
     t.integer  "album_id",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "locations", force: :cascade do |t|
-    t.string   "name_fr"
-    t.string   "name_en"
+    t.string   "name_fr", null: false
+    t.string   "name_en", null: false
     t.string   "main_image"
     t.text     "description_fr"
     t.text     "description_en"
@@ -64,10 +64,10 @@ ActiveRecord::Schema.define(version: 20150330144406) do
   end
 
   create_table "professional_experiences", force: :cascade do |t|
-    t.date     "date"
-    t.string   "company"
-    t.string   "location_fr"
-    t.string   "location_en"
+    t.date     "date", null: false
+    t.string   "company", null: false
+    t.string   "location_fr", null: false
+    t.string   "location_en", null: false
     t.text     "description_fr"
     t.text     "description_en"
     t.datetime "created_at",     null: false
@@ -75,8 +75,8 @@ ActiveRecord::Schema.define(version: 20150330144406) do
   end
 
   create_table "skills", force: :cascade do |t|
-    t.string   "description_fr"
-    t.string   "description_en"
+    t.string   "description_fr", null: false
+    t.string   "description_en", null: false
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
