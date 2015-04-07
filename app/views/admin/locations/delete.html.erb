@@ -1,0 +1,30 @@
+<h1>Location Show View</h1>
+
+<p>
+  <strong>Name_fr:</strong>
+  <%= @location.name_fr %>
+</p>
+
+<p>
+  <strong>Name_en:</strong>
+  <%= @location.name_en %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @location.main_image(:medium) %>
+</p>
+
+<p>
+  <strong>Description_fr:</strong>
+  <%= @location.description_fr %>
+</p>
+
+<p>
+  <strong>Description_en:</strong>
+  <%= @location.description_en %>
+</p>
+
+<%= link_to 'Delete', admin_location_destroy_path(:id => @location.id) %> |
+<%= link_to 'Edit', edit_admin_location_path(@location) %> |
+<%= link_to 'Back', admin_locations_path %>

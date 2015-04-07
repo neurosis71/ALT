@@ -1,0 +1,27 @@
+<div class="box">
+  <h1>Locations</h1>
+  <%= link_to 'New', new_admin_location_path %>
+  <table>
+    <thead>
+    <tr>
+      <th>Name fr</th>
+      <th>Name en</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @locations.each do |location| %>
+        <tr>
+          <td><%= location.name_fr %></td>
+          <td><%= location.name_en %></td>
+          <td><%= link_to 'Show', admin_location_path(location) %></td>
+          <td><%= link_to 'Edit', edit_admin_location_path(location) %></td>
+          <td><%= link_to 'Delete', admin_location_delete_path(location) %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

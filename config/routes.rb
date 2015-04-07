@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -32,6 +33,11 @@ Rails.application.routes.draw do
     resources :skills
     get 'skills/:id/delete' => 'skills#delete', :as => :skill_delete
     get 'skills/:id/destroy' => 'skills#destroy', :as => :skill_destroy
+
+    #locations
+    resources :locations
+    get 'locations/:id/delete' => 'locations#delete', :as => :location_delete
+    get 'locations/:id/destroy' => 'locations#destroy', :as => :location_destroy
   end
 
   # Example of regular route:

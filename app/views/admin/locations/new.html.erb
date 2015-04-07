@@ -1,0 +1,40 @@
+<h1>New location entry</h1>
+
+<%= form_for(@location, url: admin_locations_path) do |f| %>
+
+    <div class="name_fr">
+      <%= f.label :name_fr%>
+      <%= f.text_field :name_fr %>
+    </div>
+
+    <div class="name_en">
+      <%= f.label :name_en%>
+      <%= f.text_field :name_en %>
+    </div>
+
+    <div class="main_image">
+      <%= f.label :main_image%>
+      <%= f.file_field :main_image %>
+    </div>
+
+    <div class="description_fr">
+      <%= f.label :description_fr%>
+      <%= f.text_area :description_fr, size: "60x12" %>
+    </div>
+
+    <div class="description_en">
+      <%= f.label :description_en%>
+      <%= f.text_area :description_en, size: "60x12" %>
+    </div>
+
+    <div class="submit">
+      <%= f.submit %>
+    </div>
+<% end %>
+
+<div class="projects">
+  <h1>Projects List</h1>
+
+
+
+</div>
