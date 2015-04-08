@@ -37,7 +37,30 @@
 <div class="projects">
   <h1>Projects List</h1>
 
-  <%= link_to 'New', new_admin_location_path %>
+  <%= link_to 'New', new_admin_project_path(:location_id => @location.id) %>
 
+  <table>
+    <thead>
+    <tr>
+      <th>Name fr</th>
+      <th>Name en</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @projects.each do |project| %>
+        <tr>
+          <td><%= project.name_fr %></td>
+          <td><%= project.name_en %></td>
+          <td><%= link_to 'Show', admin_project_path(project) %></td>
+          <td><%= link_to 'Edit', edit_admin_project_path(project) %></td>
+          <td><%= link_to 'Delete', admin_project_delete_path(project) %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
 
 </div>

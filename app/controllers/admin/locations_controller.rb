@@ -26,7 +26,7 @@ class Admin::LocationsController < ApplicationController
 
   def edit
     @location = Location.find(params[:id])
-    #@projects = @location.albums
+    @projects = @location.albums
   end
 
   def update

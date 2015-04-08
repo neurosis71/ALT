@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150403131037) do
+ActiveRecord::Schema.define(version: 20150407092123) do
 
   create_table "abouts", force: :cascade do |t|
     t.text     "about_fr"
@@ -27,12 +27,15 @@ ActiveRecord::Schema.define(version: 20150403131037) do
   create_table "albums", force: :cascade do |t|
     t.string   "name_fr"
     t.string   "name_en"
-    t.string   "main_image"
     t.text     "description_fr"
     t.text     "description_en"
     t.integer  "location_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "main_image_file_name"
+    t.string   "main_image_content_type"
+    t.integer  "main_image_file_size"
+    t.datetime "main_image_updated_at"
   end
 
   create_table "cursus", force: :cascade do |t|

@@ -4,7 +4,7 @@ class CreateAlbums < ActiveRecord::Migration
 
       t.string :name_fr, null: false
       t.string :name_en, null: false
-      t.string :main_image
+      t.attachement :main_image
       t.text :description_fr
       t.text :description_en
       t.references :location, null: true

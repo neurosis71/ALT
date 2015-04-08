@@ -1,0 +1,29 @@
+<h1>Project Show View</h1>
+
+<p>
+  <strong>Name_fr:</strong>
+  <%= @project.name_fr %>
+</p>
+
+<p>
+  <strong>Name_en:</strong>
+  <%= @project.name_en %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @project.main_image(:medium) %>
+</p>
+
+<p>
+  <strong>Description_fr:</strong>
+  <%= @project.description_fr %>
+</p>
+
+<p>
+  <strong>Description_en:</strong>
+  <%= @project.description_en %>
+</p>
+
+<%= link_to 'Edit', edit_admin_project_path(@project) %> |
+<%= link_to 'Back', edit_admin_location_path(:id => @project.location_id) %>
