@@ -8,9 +8,15 @@
 </head>
 <body>
 
-<%= render 'shared/adminnav' %>
+<div class="admin_header">
+  <%= image_tag "admin/logo.png", :class => 'admin_logo' %>
+  <%= render 'shared/adminnav' %>
+</div>
 
-<%= yield %>
+<div class="admin_body">
+  <%= yield %>
+</div>
+
 
 </body>
 </html>
