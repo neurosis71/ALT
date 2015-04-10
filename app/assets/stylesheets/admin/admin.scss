@@ -1,14 +1,9 @@
 .admin_header{
-  margin-left: 150px;
-  width: 900px;
-  position: relative;
+  margin-top: 10px;
 }
 
 .admin_body{
   position: relative;
-  margin-left: 150px;
-  padding-top: 30px;
-  width: 900px;
   clear: left;
 }
 
@@ -19,17 +14,36 @@
 }
 
 .admin_nav{
-  margin-left: 10px;
   height: 120px;
   line-height: 100px;
 }
 
 .admin_nav > a{
-  width: 40px;
-  margin-left: 30px;
-  margin-right: 0px;
+  margin-right: 20px;
   -webkit-flex-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+
+
+
+//separator
+.separator {
+  padding: 10px;
+  position: relative;
+
+  .mask {
+    overflow: hidden;
+    height: 20px;
+    &:after {
+      content: '';
+      display: block;
+      margin: -25px auto 0;
+      width: 100%;
+      height: 25px;
+      border-radius: 125px / 12px;
+      box-shadow: 0 0 8px black;
+    }
+  }
 }

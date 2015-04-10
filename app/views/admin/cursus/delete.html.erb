@@ -1,5 +1,9 @@
 <h1>Cursus Delete View</h1>
 
+<%= link_to 'Delete', admin_cursu_destroy_path(:id => @cursu.id), :class => 'button radius tiny alert' %>
+<%= link_to 'Edit', edit_admin_cursu_path(@cursu), :class => 'button radius tiny secondary' %>
+<%= link_to 'Back', admin_resume_index_path, :class => 'button radius tiny' %>
+
 <p>
   <strong>Date:</strong>
   <%= @cursu.date %>
@@ -30,6 +34,6 @@
   <%= @cursu.description_en %>
 </p>
 
-<%= link_to 'Delete', admin_cursu_destroy_path(:id => @cursu.id) %> |
-<%= link_to 'Edit', edit_admin_cursu_path(@cursu) %> |
-<%= link_to 'Back', admin_resume_index_path %>
+<%= link_to 'Delete', admin_cursu_destroy_path(:id => @cursu.id), :class => 'button radius tiny alert' %>
+<%= link_to 'Edit', edit_admin_cursu_path(@cursu), :class => 'button radius tiny secondary' %>
+<%= link_to 'Back', admin_resume_index_path, :class => 'button radius tiny' %>

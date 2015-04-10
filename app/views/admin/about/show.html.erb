@@ -1,5 +1,8 @@
 <h1>About</h1>
 
+
+<%= link_to 'Edit', edit_admin_about_path(@about), :class => 'button radius tiny secondary' %>
+
 <p>
   <strong>about_fr:</strong>
   <%= @about.about_fr %>
@@ -29,9 +32,6 @@
   <strong>interests_en:</strong>
   <%= @about.interests_en %>
 </p>
-
-
-<%= link_to 'Edit', edit_admin_about_path(@about) %>
 
 
 

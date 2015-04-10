@@ -1,6 +1,6 @@
 <h1>New cursus entry</h1>
 
-<%= form_for(@cursu, url: admin_cursus_create_path) do |f| %>
+<%= form_for(@cursu, url: admin_cursus_path) do |f| %>
 
     <div class="date">
       <%= f.label :date%>
@@ -33,6 +33,6 @@
     </div>
 
     <div class="submit">
-      <%= f.submit %>
+      <%= f.submit :class => 'button radius tiny info' %>
     </div>
 <% end %>

@@ -1,5 +1,8 @@
 <h1>Project Show View</h1>
 
+<%= link_to 'Edit', edit_admin_project_path(@project), :class => 'button radius tiny secondary' %>
+<%= link_to 'Back', edit_admin_location_path(:id => @project.location_id), :class => 'button radius tiny ' %>
+
 <p>
   <strong>Name_fr:</strong>
   <%= @project.name_fr %>
@@ -25,5 +28,5 @@
   <%= @project.description_en %>
 </p>
 
-<%= link_to 'Edit', edit_admin_project_path(@project) %> |
-<%= link_to 'Back', edit_admin_location_path(:id => @project.location_id) %>
+<%= link_to 'Edit', edit_admin_project_path(@project), :class => 'button radius tiny secondary' %>
+<%= link_to 'Back', edit_admin_location_path(:id => @project.location_id), :class => 'button radius tiny ' %>

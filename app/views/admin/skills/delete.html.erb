@@ -1,5 +1,9 @@
 <h1>Skill Delete View</h1>
 
+<%= link_to 'Delete', admin_skill_destroy_path(:id => @skill.id), :class => 'button radius tiny alert' %>
+<%= link_to 'Edit', edit_admin_skill_path(@skill), :class => 'button radius tiny secondary' %>
+<%= link_to 'Back', admin_resume_index_path, :class => 'button radius tiny' %>
+
 <p>
   <strong>Description_fr:</strong>
   <%= @skill.description_fr %>
@@ -10,6 +14,6 @@
   <%= @skill.description_en %>
 </p>
 
-<%= link_to 'Delete', admin_skill_destroy_path(:id => @skill.id) %> |
-<%= link_to 'Edit', edit_admin_skill_path(@skill) %> |
-<%= link_to 'Back', admin_resume_index_path %>
+<%= link_to 'Delete', admin_skill_destroy_path(:id => @skill.id), :class => 'button radius tiny alert' %>
+<%= link_to 'Edit', edit_admin_skill_path(@skill), :class => 'button radius tiny secondary' %>
+<%= link_to 'Back', admin_resume_index_path, :class => 'button radius tiny' %>

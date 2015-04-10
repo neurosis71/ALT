@@ -1,5 +1,10 @@
 <h1>Experience Delete View</h1>
 
+
+<%= link_to 'Delete', admin_experience_destroy_path(:id => @experience.id), :class => 'button radius tiny alert' %>
+<%= link_to 'Edit', edit_admin_experience_path(@experience), :class => 'button radius tiny secondary' %>
+<%= link_to 'Back', admin_resume_index_path, :class => 'button radius tiny'  %>
+
 <p>
   <strong>Date:</strong>
   <%= @experience.date %>
@@ -30,6 +35,6 @@
   <%= @experience.description_en %>
 </p>
 
-<%= link_to 'Delete', admin_experience_destroy_path(:id => @experience.id) %> |
-<%= link_to 'Edit', edit_admin_experience_path(@experience) %> |
-<%= link_to 'Back', admin_resume_index_path %>
+<%= link_to 'Delete', admin_experience_destroy_path(:id => @experience.id), :class => 'button radius tiny alert' %>
+<%= link_to 'Edit', edit_admin_experience_path(@experience), :class => 'button radius tiny secondary' %>
+<%= link_to 'Back', admin_resume_index_path, :class => 'button radius tiny'  %>

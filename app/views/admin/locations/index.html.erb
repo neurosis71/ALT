@@ -1,7 +1,7 @@
 <div class="box">
   <h1>Locations</h1>
-  <%= link_to 'New', new_admin_location_path %>
-  <table>
+  <%= link_to 'New', new_admin_location_path, :class => 'button radius tiny success' %>
+  <table class="small-12 columns">
     <thead>
     <tr>
       <th>Name fr</th>
@@ -17,9 +17,9 @@
         <tr>
           <td><%= location.name_fr %></td>
           <td><%= location.name_en %></td>
-          <td><%= link_to 'Show', admin_location_path(location) %></td>
-          <td><%= link_to 'Edit', edit_admin_location_path(location) %></td>
-          <td><%= link_to 'Delete', admin_location_delete_path(location) %></td>
+          <td><%= link_to 'Show', admin_location_path(location), :class => 'button radius tiny info' %></td>
+          <td><%= link_to 'Edit', edit_admin_location_path(location), :class => 'button radius tiny secondary' %></td>
+          <td><%= link_to 'Delete', admin_location_delete_path(location), :class => 'button radius tiny alert' %></td>
         </tr>
     <% end %>
     </tbody>

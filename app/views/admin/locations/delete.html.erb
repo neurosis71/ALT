@@ -1,5 +1,9 @@
 <h1>Location Show View</h1>
 
+<%= link_to 'Delete', admin_location_destroy_path(:id => @location.id), :class => 'button radius tiny alert' %>
+<%= link_to 'Edit', edit_admin_location_path(@location), :class => 'button radius tiny secondary' %>
+<%= link_to 'Back', admin_locations_path, :class => 'button radius tiny' %>
+
 <p>
   <strong>Name_fr:</strong>
   <%= @location.name_fr %>
@@ -25,6 +29,6 @@
   <%= @location.description_en %>
 </p>
 
-<%= link_to 'Delete', admin_location_destroy_path(:id => @location.id) %> |
-<%= link_to 'Edit', edit_admin_location_path(@location) %> |
-<%= link_to 'Back', admin_locations_path %>
+<%= link_to 'Delete', admin_location_destroy_path(:id => @location.id), :class => 'button radius tiny alert' %>
+<%= link_to 'Edit', edit_admin_location_path(@location), :class => 'button radius tiny secondary' %>
+<%= link_to 'Back', admin_locations_path, :class => 'button radius tiny' %>

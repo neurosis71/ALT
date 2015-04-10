@@ -1,5 +1,8 @@
 <h1>Experience Show View</h1>
 
+<%= link_to 'Edit', edit_admin_experience_path(@experience), :class => 'button radius tiny secondary' %>
+<%= link_to 'Back', admin_resume_index_path, :class => 'button radius tiny ' %>
+
 <p>
   <strong>Date:</strong>
   <%= @experience.date %>
@@ -30,5 +33,5 @@
   <%= @experience.description_en %>
 </p>
 
-<%= link_to 'Edit', edit_admin_experience_path(@experience) %> |
-<%= link_to 'Back', admin_resume_index_path %>
+<%= link_to 'Edit', edit_admin_experience_path(@experience), :class => 'button radius tiny secondary' %>
+<%= link_to 'Back', admin_resume_index_path, :class => 'button radius tiny ' %>

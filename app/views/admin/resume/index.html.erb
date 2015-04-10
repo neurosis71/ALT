@@ -1,8 +1,8 @@
 
 <div class="box">
   <h1>Cursus</h1>
-  <%= link_to 'New', new_admin_cursu_path %>
-  <table>
+  <%= link_to 'New', new_admin_cursu_path, :class => 'button radius tiny success' %>
+  <table class="small-12 columns">
     <thead>
     <tr>
       <th>Date</th>
@@ -22,19 +22,23 @@
           <td><%= cursu.school %></td>
           <td><%= cursu.location_fr %></td>
           <td><%= cursu.location_en %></td>
-          <td><%= link_to 'Show', admin_cursu_path(cursu) %></td>
-          <td><%= link_to 'Edit', edit_admin_cursu_path(cursu) %></td>
-          <td><%= link_to 'Delete', admin_cursu_delete_path(cursu) %></td>
+          <td><%= link_to 'Show', admin_cursu_path(cursu), :class => 'button radius tiny info' %></td>
+          <td><%= link_to 'Edit', edit_admin_cursu_path(cursu), :class => 'button radius tiny secondary' %></td>
+          <td><%= link_to 'Delete', admin_cursu_delete_path(cursu), :class => 'button radius tiny alert' %></td>
         </tr>
     <% end %>
     </tbody>
   </table>
 </div>
 
+<div class="separator small-12 columns">
+  <div class="mask"></div>
+</div>
+
 <div class="box">
   <h1>Professional Experience</h1>
-  <%= link_to 'New', new_admin_experience_path %>
-  <table>
+  <%= link_to 'New', new_admin_experience_path, :class => 'button radius tiny success' %>
+  <table class="small-12 columns">
     <thead>
     <tr>
       <th>Date</th>
@@ -54,19 +58,24 @@
           <td><%= professional_experience.company %></td>
           <td><%= professional_experience.location_fr %></td>
           <td><%= professional_experience.location_en %></td>
-          <td><%= link_to 'Show', admin_experience_path(professional_experience) %></td>
-          <td><%= link_to 'Edit', edit_admin_experience_path(professional_experience) %></td>
-          <td><%= link_to 'Delete', admin_experience_delete_path(professional_experience) %></td>
+          <td><%= link_to 'Show', admin_experience_path(professional_experience), :class => 'button radius tiny info' %></td>
+          <td><%= link_to 'Edit', edit_admin_experience_path(professional_experience), :class => 'button radius tiny secondary' %></td>
+          <td><%= link_to 'Delete', admin_experience_delete_path(professional_experience), :class => 'button radius tiny alert' %></td>
         </tr>
     <% end %>
     </tbody>
   </table>
 </div>
 
+
+<div class="separator small-12 columns">
+  <div class="mask"></div>
+</div>
+
 <div class="box">
   <h1>Skills</h1>
-  <%= link_to 'New', new_admin_skill_path %>
-  <table>
+  <%= link_to 'New', new_admin_skill_path, :class => 'button radius tiny success' %>
+  <table class="small-12 columns">
     <thead>
     <tr>
       <th>description_fr</th>
@@ -82,9 +91,9 @@
         <tr>
           <td><%= skill.description_fr %></td>
           <td><%= skill.description_en %></td>
-          <td><%= link_to 'Show', admin_skill_path(skill) %></td>
-          <td><%= link_to 'Edit', edit_admin_skill_path(skill) %></td>
-          <td><%= link_to 'Delete', admin_skill_delete_path(skill) %></td>
+          <td><%= link_to 'Show', admin_skill_path(skill), :class => 'button radius tiny info' %></td>
+          <td><%= link_to 'Edit', edit_admin_skill_path(skill), :class => 'button radius tiny secondary' %></td>
+          <td><%= link_to 'Delete', admin_skill_delete_path(skill), :class => 'button radius tiny alert' %></td>
         </tr>
     <% end %>
     </tbody>
