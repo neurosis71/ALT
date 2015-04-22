@@ -1,0 +1,53 @@
+/* line 1, ../../../app/assets/stylesheets/admin/admin.scss */
+.admin_header {
+  margin-top: 10px;
+}
+
+/* line 5, ../../../app/assets/stylesheets/admin/admin.scss */
+.admin_body {
+  position: relative;
+  clear: left;
+}
+
+/* line 10, ../../../app/assets/stylesheets/admin/admin.scss */
+.admin_logo {
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+/* line 16, ../../../app/assets/stylesheets/admin/admin.scss */
+.admin_nav {
+  height: 120px;
+  line-height: 100px;
+}
+
+/* line 21, ../../../app/assets/stylesheets/admin/admin.scss */
+.admin_nav > a {
+  margin-right: 20px;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* line 32, ../../../app/assets/stylesheets/admin/admin.scss */
+.separator {
+  padding: 10px;
+  position: relative;
+}
+/* line 36, ../../../app/assets/stylesheets/admin/admin.scss */
+.separator .mask {
+  overflow: hidden;
+  height: 20px;
+}
+/* line 39, ../../../app/assets/stylesheets/admin/admin.scss */
+.separator .mask:after {
+  content: '';
+  display: block;
+  margin: -25px auto 0;
+  width: 100%;
+  height: 25px;
+  border-radius: 125px / 12px;
+  box-shadow: 0 0 8px black;
+}

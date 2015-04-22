@@ -51,4 +51,5 @@ class Admin::ProjectsController < ApplicationController
   def project_params
     params.require(:album).permit(:name_fr, :name_en, :main_image, :description_fr, :description_en, :location_id)
   end
+
 end

@@ -2,6 +2,7 @@
 
 <%= link_to 'Edit', edit_admin_project_path(@project), :class => 'button radius tiny secondary' %>
 <%= link_to 'Back', edit_admin_location_path(:id => @project.location_id), :class => 'button radius tiny ' %>
+<%= link_to 'Add Photos', new_admin_photo_path(:album_id => @project.id), :class => 'button radius tiny success' %>
 
 <p>
   <strong>Name_fr:</strong>
@@ -30,3 +31,4 @@
 
 <%= link_to 'Edit', edit_admin_project_path(@project), :class => 'button radius tiny secondary' %>
 <%= link_to 'Back', edit_admin_location_path(:id => @project.location_id), :class => 'button radius tiny ' %>
+<%= link_to 'Add Photos', new_admin_photo_path(:album_id => @project.id), :class => 'button radius tiny success' %>

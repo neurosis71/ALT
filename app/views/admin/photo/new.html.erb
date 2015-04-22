@@ -1,0 +1,78 @@
+<h1>Add photos</h1>
+
+<%= link_to 'Back', admin_project_path(:id => @album_id), :class => 'button radius tiny ' %>
+
+<%= form_for(@photo, url: admin_photo_index_path) do |f| %>
+
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.file_field :image, required: true, multiple: true, name: 'image[image]' %>
+    </div>
+
+    <div>
+      <%= f.hidden_field :album_id, :value => @album_id , :name => 'image[album_id]' %>
+    </div>
+
+    <div class="progress-wrapper">
+      <p>Bitrate: <span class="bitrate"></span></p>
+      <div class="progress small-12 success round">
+        <span class="meter" style="width: 1%"></span>
+      </div>
+    </div>
+
+
+<% end %>
+
+<ul class="row" id="photos-list">
+  <%= @photos.each do |t| %>
+      <%= image_tag t.image(:medium) %>
+  <% end %>
+</ul>
+
+<%= link_to 'Back', admin_project_path(:id => @album_id), :class => 'button radius tiny ' %>
+
+<script>
+    $(document).ready(function() {
+        var multiple_photos_form = $('#new_image');
+        multiple_photos_form.fileupload({
+            dataType: 'script',
+            add: function (e, data) {
+                types = /(\.|\/)(gif|jpe?g|png|bmp)$/i;
+                file = data.files[0];
+                if (types.test(file.type) || types.test(file.name)) {
+                    data.submit();
+                }
+                else { alert(file.name + " must be GIF, JPEG, BMP or PNG file"); }
+            }
+        });
+
+        //progress bar code
+        var wrapper = multiple_photos_form.find('.progress-wrapper');
+        var progress_bar = wrapper.find('.progress-bar');
+
+        multiple_photos_form.on('fileuploadstart', function() {
+            wrapper.show();
+        });
+
+        multiple_photos_form.on('fileuploaddone', function() {
+            wrapper.hide();
+            progress_bar.width(0); // Revert progress bar's width back to 0 for future uploads
+        });
+
+        multiple_photos_form.on('fileuploadprogressall', function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            progress_bar.css('width', progress + '%').text(progress + '%');
+        });
+
+
+        //bitrate code
+        var bitrate = wrapper.find('.bitrate');
+
+        multiple_photos_form.on('fileuploadprogressall', function (e, data) {
+            bitrate.text((data.bitrate / 1024).toFixed(2) + 'Kb/s');
+
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            progress_bar.css('width', progress + '%').text(progress + '%');
+        });
+    });
+</script>

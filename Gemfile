@@ -26,6 +26,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #paperclip for image upload management
 gem "paperclip", "~> 4.2"
 
+#Jquery file upload for multiple image upload
+gem 'jquery-fileupload-rails'
+#for AJAX file upload
+gem 'remotipart'
+
 #foundation
 gem 'foundation-rails'
 

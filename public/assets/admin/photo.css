@@ -1,0 +1,50 @@
+/* line 6, ../../../app/assets/stylesheets/admin/photo.scss */
+.progress-wrapper {
+  display: none;
+}
+
+/* line 10, ../../../app/assets/stylesheets/admin/photo.scss */
+#dropzone {
+  background: palegreen;
+  width: 150px;
+  text-align: center;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #67f967;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 21, ../../../app/assets/stylesheets/admin/photo.scss */
+#dropzone.in {
+  width: 600px;
+  height: 200px;
+  line-height: 200px;
+  font-size: larger;
+}
+
+/* line 28, ../../../app/assets/stylesheets/admin/photo.scss */
+#dropzone.hover {
+  background: lawngreen;
+  border: 1px solid #63c900;
+}
+
+/* line 33, ../../../app/assets/stylesheets/admin/photo.scss */
+#dropzone.fade {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}

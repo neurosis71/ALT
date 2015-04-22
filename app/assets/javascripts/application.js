@@ -15,5 +15,8 @@
 //= require foundation
 //= require turbolinks
 //= require_tree .
+//= require jquery-fileupload/basic-plus
+//= require jquery-fileupload/vendor/tmpl
+//= require jquery.remotipart
 
 $(function(){ $(document).foundation(); });
