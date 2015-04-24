@@ -46,4 +46,18 @@
       box-shadow: 0 0 8px black;
     }
   }
+
+  .mask-small {
+    overflow: hidden;
+    height: 10px;
+    &:after {
+      content: '';
+      display: block;
+      margin: -13px auto 0;
+      width: 100%;
+      height: 13px;
+      border-radius: 125px / 12px;
+      box-shadow: 0 0 5px #e7e7e7;
+    }
+  }
 }
