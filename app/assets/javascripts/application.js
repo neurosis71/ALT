@@ -18,5 +18,6 @@
 //= require jquery-fileupload/basic-plus
 //= require jquery-fileupload/vendor/tmpl
 //= require jquery.remotipart
+//= require ckeditor/init
 
 $(function(){ $(document).foundation(); });

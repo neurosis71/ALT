@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422081756) do
+ActiveRecord::Schema.define(version: 20150423142240) do
 
   create_table "abouts", force: :cascade do |t|
     t.text     "about_fr"
@@ -24,19 +24,24 @@ ActiveRecord::Schema.define(version: 20150422081756) do
     t.datetime "updated_at",   null: false
   end
 
-  create_table "albums", force: :cascade do |t|
-    t.string   "name_fr"
-    t.string   "name_en"
-    t.text     "description_fr"
-    t.text     "description_en"
-    t.integer  "location_id"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-    t.string   "main_image_file_name"
-    t.string   "main_image_content_type"
-    t.integer  "main_image_file_size"
-    t.datetime "main_image_updated_at"
+# Could not dump table "albums" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    limit: 30
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
+
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
 
   create_table "cursus", force: :cascade do |t|
     t.date     "date"
