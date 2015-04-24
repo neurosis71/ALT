@@ -17,7 +17,7 @@ class Admin::ExperienceController < ApplicationController
   def create
     @experience = ProfessionalExperience.new(professional_experience_params)
     if @experience.save
-      redirect_to(:controller => 'resume', :action => 'index')
+      redirect_to(admin_experience_path(:id => @experience.id))
     else
       render('new')
     end
@@ -30,7 +30,7 @@ class Admin::ExperienceController < ApplicationController
   def update
     @experience = ProfessionalExperience.find(params[:id])
     if @experience.update_attributes(professional_experience_params)
-      redirect_to(:controller => 'resume', :action => 'index')
+      redirect_to(admin_experience_path(:id => @experience.id))
     else
       render('edit')
     end

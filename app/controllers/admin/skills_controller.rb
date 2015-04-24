@@ -17,7 +17,7 @@ class Admin::SkillsController < ApplicationController
   def create
     @skill = Skill.new(skill_params)
     if @skill.save
-      redirect_to(:controller => 'resume', :action => 'index')
+      redirect_to(admin_skill_path(:id => @skill.id))
     else
       render('new')
     end
@@ -30,7 +30,7 @@ class Admin::SkillsController < ApplicationController
   def update
     @skill = Skill.find(params[:id])
     if @skill.update_attributes(skill_params)
-      redirect_to(:controller => 'resume', :action => 'index')
+      redirect_to(admin_skill_path(:id => @skill.id))
     else
       render('edit')
     end

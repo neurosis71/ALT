@@ -18,7 +18,7 @@ class Admin::LocationsController < ApplicationController
   def create
     @location = Location.new(location_params)
     if @location.save
-      redirect_to(:controller => 'locations', :action => 'index')
+      redirect_to(admin_location_path(:id => @location.id))
     else
       render('new')
     end
@@ -32,7 +32,7 @@ class Admin::LocationsController < ApplicationController
   def update
     @location = Location.find(params[:id])
     if @location.update_attributes(location_params)
-      redirect_to(:controller => 'locations', :action => 'index')
+      redirect_to(admin_location_path(:id => @location.id))
     else
       render('edit')
     end

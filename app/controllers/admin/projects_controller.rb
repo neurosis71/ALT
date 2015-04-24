@@ -19,7 +19,7 @@ class Admin::ProjectsController < ApplicationController
 
     @project = Album.new(project_params)
     if @project.save
-      redirect_to(:controller => 'locations', :action => 'edit', :id => @project.location_id)
+      redirect_to(admin_project_path(:id => @project.id))
     else
       render('new')
     end
@@ -32,7 +32,7 @@ class Admin::ProjectsController < ApplicationController
   def update
     @project = Album.find(params[:id])
     if @project.update_attributes(project_params)
-      redirect_to(:controller => 'locations', :action => 'edit', :id => @project.location_id)
+      redirect_to(admin_project_path(:id => @project.id))
     else
       render('edit')
     end

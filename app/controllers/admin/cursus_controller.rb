@@ -17,7 +17,7 @@ class Admin::CursusController < ApplicationController
   def create
     @cursu = Cursu.new(cursu_params)
     if @cursu.save
-      redirect_to(:controller => 'resume', :action => 'index')
+      redirect_to(admin_cursu_path(:id => @cursu.id))
     else
       render('new')
     end
@@ -30,7 +30,7 @@ class Admin::CursusController < ApplicationController
   def update
     @cursu = Cursu.find(params[:id])
     if @cursu.update_attributes(cursu_params)
-      redirect_to(:controller => 'resume', :action => 'index')
+      redirect_to(admin_cursu_path(:id => @cursu.id))
     else
       render('edit')
     end

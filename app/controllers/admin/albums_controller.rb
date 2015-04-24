@@ -30,7 +30,7 @@ class Admin::AlbumsController < ApplicationController
   def update
     @album = Album.find(params[:id])
     if @album.update_attributes(album_params)
-      redirect_to(:controller => 'albums', :action => 'show')
+      redirect_to(admin_album_path(:id => @album.id))
     else
       render('edit')
     end
@@ -43,7 +43,7 @@ class Admin::AlbumsController < ApplicationController
   def destroy
     #@album = Album.find(params[:id])
     Album.find(params[:id]).destroy
-    redirect_to(:controller => 'albums', :action => 'index')
+    redirect_to(admin_album_path(:id => @album.id))
   end
 
   private
