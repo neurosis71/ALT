@@ -1,0 +1,34 @@
+<h1>Album Show View</h1>
+
+<%= link_to 'Edit', edit_admin_album_path(@album), :class => 'button radius tiny secondary' %>
+<%= link_to 'Back', admin_albums_path, :class => 'button radius tiny ' %>
+<%= link_to 'Add Photos', new_admin_photo_path(:album_id => @album.id, :project => false), :class => 'button radius tiny success' %>
+
+<p>
+  <strong>Name_fr:</strong>
+  <%= @album.name_fr %>
+</p>
+
+<p>
+  <strong>Name_en:</strong>
+  <%= @album.name_en %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @album.main_image(:medium) %>
+</p>
+
+<p>
+  <strong>Description_fr:</strong>
+  <%= @album.description_fr %>
+</p>
+
+<p>
+  <strong>Description_en:</strong>
+  <%= @album.description_en %>
+</p>
+
+<%= link_to 'Edit', edit_admin_album_path(@album), :class => 'button radius tiny secondary' %>
+<%= link_to 'Back', admin_albums_path, :class => 'button radius tiny ' %>
+<%= link_to 'Add Photos', new_admin_photo_path(:album_id => @album.id, :project => false), :class => 'button radius tiny success' %>

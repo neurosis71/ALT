@@ -3,7 +3,7 @@ class Admin::ProjectsController < ApplicationController
   layout 'admin'
 
   def index
-    @projects = Album.all
+    @projects = Album.all.where("project = ?",1)
   end
 
   def show
@@ -16,6 +16,7 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def create
+
     @project = Album.new(project_params)
     if @project.save
       redirect_to(:controller => 'locations', :action => 'edit', :id => @project.location_id)
@@ -42,14 +43,14 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def destroy
-    @project = Album.find(params[:id]).destroy
+    Album.find(params[:id]).destroy
     redirect_to(:controller => 'locations', :action => 'edit', :id => @project.location_id)
   end
 
   private
 
   def project_params
-    params.require(:album).permit(:name_fr, :name_en, :main_image, :description_fr, :description_en, :location_id)
+    params.require(:album).permit(:name_fr, :name_en, :main_image, :description_fr, :description_en, :location_id, :project)
   end
 
 end

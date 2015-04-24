@@ -1,6 +1,10 @@
 <h1>Add photos</h1>
 
-<%= link_to 'Back', admin_project_path(:id => @album_id), :class => 'button radius tiny ' %>
+<% if @project == 'true' %>
+    <%= link_to 'Back', admin_project_path(:id => @album_id), :class => 'button radius tiny ' %>
+<% else %>
+    <%= link_to 'Back', admin_album_path(:id => @album_id), :class => 'button radius tiny ' %>
+<% end %>
 
 <%= form_for(@photo, url: admin_photo_index_path) do |f| %>
 
@@ -23,17 +27,21 @@
 
 <% end %>
 
-<ul class="row" id="photos-list">
-  <%= @photos.each do |t| %>
-      <%= image_tag t.image(:medium) %>
+<ul class="row" id="container">
+  <% @photos.each do |t| %>
+     <div class="item"> <%= image_tag t.image(:medium) %> </div>
   <% end %>
 </ul>
 
-<%= link_to 'Back', admin_project_path(:id => @album_id), :class => 'button radius tiny ' %>
+<% if @project %>
+    <%= link_to 'Back', admin_project_path(:id => @album_id), :class => 'button radius tiny ' %>
+<% else %>
+    <%= link_to 'Back', admin_album_path(:id => @album_id), :class => 'button radius tiny ' %>
+<% end %>
 
 <script>
     $(document).ready(function() {
-        var multiple_photos_form = $('#new_image');
+        var multiple_photos_form = $('#new_photo');
         multiple_photos_form.fileupload({
             dataType: 'script',
             add: function (e, data) {

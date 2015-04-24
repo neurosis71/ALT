@@ -1,0 +1,27 @@
+<div class="box">
+  <h1>Albums</h1>
+  <%= link_to 'New', new_admin_album_path, :class => 'button radius tiny success' %>
+  <table class="small-12 columns">
+    <thead>
+    <tr>
+      <th>Name fr</th>
+      <th>Name en</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @albums.each do |album| %>
+        <tr>
+          <td><%= album.name_fr %></td>
+          <td><%= album.name_en %></td>
+          <td><%= link_to 'Show', admin_album_path(album), :class => 'button radius tiny info' %></td>
+          <td><%= link_to 'Edit', edit_admin_album_path(album), :class => 'button radius tiny secondary' %></td>
+          <td><%= link_to 'Delete', admin_album_delete_path(album), :class => 'button radius tiny alert' %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

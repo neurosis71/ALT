@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -48,7 +49,17 @@ Rails.application.routes.draw do
     get 'photo/:id/delete' => 'photo#delete', :as => :photo_delete
     get 'photo/:id/destroy' => 'photo#destroy', :as => :photo_destroy
 
+    #photos
+    resources :albums
+    get 'albums/:id/delete' => 'albums#delete', :as => :album_delete
+    get 'albums/:id/destroy' => 'albums#destroy', :as => :album_destroy
+
   end
+
+
+
+  # ASSETS
+  mount Ckeditor::Engine => '/ckeditor'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

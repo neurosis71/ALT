@@ -1,6 +1,6 @@
 class Album < ActiveRecord::Base
   belongs_to :locations
-  has_many :images
+  has_many :photos, :dependent => :destroy
 
   #main image upload definition for paperclip
   has_attached_file :main_image,

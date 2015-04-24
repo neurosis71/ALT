@@ -14,6 +14,7 @@ class Admin::PhotoController < ApplicationController
     @photos = Photo.where("album_id = ?", params[:album_id]).order('created_at DESC')
     @photo = Photo.new
     @album_id = params[:album_id]
+    @project = params[:project] #check if we are coming from a project or an album to put the correct 'back' button
   end
 
   def create
@@ -32,9 +33,17 @@ class Admin::PhotoController < ApplicationController
   end
 
   def delete
+    @photo = Photo.find(params[:id])
   end
 
   def destroy
+    respond_to do |format|
+      @photo = Photo.find(params[:id])
+      @album_id = @photo.album_id
+      @photo.destroy
+      format.html { redirect_to admin_project_path(:id => @album_id)}
+      format.js
+    end
   end
 
   private
