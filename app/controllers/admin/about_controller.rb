@@ -27,7 +27,7 @@ class Admin::AboutController < ApplicationController
     if @about.update_attributes(about_params)
       redirect_to(:action => 'show', :id => @about.id)
     else
-      render('show')
+      render('edit')
     end
   end
 

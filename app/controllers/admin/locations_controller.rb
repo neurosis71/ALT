@@ -34,6 +34,7 @@ class Admin::LocationsController < ApplicationController
     if @location.update_attributes(location_params)
       redirect_to(admin_location_path(:id => @location.id))
     else
+      @projects = @location.albums
       render('edit')
     end
   end

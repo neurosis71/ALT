@@ -60,3 +60,20 @@ img.no-border{
     padding: 0px;
     border: none;
 }
+
+
+/* styling for form errors */
+.field_with_errors input{
+    border: 1px solid red;
+}
+
+.error_explanation{
+    border-radius: 10px 10px 10px 10px;
+    border: solid 2px red;
+    text-align: center;
+    padding: 10px 0 0 0;
+}
+
+.error_explanation ul li{
+   color: red;
+}

@@ -1,5 +1,17 @@
 <h1>New experience entry</h1>
 
+<% if @experience.errors.any? %>
+    <div class="error_explanation small-8 small-centered columns">
+      <h6><%= pluralize(@experience.errors.count, "erreur") %> sont apparues :</h6>
+
+      <ul>
+        <% @experience.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
 <%= form_for(@experience, url: admin_experience_index_path, :html => { :mulipart => true}) do |f| %>
 
     <div class="date">

@@ -1,5 +1,17 @@
 <h1>New skill entry</h1>
 
+<% if @skill.errors.any? %>
+    <div class="error_explanation small-8 small-centered columns">
+      <h6><%= pluralize(@skill.errors.count, "erreur") %> sont apparues :</h6>
+
+      <ul>
+        <% @skill.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
 <%= form_for(@skill, url: admin_skills_path) do |f| %>
 
     <ul class="tabs" data-tab>
