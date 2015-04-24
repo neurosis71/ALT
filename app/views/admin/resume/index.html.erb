@@ -89,8 +89,8 @@
     <tbody>
     <% @skills.each do |skill| %>
         <tr>
-          <td><%= skill.description_fr %></td>
-          <td><%= skill.description_en %></td>
+          <td><%= skill.description_fr.html_safe %></td>
+          <td><%= skill.description_en.html_safe %></td>
           <td><%= link_to 'Show', admin_skill_path(skill), :class => 'button radius tiny info' %></td>
           <td><%= link_to 'Edit', edit_admin_skill_path(skill), :class => 'button radius tiny secondary' %></td>
           <td><%= link_to 'Delete', admin_skill_delete_path(skill), :class => 'button radius tiny alert' %></td>

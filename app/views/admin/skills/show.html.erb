@@ -3,15 +3,37 @@
 <%= link_to 'Edit', edit_admin_skill_path(@skill), :class => 'button radius tiny secondary' %>
 <%= link_to 'Back', admin_resume_index_path, :class => 'button radius tiny ' %>
 
-<p>
-  <strong>Description_fr:</strong>
-  <%= @skill.description_fr %>
-</p>
 
-<p>
-  <strong>Description_en:</strong>
-  <%= @skill.description_en %>
-</p>
+<ul class="tabs" data-tab>
+  <li class="tab-title active"><a href="#panel1">Francais</a></li>
+  <li class="tab-title"><a href="#panel2">Anglais</a></li>
+</ul>
+
+<div class="tabs-content">
+
+  <div class="content contained active" id="panel1">
+
+    <table>
+      <tr>
+        <td  class="cell1"><strong>Description_fr:</strong></td>
+        <td  class="cell2"><%= @skill.description_fr.html_safe %></td>
+      </tr>
+    </table>
+
+  </div>
+
+  <div class="content contained" id="panel2">
+
+    <table>
+      <tr>
+        <td  class="cell1"><strong>Description_en:</strong></td>
+        <td  class="cell2"><%= @skill.description_en.html_safe %></td>
+      </tr>
+    </table>
+
+  </div>
+
+</div>
 
 <%= link_to 'Edit', edit_admin_skill_path(@skill), :class => 'button radius tiny secondary' %>
 <%= link_to 'Back', admin_resume_index_path, :class => 'button radius tiny ' %>

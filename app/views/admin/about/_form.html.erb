@@ -1,33 +1,54 @@
 <%= form_for :about do |f| %>
 
-    <div class="about_fr">
-      <%= f.label :about_fr%>
-      <%= f.text_area :about_fr, size: "60x12" %>
-    </div>
+    <ul class="tabs" data-tab>
+      <li class="tab-title active"><a href="#panel1">Francais</a></li>
+      <li class="tab-title"><a href="#panel2">Anglais</a></li>
+    </ul>
 
-    <div class="about_en">
-      <%= f.label :about_en%>
-      <%= f.text_area :about_en, size: "60x12" %>
-    </div>
+    <div class="tabs-content">
 
-    <div class="career_fr">
-      <%= f.label :career_fr%>
-      <%= f.text_area :career_fr, size: "60x12" %>
-    </div>
+      <div class="content contained active" id="panel1">
 
-    <div class="career_en">
-      <%= f.label :career_en%>
-      <%= f.text_area :career_en, size: "60x12" %>
-    </div>
+        <table>
+          <tr>
+            <td class="cell1"><%= f.label :about_fr%></td>
+            <td class="cell2"><%= f.text_area :about_fr, :class => 'ckeditor' %></td>
+          </tr>
 
-    <div class="interests_fr">
-      <%= f.label :interests_fr%>
-      <%= f.text_area :interests_fr, size: "60x12" %>
-    </div>
+          <tr>
+            <td class="cell1"><%= f.label :career_fr%></td>
+            <td class="cell2"><%= f.text_area :career_fr, :class => 'ckeditor' %></td>
+          </tr>
 
-    <div class="interests_en">
-      <%= f.label :interests_en%>
-      <%= f.text_area :interests_en, size: "60x12" %>
+          <tr>
+            <td class="cell1"><%= f.label :interests_fr%></td>
+            <td class="cell2"><%= f.text_area :interests_fr, :class => 'ckeditor' %></td>
+          </tr>
+        </table>
+
+      </div>
+
+      <div class="content contained" id="panel2">
+
+        <table>
+          <tr>
+            <td class="cell1"><%= f.label :about_en%></td>
+            <td class="cell2"><%= f.text_area :about_en, :class => 'ckeditor' %></td>
+          </tr>
+
+          <tr>
+            <td class="cell1"><%= f.label :career_en%></td>
+            <td class="cell2"><%= f.text_area :career_en, :class => 'ckeditor' %></td>
+          </tr>
+
+          <tr>
+            <td class="cell1"><%= f.label :interests_en%></td>
+            <td class="cell2"><%= f.text_area :interests_en, :class => 'ckeditor' %></td>
+          </tr>
+        </table>
+
+      </div>
+
     </div>
 
     <div class="submit">

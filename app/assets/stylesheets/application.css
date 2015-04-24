@@ -15,3 +15,40 @@
  *= require foundation_and_overrides
 
  */
+
+
+/* styling for tabs titles*/
+.tabs a{
+    border-radius: 4px 4px 0 0;
+}
+
+.tabs-content>.content.contained{border: solid 0 #e7e7e7; border-width: 1px 1px 1px 1px;}
+
+/* table in tabs styling */
+.tabs-content>.content table {
+   width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.tabs-content>.content table tr td{
+    background: white;
+    text-align: center;
+    vertical-align: middle ;
+}
+
+.tabs-content>.content table tr td.cell1{
+    width: 30%;
+}
+
+.tabs-content>.content table tr td.cell2{
+    width: 70%;
+}
+
+
+
+/* Styling for textarea */
+textarea {
+    resize: none;
+}
+

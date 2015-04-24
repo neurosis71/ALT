@@ -1,37 +1,54 @@
 <h1>About</h1>
 
-
 <%= link_to 'Edit', edit_admin_about_path(@about), :class => 'button radius tiny secondary' %>
 
-<p>
-  <strong>about_fr:</strong>
-  <%= @about.about_fr %>
-</p>
+<ul class="tabs" data-tab>
+  <li class="tab-title active"><a href="#panel1">Francais</a></li>
+  <li class="tab-title"><a href="#panel2">Anglais</a></li>
+</ul>
 
-<p>
-  <strong>about_en:</strong>
-  <%= @about.about_en %>
-</p>
+<div class="tabs-content">
 
-<p>
-  <strong>career_fr:</strong>
-  <%= @about.career_fr %>
-</p>
+  <div class="content contained active" id="panel1">
 
-<p>
-  <strong>career_en:</strong>
-  <%= @about.career_en %>
-</p>
+    <table>
+        <tr>
+          <td class="cell1"><strong>about_fr:</strong></td>
+          <td class="cell2"><%= @about.about_fr.html_safe %></td>
+        </tr>
 
-<p>
-  <strong>interests_fr:</strong>
-  <%= @about.interests_fr %>
-</p>
+        <tr>
+          <td class="cell1"><strong>career_fr:</strong></td>
+          <td class="cell2"><%= @about.career_fr.html_safe %></td>
+        </tr>
 
-<p>
-  <strong>interests_en:</strong>
-  <%= @about.interests_en %>
-</p>
+        <tr>
+          <td class="cell1"><strong>interests_fr:</strong></td>
+          <td class="cell2"><%= @about.interests_fr.html_safe %></td>
+        </tr>
+    </table>
+  </div>
 
 
+  <div class="content contained" id="panel2">
+    <table>
+      <tr>
+        <td class="cell1"><strong>about_en:</strong></td>
+        <td class="cell2"><%= @about.about_en.html_safe %></td>
+      </tr>
 
+      <tr>
+        <td class="cell1"><strong>career_en:</strong></td>
+        <td class="cell2"><%= @about.career_en.html_safe %></td>
+      </tr>
+
+      <tr>
+        <td class="cell1"><strong>interests_en:</strong></td>
+        <td class="cell2"><%= @about.interests_en.html_safe %></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+<%= link_to 'Edit', edit_admin_about_path(@about), :class => 'button radius tiny secondary' %>

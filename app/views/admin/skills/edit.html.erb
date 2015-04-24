@@ -2,14 +2,35 @@
 
 <%= form_for(@skill, url: admin_skill_path) do |f| %>
 
-    <div class="description_fr">
-      <%= f.label :description_fr%>
-      <%= f.text_area :description_fr, size: "60x12" %>
-    </div>
 
-    <div class="description_en">
-      <%= f.label :description_en%>
-      <%= f.text_area :description_en, size: "60x12" %>
+    <ul class="tabs" data-tab>
+      <li class="tab-title active"><a href="#panel1">Francais</a></li>
+      <li class="tab-title"><a href="#panel2">Anglais</a></li>
+    </ul>
+
+    <div class="tabs-content">
+
+      <div class="content contained active" id="panel1">
+
+        <table>
+          <tr>
+            <td  class="cell1"><%= f.label :description_fr%></td>
+            <td  class="cell2"><%= f.text_area :description_fr, :class => 'ckeditor' %></td>
+          </tr>
+        </table>
+
+      </div>
+      <div class="content contained" id="panel2">
+
+        <table>
+          <tr>
+            <td  class="cell1"><%= f.label :description_en%></td>
+            <td  class="cell2"><%= f.text_area :description_en, :class => 'ckeditor' %></td>
+          </tr>
+        </table>
+
+       </div>
+
     </div>
 
     <div class="submit">

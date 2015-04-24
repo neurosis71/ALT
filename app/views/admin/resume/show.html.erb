@@ -77,8 +77,8 @@
     <tbody>
     <% @skills.each do |skill| %>
         <tr>
-          <td><%= skill.date %></td>
-          <td><%= skill.school %></td>
+          <td><%= skill.date.html_safe %></td>
+          <td><%= skill.school.html_safe %></td>
           <!--<td><%= #link_to 'Show', category %></td>
           <td><%= #link_to 'Edit', edit_category_path(category) %></td>
           <td><%= #link_to 'Delete', categories_delete_path(:id => category.id) %></td>-->

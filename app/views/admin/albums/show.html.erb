@@ -5,29 +5,48 @@
 <%= link_to 'Add Photos', new_admin_photo_path(:album_id => @album.id, :project => false), :class => 'button radius tiny success' %>
 
 <p>
-  <strong>Name_fr:</strong>
-  <%= @album.name_fr %>
-</p>
-
-<p>
-  <strong>Name_en:</strong>
-  <%= @album.name_en %>
-</p>
-
-<p>
   <strong>Image:</strong>
   <%= image_tag @album.main_image(:medium) %>
 </p>
 
-<p>
-  <strong>Description_fr:</strong>
-  <%= @album.description_fr %>
-</p>
+<ul class="tabs" data-tab>
+  <li class="tab-title active"><a href="#panel1">Francais</a></li>
+  <li class="tab-title"><a href="#panel2">Anglais</a></li>
+</ul>
 
-<p>
-  <strong>Description_en:</strong>
-  <%= @album.description_en %>
-</p>
+<div class="tabs-content">
+
+  <div class="content contained active" id="panel1">
+
+    <table>
+      <tr>
+        <td class="cell1"><strong>Name_fr:</strong></td>
+        <td class="cell2"><%= @album.name_fr %></td>
+      </tr>
+      <tr>
+        <td class="cell1"><strong>Description_fr:</strong></td>
+        <td class="cell2"><%= @album.description_fr %></td>
+      </tr>
+    </table>
+
+  </div>
+
+  <div class="content contained" id="panel2">
+
+    <table>
+      <tr>
+        <td class="cell1"><strong>Name_en:</strong></td>
+        <td class="cell2"><%= @album.name_en %></td>
+      </tr>
+      <tr>
+        <td class="cell1"><strong>Description_en:</strong></td>
+        <td class="cell2"><%= @album.description_en %></td>
+      </tr>
+    </table>
+
+  </div>
+
+</div>
 
 <%= link_to 'Edit', edit_admin_album_path(@album), :class => 'button radius tiny secondary' %>
 <%= link_to 'Back', admin_albums_path, :class => 'button radius tiny ' %>
