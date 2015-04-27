@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
+ *= require jquery-ui/datepicker
 
  */
 
@@ -76,4 +77,24 @@ img.no-border{
 
 .error_explanation ul li{
    color: red;
+}
+
+/* Styling flash messages */
+.notice{
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+}
+
+.alert-notice{
+    border: solid 1px #4F938A;
+    background-color: #E3F2DF;
+    color: #4F938A;
+}
+
+.alert-alert{
+    border: solid 1px #C15354;
+    background-color: #F4E2E2;
+    color: #C15354;
 }

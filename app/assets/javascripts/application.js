@@ -19,5 +19,6 @@
 //= require jquery-fileupload/vendor/tmpl
 //= require jquery.remotipart
 //= require ckeditor/init
+//= require jquery-ui/datepicker
 
 $(function(){ $(document).foundation(); });
