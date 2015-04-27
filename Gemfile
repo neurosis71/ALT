@@ -37,6 +37,17 @@ gem 'foundation-rails'
 #ckeditor wysiwyg
 gem 'ckeditor'
 
+#jquery ui for datepickers and drag/drop
+gem 'jquery-ui-rails'
+
+#devise for authentication
+gem 'devise'
+gem 'devise-i18n'
+
+
+#internationalization
+gem 'rails-i18n'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

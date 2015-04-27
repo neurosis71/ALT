@@ -1,6 +1,7 @@
 class Admin::SkillsController < ApplicationController
 
   layout "admin"
+  before_action :authenticate_user!
 
   def index
     @skills = Skill.all

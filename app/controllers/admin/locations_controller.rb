@@ -1,6 +1,7 @@
 class Admin::LocationsController < ApplicationController
 
   layout 'admin'
+  before_action :authenticate_user!
 
   def index
     @locations = Location.all

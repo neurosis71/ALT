@@ -1,6 +1,7 @@
 class Admin::ExperienceController < ApplicationController
 
   layout "admin"
+  before_action :authenticate_user!
 
   def index
     @experiences = ProfessionalExperience.all

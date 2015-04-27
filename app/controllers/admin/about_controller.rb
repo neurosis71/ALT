@@ -2,6 +2,7 @@ class Admin::AboutController < ApplicationController
 
   layout "admin"
 
+  before_action :authenticate_user!
 
   ##################################
   #             WARNING            #

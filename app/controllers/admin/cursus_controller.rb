@@ -1,6 +1,7 @@
 class Admin::CursusController < ApplicationController
 
   layout "admin"
+  before_action :authenticate_user!
 
   def index
     @cursus = Cursu.all

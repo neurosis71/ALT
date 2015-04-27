@@ -15,6 +15,7 @@
   <div class="row">
     <%= image_tag "admin/logo.png", :class => 'admin_logo no-border' %>
     <%= render 'shared/adminnav' %>
+    <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
   </div>
 </div>
 

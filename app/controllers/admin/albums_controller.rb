@@ -1,6 +1,7 @@
 class Admin::AlbumsController < ApplicationController
 
   layout 'admin'
+  before_action :authenticate_user!
 
   def index
     @albums = Album.all.where("project = ?", 0)

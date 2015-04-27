@@ -1,6 +1,7 @@
 class Admin::PhotoController < ApplicationController
 
   layout 'admin'
+  before_action :authenticate_user!
 
   def index
     @photos = Photo.where("album_id = ?", params[:album_id])
