@@ -32,3 +32,11 @@ config/secrets.yml
 /vendor/assets/bower_components
 *.bowerrc
 bower.json
+
+public/images/albums/6/medium_a.baa-Always-Safety-First.jpg
+
+public/images/albums/6/medium_a.baa-Always-Safety-First.jpg
+
+public/images/albums/6/original_a.baa-Always-Safety-First.jpg
+
+public/images/albums/6/thumb_a.baa-Always-Safety-First.jpg

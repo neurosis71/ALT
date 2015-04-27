@@ -17,6 +17,7 @@ class Admin::AlbumsController < ApplicationController
   def create
     @album = Album.new(album_params)
     if @album.save
+      flash[:notice] = "L'album à été créé"
       redirect_to(admin_album_path(@album))
     else
       render('new')
@@ -30,6 +31,7 @@ class Admin::AlbumsController < ApplicationController
   def update
     @album = Album.find(params[:id])
     if @album.update_attributes(album_params)
+      flash[:notice] = "L'album est mis à jour"
       redirect_to(admin_album_path(:id => @album.id))
     else
       render('edit')
@@ -43,7 +45,8 @@ class Admin::AlbumsController < ApplicationController
   def destroy
     #@album = Album.find(params[:id])
     Album.find(params[:id]).destroy
-    redirect_to(admin_album_path(:id => @album.id))
+    flash[:notice] = "L'album à été supprimé"
+    redirect_to(admin_albums_path)
   end
 
   private

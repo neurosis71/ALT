@@ -25,6 +25,7 @@ class Admin::AboutController < ApplicationController
   def update
     @about = About.find(1)
     if @about.update_attributes(about_params)
+      flash[:notice] = "La section a propos à été mise à jour"
       redirect_to(:action => 'show', :id => @about.id)
     else
       render('edit')

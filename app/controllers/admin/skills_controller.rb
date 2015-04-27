@@ -17,6 +17,7 @@ class Admin::SkillsController < ApplicationController
   def create
     @skill = Skill.new(skill_params)
     if @skill.save
+      flash[:notice] = "La compétence à été créé"
       redirect_to(admin_skill_path(:id => @skill.id))
     else
       render('new')
@@ -30,6 +31,7 @@ class Admin::SkillsController < ApplicationController
   def update
     @skill = Skill.find(params[:id])
     if @skill.update_attributes(skill_params)
+      flash[:notice] = "La compétence est mise à jour"
       redirect_to(admin_skill_path(:id => @skill.id))
     else
       render('edit')
@@ -42,6 +44,7 @@ class Admin::SkillsController < ApplicationController
 
   def destroy
     Skill.find(params[:id]).destroy
+    flash[:notice] = "La compétence à été supprimée"
     redirect_to(:controller => 'resume', :action => 'index')
   end
 

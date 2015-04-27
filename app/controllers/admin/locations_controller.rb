@@ -18,6 +18,7 @@ class Admin::LocationsController < ApplicationController
   def create
     @location = Location.new(location_params)
     if @location.save
+      flash[:notice] = "Le lieu à été créé"
       redirect_to(admin_location_path(:id => @location.id))
     else
       render('new')
@@ -32,6 +33,7 @@ class Admin::LocationsController < ApplicationController
   def update
     @location = Location.find(params[:id])
     if @location.update_attributes(location_params)
+      flash[:notice] = "Le lieu est mis à jour"
       redirect_to(admin_location_path(:id => @location.id))
     else
       @projects = @location.albums
@@ -45,6 +47,7 @@ class Admin::LocationsController < ApplicationController
 
   def destroy
     @location = Location.find(params[:id]).destroy
+    flash[:notice] = "Le lieu à été supprimé"
     redirect_to(:controller => 'locations', :action => 'index')
   end
 

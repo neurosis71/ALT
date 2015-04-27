@@ -17,6 +17,7 @@ class Admin::CursusController < ApplicationController
   def create
     @cursu = Cursu.new(cursu_params)
     if @cursu.save
+      flash[:notice] = "Le cursus à été créé"
       redirect_to(admin_cursu_path(:id => @cursu.id))
     else
       render('new')
@@ -30,6 +31,7 @@ class Admin::CursusController < ApplicationController
   def update
     @cursu = Cursu.find(params[:id])
     if @cursu.update_attributes(cursu_params)
+      flash[:notice] = "Le cursus est mis à jour"
       redirect_to(admin_cursu_path(:id => @cursu.id))
     else
       render('edit')
@@ -42,6 +44,7 @@ class Admin::CursusController < ApplicationController
 
   def destroy
     Cursu.find(params[:id]).destroy
+    flash[:notice] = "Le cursus à été supprimé"
     redirect_to(:controller => 'resume', :action => 'index')
   end
 

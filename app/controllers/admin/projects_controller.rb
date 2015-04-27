@@ -19,6 +19,7 @@ class Admin::ProjectsController < ApplicationController
 
     @project = Album.new(project_params)
     if @project.save
+      flash[:notice] = "Le projet à été créé"
       redirect_to(admin_project_path(:id => @project.id))
     else
       render('new')
@@ -32,6 +33,7 @@ class Admin::ProjectsController < ApplicationController
   def update
     @project = Album.find(params[:id])
     if @project.update_attributes(project_params)
+      flash[:notice] = "Le projet est mis à jour"
       redirect_to(admin_project_path(:id => @project.id))
     else
       render('edit')
@@ -43,8 +45,11 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def destroy
-    Album.find(params[:id]).destroy
-    redirect_to(:controller => 'locations', :action => 'edit', :id => @project.location_id)
+    @project = Album.find(params[:id])
+    @location_id = @project.location_id
+    @project.destroy
+    flash[:notice] = "Le projet à été supprimé"
+    redirect_to(:controller => 'locations', :action => 'edit', :id => @location_id)
   end
 
   private

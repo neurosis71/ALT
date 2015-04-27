@@ -17,6 +17,7 @@ class Admin::ExperienceController < ApplicationController
   def create
     @experience = ProfessionalExperience.new(professional_experience_params)
     if @experience.save
+      flash[:notice] = "L'expérience à été créé"
       redirect_to(admin_experience_path(:id => @experience.id))
     else
       render('new')
@@ -30,6 +31,7 @@ class Admin::ExperienceController < ApplicationController
   def update
     @experience = ProfessionalExperience.find(params[:id])
     if @experience.update_attributes(professional_experience_params)
+      flash[:notice] = "L'expérience est mise à jour"
       redirect_to(admin_experience_path(:id => @experience.id))
     else
       render('edit')
@@ -42,6 +44,7 @@ class Admin::ExperienceController < ApplicationController
 
   def destroy
     @experience = ProfessionalExperience.find(params[:id]).destroy
+    flash[:notice] = "L'expérience à été supprimée"
     redirect_to(:controller => 'resume', :action => 'index')
   end
 
