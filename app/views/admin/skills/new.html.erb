@@ -1,8 +1,8 @@
-<h1>New skill entry</h1>
+<h1><%=t('admin.skills.new.title')%></h1>
 
 <% if @skill.errors.any? %>
     <div class="error_explanation small-8 small-centered columns">
-      <h6><%= pluralize(@skill.errors.count, "erreur") %> sont apparues :</h6>
+      <h6><%= @skill.errors.count %> <%=t('admin.forms.message.error')%> :</h6>
 
       <ul>
         <% @skill.errors.full_messages.each do |msg| %>
@@ -15,8 +15,8 @@
 <%= form_for(@skill, url: admin_skills_path) do |f| %>
 
     <ul class="tabs" data-tab>
-      <li class="tab-title active"><a href="#panel1">Francais</a></li>
-      <li class="tab-title"><a href="#panel2">Anglais</a></li>
+      <li class="tab-title active"><a href="#panel1"><%=t('admin.language.fr')%></a></li>
+      <li class="tab-title"><a href="#panel2"><%=t('admin.language.en')%></a></li>
     </ul>
 
     <div class="tabs-content">
@@ -25,7 +25,7 @@
 
         <table>
           <tr>
-            <td  class="cell1"><%= f.label :description_fr%></td>
+            <td  class="cell1"><%= f.label t('activerecord.attributes.skills.description_fr')%></td>
             <td  class="cell2"><%= f.text_area :description_fr, :class => 'ckeditor' %></td>
           </tr>
         </table>
@@ -35,7 +35,7 @@
 
         <table>
           <tr>
-            <td  class="cell1"><%= f.label :description_en%></td>
+            <td  class="cell1"><%= f.label t('activerecord.attributes.skills.description_en')%></td>
             <td  class="cell2"><%= f.text_area :description_en, :class => 'ckeditor' %></td>
           </tr>
         </table>
@@ -45,6 +45,6 @@
     </div>
 
     <div class="submit">
-      <%= f.submit :class => 'button radius tiny info' %>
+      <%= f.submit t('admin.buttons.save') ,:class => 'button radius tiny info' %>
     </div>
 <% end %>
