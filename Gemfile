@@ -32,7 +32,7 @@ gem 'jquery-fileupload-rails'
 gem 'remotipart'
 
 #foundation
-gem 'foundation-rails'
+gem 'foundation-rails', '~> 5.5.1.2'
 
 #ckeditor wysiwyg
 gem 'ckeditor'
@@ -47,6 +47,9 @@ gem 'devise-i18n'
 
 #internationalization
 gem 'rails-i18n'
+
+#user localization for locales
+gem 'geocoder'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

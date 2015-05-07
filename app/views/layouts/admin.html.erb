@@ -13,9 +13,7 @@
 
 <div class="admin_header">
   <div class="row">
-    <%= image_tag "admin/logo.png", :class => 'admin_logo no-border' %>
     <%= render 'shared/adminnav' %>
-    <%= link_to t('admin.layout.session.logout'), destroy_user_session_path, method: :delete %>
   </div>
 </div>
 

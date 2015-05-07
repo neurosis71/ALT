@@ -12,13 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation
-//= require turbolinks
-//= require_tree .
 //= require jquery-fileupload/basic-plus
 //= require jquery-fileupload/vendor/tmpl
 //= require jquery.remotipart
-//= require ckeditor/init
 //= require jquery-ui/datepicker
+//= require foundation
+//= require ckeditor/init
+//= require turbolinks
+//= require_tree .
 
 $(function(){ $(document).foundation(); });

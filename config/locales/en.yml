@@ -152,6 +152,7 @@ en:
       add_photo:          "Add photos"
 
     language:
+      lang:               "Language"
       fr:                 "French"
       en:                 "English"
 

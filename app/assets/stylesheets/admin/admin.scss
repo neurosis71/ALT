@@ -1,5 +1,5 @@
 .admin_header{
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .admin_body{
@@ -11,6 +11,7 @@
   height: 100px;
   width: 100px;
   float: left;
+  margin-right: 20px;
 }
 
 .admin_nav{
@@ -26,6 +27,20 @@
   align-items: center;
 }
 
+.nav-right{
+  float: right;
+}
+
+.nav-right > a {
+  margin-left: 20px;
+}
+
+.language-select{
+}
+
+.signout{
+
+}
 
 
 //separator

@@ -60,6 +60,8 @@ Rails.application.routes.draw do
 
   end
 
+  # Local management
+  get '/change_locale/:locale', to: 'settings#change_locale', as: :change_locale
 
 
   # ASSETS
