@@ -1,15 +1,15 @@
-<h1>Add photos</h1>
+<h1><%=t('admin.photo.new.title')%></h1>
 
 <% if @project == 'true' %>
-    <%= link_to 'Back', admin_project_path(:id => @album_id), :class => 'button radius tiny ' %>
+    <%= link_to t('admin.buttons.back'), admin_project_path(:id => @album_id), :class => 'button radius tiny ' %>
 <% else %>
-    <%= link_to 'Back', admin_album_path(:id => @album_id), :class => 'button radius tiny ' %>
+    <%= link_to t('admin.buttons.back'), admin_album_path(:id => @album_id), :class => 'button radius tiny ' %>
 <% end %>
 
 <%= form_for(@photo, url: admin_photo_index_path) do |f| %>
 
     <div class="form-group">
-      <%= f.label :image %>
+      <%= f.label t('activerecord.attributes.albums.main_image') %>
       <%= f.file_field :image, required: true, multiple: true, name: 'image[image]' %>
     </div>
 
@@ -34,9 +34,9 @@
 </ul>
 
 <% if @project %>
-    <%= link_to 'Back', admin_project_path(:id => @album_id), :class => 'button radius tiny ' %>
+    <%= link_to t('admin.buttons.back'), admin_project_path(:id => @album_id), :class => 'button radius tiny ' %>
 <% else %>
-    <%= link_to 'Back', admin_album_path(:id => @album_id), :class => 'button radius tiny ' %>
+    <%= link_to t('admin.buttons.back'), admin_album_path(:id => @album_id), :class => 'button radius tiny ' %>
 <% end %>
 
 <script>
