@@ -1,14 +1,14 @@
 
 <div class="box">
-  <h1>Cursus</h1>
-  <%= link_to 'New', new_admin_cursu_path, :class => 'button radius tiny success' %>
+  <h1><%=t('admin.cursus.show.title')%></h1>
+  <%= link_to t('admin.buttons.new'), new_admin_cursu_path, :class => 'button radius tiny success' %>
   <table class="small-12 columns">
     <thead>
     <tr>
-      <th>Date</th>
-      <th>School</th>
-      <th>location_fr</th>
-      <th>location_en</th>
+      <th><%=t('activerecord.attributes.cursus.date')%></th>
+      <th><%=t('activerecord.attributes.cursus.school')%></th>
+      <th><%=t('activerecord.attributes.cursus.location_fr')%></th>
+      <th><%=t('activerecord.attributes.cursus.location_en')%></th>
       <th></th>
       <th></th>
       <th></th>
@@ -22,9 +22,9 @@
           <td><%= cursu.school %></td>
           <td><%= cursu.location_fr %></td>
           <td><%= cursu.location_en %></td>
-          <td><%= link_to 'Show', admin_cursu_path(cursu), :class => 'button radius tiny info' %></td>
-          <td><%= link_to 'Edit', edit_admin_cursu_path(cursu), :class => 'button radius tiny secondary' %></td>
-          <td><%= link_to 'Delete', admin_cursu_delete_path(cursu), :class => 'button radius tiny alert' %></td>
+          <td><%= link_to t('admin.buttons.show'), admin_cursu_path(cursu), :class => 'button radius tiny info' %></td>
+          <td><%= link_to t('admin.buttons.edit'), edit_admin_cursu_path(cursu), :class => 'button radius tiny secondary' %></td>
+          <td><%= link_to t('admin.buttons.delete'), admin_cursu_delete_path(cursu), :class => 'button radius tiny alert' %></td>
         </tr>
     <% end %>
     </tbody>
@@ -36,15 +36,15 @@
 </div>
 
 <div class="box">
-  <h1>Professional Experience</h1>
-  <%= link_to 'New', new_admin_experience_path, :class => 'button radius tiny success' %>
+  <h1><%=t('admin.experience.show.title')%></h1>
+  <%= link_to t('admin.buttons.new'), new_admin_experience_path, :class => 'button radius tiny success' %>
   <table class="small-12 columns">
     <thead>
     <tr>
-      <th>Date</th>
-      <th>School</th>
-      <th>location_fr</th>
-      <th>location_en</th>
+      <th><%=t('activerecord.attributes.professional_experiences.date')%></th>
+      <th><%=t('activerecord.attributes.professional_experiences.company')%></th>
+      <th><%=t('activerecord.attributes.professional_experiences.location_fr')%></th>
+      <th><%=t('activerecord.attributes.professional_experiences.location_en')%></th>
       <th></th>
       <th></th>
       <th></th>
@@ -58,9 +58,9 @@
           <td><%= professional_experience.company %></td>
           <td><%= professional_experience.location_fr %></td>
           <td><%= professional_experience.location_en %></td>
-          <td><%= link_to 'Show', admin_experience_path(professional_experience), :class => 'button radius tiny info' %></td>
-          <td><%= link_to 'Edit', edit_admin_experience_path(professional_experience), :class => 'button radius tiny secondary' %></td>
-          <td><%= link_to 'Delete', admin_experience_delete_path(professional_experience), :class => 'button radius tiny alert' %></td>
+          <td><%= link_to t('admin.buttons.show'), admin_experience_path(professional_experience), :class => 'button radius tiny info' %></td>
+          <td><%= link_to t('admin.buttons.edit'), edit_admin_experience_path(professional_experience), :class => 'button radius tiny secondary' %></td>
+          <td><%= link_to t('admin.buttons.delete'), admin_experience_delete_path(professional_experience), :class => 'button radius tiny alert' %></td>
         </tr>
     <% end %>
     </tbody>
@@ -73,13 +73,13 @@
 </div>
 
 <div class="box">
-  <h1>Skills</h1>
-  <%= link_to 'New', new_admin_skill_path, :class => 'button radius tiny success' %>
+  <h1><%=t('admin.skills.show.title')%></h1>
+  <%= link_to t('admin.buttons.new'), new_admin_skill_path, :class => 'button radius tiny success' %>
   <table class="small-12 columns">
     <thead>
     <tr>
-      <th>description_fr</th>
-      <th>description_en</th>
+      <th><%=t('activerecord.attributes.skills.description_fr')%></th>
+      <th><%=t('activerecord.attributes.skills.description_en')%></th>
       <th></th>
       <th></th>
       <th></th>
@@ -91,9 +91,9 @@
         <tr>
           <td><%= skill.description_fr.html_safe %></td>
           <td><%= skill.description_en.html_safe %></td>
-          <td><%= link_to 'Show', admin_skill_path(skill), :class => 'button radius tiny info' %></td>
-          <td><%= link_to 'Edit', edit_admin_skill_path(skill), :class => 'button radius tiny secondary' %></td>
-          <td><%= link_to 'Delete', admin_skill_delete_path(skill), :class => 'button radius tiny alert' %></td>
+          <td><%= link_to t('admin.buttons.show'), admin_skill_path(skill), :class => 'button radius tiny info' %></td>
+          <td><%= link_to t('admin.buttons.edit'), edit_admin_skill_path(skill), :class => 'button radius tiny secondary' %></td>
+          <td><%= link_to t('admin.buttons.delete'), admin_skill_delete_path(skill), :class => 'button radius tiny alert' %></td>
         </tr>
     <% end %>
     </tbody>
