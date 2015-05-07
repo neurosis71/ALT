@@ -1,17 +1,17 @@
-<h1>Project Show View</h1>
+<h1><%=t('admin.projects.show.title')%></h1>
 
-<%= link_to 'Edit', edit_admin_project_path(@project), :class => 'button radius tiny secondary' %>
-<%= link_to 'Back', edit_admin_location_path(:id => @project.location_id), :class => 'button radius tiny ' %>
-<%= link_to 'Add Photos', new_admin_photo_path(:album_id => @project.id, :project => true), :class => 'button radius tiny success' %>
+<%= link_to t('admin.buttons.edit'), edit_admin_project_path(@project), :class => 'button radius tiny secondary' %>
+<%= link_to t('admin.buttons.back'), edit_admin_location_path(:id => @project.location_id), :class => 'button radius tiny ' %>
+<%= link_to t('admin.buttons.add_photo'), new_admin_photo_path(:album_id => @project.id, :project => true), :class => 'button radius tiny success' %>
 
 <p>
-  <strong>Image:</strong>
+  <strong><%=t('activerecord.attributes.albums.main_image')%>:</strong>
   <%= image_tag @project.main_image(:medium) %>
 </p>
 
 <ul class="tabs" data-tab>
-  <li class="tab-title active"><a href="#panel1">Francais</a></li>
-  <li class="tab-title"><a href="#panel2">Anglais</a></li>
+  <li class="tab-title active"><a href="#panel1"><%=t('admin.language.fr')%></a></li>
+  <li class="tab-title"><a href="#panel2"><%=t('admin.language.en')%></a></li>
 </ul>
 
 <div class="tabs-content">
@@ -20,7 +20,7 @@
 
     <table>
       <tr>
-        <td class="cell1"><strong>Name_fr:</strong></td>
+        <td class="cell1"><strong><%=t('activerecord.attributes.albums.name_fr')%>:</strong></td>
         <td class="cell2"><%= @project.name_fr %></td>
       </tr>
       <tr>
@@ -31,7 +31,7 @@
         </td>
       </tr>
       <tr>
-        <td class="cell1"><strong>Description_fr:</strong></td>
+        <td class="cell1"><strong><%=t('activerecord.attributes.albums.description_fr')%>:</strong></td>
         <td class="cell2"><%= @project.description_fr %></td>
       </tr>
     </table>
@@ -42,7 +42,7 @@
 
     <table>
       <tr>
-        <td class="cell1"><strong>Name_en:</strong></td>
+        <td class="cell1"><strong><%=t('activerecord.attributes.albums.name_en')%>:</strong></td>
         <td class="cell2"><%= @project.name_en %></td>
       </tr>
       <tr>
@@ -53,7 +53,7 @@
         </td>
       </tr>
       <tr>
-        <td class="cell1"><strong>Description_en:</strong></td>
+        <td class="cell1"><strong><%=t('activerecord.attributes.albums.description_en')%>:</strong></td>
         <td class="cell2"><%= @project.description_en %></td>
       </tr>
     </table>
@@ -62,6 +62,6 @@
 
 </div>
 
-<%= link_to 'Edit', edit_admin_project_path(@project), :class => 'button radius tiny secondary' %>
-<%= link_to 'Back', edit_admin_location_path(:id => @project.location_id), :class => 'button radius tiny ' %>
-<%= link_to 'Add Photos', new_admin_photo_path(:album_id => @project.id, :project => true), :class => 'button radius tiny success' %>
+<%= link_to t('admin.buttons.edit'), edit_admin_project_path(@project), :class => 'button radius tiny secondary' %>
+<%= link_to t('admin.buttons.back'), edit_admin_location_path(:id => @project.location_id), :class => 'button radius tiny ' %>
+<%= link_to t('admin.buttons.add_photo'), new_admin_photo_path(:album_id => @project.id, :project => true), :class => 'button radius tiny success' %>
