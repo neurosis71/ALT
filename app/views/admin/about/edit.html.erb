@@ -1,7 +1,7 @@
-<h1>About Edit</h1>
+<h1><%=t('admin.about.edit.title')%></h1>
 
-<%= link_to 'Back', admin_about_path(@about), :class => 'button radius tiny' %>
+<%= link_to t('admin.buttons.back'), admin_about_path(@about), :class => 'button radius tiny' %>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', admin_about_path(@about), :class => 'button radius tiny' %>
+<%= link_to t('admin.buttons.back'), admin_about_path(@about), :class => 'button radius tiny' %>
