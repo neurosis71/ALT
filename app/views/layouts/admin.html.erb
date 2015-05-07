@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ALT</title>
+  <title><%=t('admin.layout.title')%></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "vendor/modernizr" %>
@@ -15,7 +15,7 @@
   <div class="row">
     <%= image_tag "admin/logo.png", :class => 'admin_logo no-border' %>
     <%= render 'shared/adminnav' %>
-    <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+    <%= link_to t('admin.layout.session.logout'), destroy_user_session_path, method: :delete %>
   </div>
 </div>
 
