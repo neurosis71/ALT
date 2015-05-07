@@ -116,6 +116,8 @@ en:
         title:            "Photos"
 
     projects:
+      index:
+        title:            "Projects"
       new:
         title:            "Project - New"
       show:

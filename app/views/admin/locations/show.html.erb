@@ -1,17 +1,17 @@
-<h1>Location Show View</h1>
+<h1><%=t('admin.locations.show.title')%></h1>
 
-<%= link_to 'Edit', edit_admin_location_path(@location), :class => 'button radius tiny secondary' %>
-<%= link_to 'Back', admin_locations_path, :class => 'button radius tiny ' %>
+<%= link_to t('admin.buttons.edit'), edit_admin_location_path(@location), :class => 'button radius tiny secondary' %>
+<%= link_to t('admin.buttons.back'), admin_locations_path, :class => 'button radius tiny ' %>
 
 
 <p>
-  <strong>Image:</strong>
+  <strong><%=t('activerecord.attributes.locations.main_image')%>:</strong>
   <%= image_tag @location.main_image(:medium) %>
 </p>
 
 <ul class="tabs" data-tab>
-  <li class="tab-title active"><a href="#panel1">Francais</a></li>
-  <li class="tab-title"><a href="#panel2">Anglais</a></li>
+  <li class="tab-title active"><a href="#panel1"><%=t('admin.language.fr')%></a></li>
+  <li class="tab-title"><a href="#panel2"><%=t('admin.language.en')%></a></li>
 </ul>
 
 <div class="tabs-content">
@@ -20,11 +20,11 @@
 
     <table>
       <tr>
-        <td class="cell1"><strong>Name_fr:</strong></td>
+        <td class="cell1"><strong><%=t('activerecord.attributes.locations.name_fr')%>:</strong></td>
         <td class="cell2"><%= @location.name_fr %></td>
       </tr>
       <tr>
-        <td class="cell1"><strong>Description_fr:</strong></td>
+        <td class="cell1"><strong><%=t('activerecord.attributes.locations.description_fr')%>:</strong></td>
         <td class="cell2"><%= @location.description_fr %></td>
       </tr>
     </table>
@@ -35,11 +35,11 @@
 
     <table>
       <tr>
-        <td class="cell1"><strong>Name_en:</strong></td>
+        <td class="cell1"><strong><%=t('activerecord.attributes.locations.name_en')%>:</strong></td>
         <td class="cell2"><%= @location.name_en %></td>
       </tr>
       <tr>
-        <td class="cell1"><strong>Description_en:</strong></td>
+        <td class="cell1"><strong><%=t('activerecord.attributes.locations.description_en')%>:</strong></td>
         <td class="cell2"><%= @location.description_en %></td>
       </tr>
     </table>
@@ -48,19 +48,19 @@
 
 </div>
 
-<%= link_to 'Edit', edit_admin_location_path(@location), :class => 'button radius tiny secondary' %>
-<%= link_to 'Back', admin_locations_path, :class => 'button radius tiny ' %>
+<%= link_to t('admin.buttons.edit'), edit_admin_location_path(@location), :class => 'button radius tiny secondary' %>
+<%= link_to t('admin.buttons.back'), admin_locations_path, :class => 'button radius tiny ' %>
 
 <div class="projects">
-  <h1>Projects List</h1>
+  <h1><%=t('admin.projects.index.title')%></h1>
 
-  <%= link_to 'New', new_admin_project_path(:location_id => @location.id), :class => 'button radius tiny success' %>
+  <%= link_to t('admin.buttons.new'), new_admin_project_path(:location_id => @location.id), :class => 'button radius tiny success' %>
 
   <table class="small-12 columns">
     <thead>
     <tr>
-      <th>Name fr</th>
-      <th>Name en</th>
+      <th><%=t('activerecord.attributes.albums.name_fr')%></th>
+      <th><%=t('activerecord.attributes.albums.name_en')%></th>
       <th></th>
       <th></th>
       <th></th>
@@ -72,9 +72,9 @@
         <tr>
           <td><%= project.name_fr %></td>
           <td><%= project.name_en %></td>
-          <td><%= link_to 'Show', admin_project_path(project), :class => 'button radius tiny info' %></td>
-          <td><%= link_to 'Edit', edit_admin_project_path(project), :class => 'button radius tiny secondary' %></td>
-          <td><%= link_to 'Delete', admin_project_delete_path(project), :class => 'button radius tiny alert' %></td>
+          <td><%= link_to t('admin.buttons.show'), admin_project_path(project), :class => 'button radius tiny info' %></td>
+          <td><%= link_to t('admin.buttons.edit'), edit_admin_project_path(project), :class => 'button radius tiny secondary' %></td>
+          <td><%= link_to t('admin.buttons.delete'), admin_project_delete_path(project), :class => 'button radius tiny alert' %></td>
         </tr>
     <% end %>
     </tbody>
