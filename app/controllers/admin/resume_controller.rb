@@ -9,8 +9,4 @@ class Admin::ResumeController < ApplicationController
     @skills = Skill.all
   end
 
-  def show
-
-  end
-
 end
