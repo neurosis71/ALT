@@ -1,23 +1,166 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+
+  activerecord:
+    attributes:
+      abouts:
+        about_fr:         "A propos"
+        about_en:         "About"
+        career_fr:        "Carrière"
+        career_en:        "Career"
+        interests_fr:     "Interêts"
+        interests_en :   "Interests"
+
+      albums:
+        name_fr:          "Nom"
+        name_en:          "Name"
+        description_fr:   "Description"
+        description_en:   "Description"
+        main_image:       "Image"
+
+      cursus:
+        date:             "Date"
+        school:           "Ecole"
+        location_fr:      "Ville"
+        location_en:      "City"
+        description_fr:   "Description"
+        description_en:   "Description"
+
+      locations:
+        name_fr:          "Nom"
+        name_en:          "Name"
+        description_fr:   "Description"
+        description_en:   "Description"
+        main_image:       "Image"
+
+      professional_experiences:
+        date:             "Date"
+        company:          "Entreprise"
+        location_fr:      "Ville"
+        location_en:      "City"
+        description_fr:   "Description"
+        description_en:   "Description"
+
+      skills:
+        description_fr:   "Description"
+        description_en:   "Description"
+
+#####################################
+
+  admin:
+    layout:
+      title:              "A.L.T. Administration"
+      nav:
+        about:            "About"
+        resume:           "Resume"
+        book:             "Book"
+        albums:           "Albums"
+      session:
+        logout:           "Sign out"
+
+    forms:
+      message:
+        error:            "errors happened"
+
+    about:
+      show:
+        title:            "About"
+      edit:
+         title:           "About - Edit"
+
+    albums:
+      index:
+        title:            "Albums"
+      new:
+        title:            "Albums - New"
+      show:
+        title:            "Album"
+      edit:
+        title:            "Album - Edit"
+      delete:
+        title:            "Album - Delete"
+
+    cursus:
+      new:
+        title:            "Cursus - New"
+      show:
+        title:            "Cursus"
+      edit:
+        title:            "Cursus - Edit"
+      delete:
+        title:            "Cursus - Delete"
+
+    experience:
+      new:
+        title:            "Professional Experience - New"
+      show:
+        title:            "Professional Experience"
+      edit:
+        title:            "Professional Experience - Edit"
+      delete:
+        title:            "Professional Experience - Delete"
+
+    locations:
+      index:
+        title:            "Locations"
+      new:
+        title:            "Location - New"
+      show:
+        title:            "Location"
+      edit:
+        title:            "Location - Edit"
+      delete:
+        title:            "Location - Delete"
+
+    photo:
+      new:
+        title:            "Photos"
+
+    projects:
+      new:
+        title:            "Project - New"
+      show:
+        title:            "Project"
+      edit:
+        title:            "Project - Edit"
+      delete:
+        title:            "Project - Delete"
+
+    resume:
+      index:
+        title:            "Resume"
+
+    skills:
+      new:
+        title:            "Skill - New"
+      show:
+        title:            "Skill"
+      edit:
+        title:            "Skill - Edit"
+      delete:
+        title:            "Skill - Delete"
+
+
+    buttons:
+      new:                "New"
+      show:               "Show"
+      edit:               "Edit"
+      delete:             "Delete"
+      back:               "Back"
+      save:               "Save"
+      add_photo:          "Add photos"
+
+    language:
+      fr:                 "French"
+      en:                 "English"
+
+#########################################
+
+  app:
+    layout:
+      title:              "A.L.T."
+
+      nav:
+        about:            "About"
+        resume:           "Resume"
+        book:             "Book"
+        albums:           "Photos"

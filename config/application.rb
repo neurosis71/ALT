@@ -22,5 +22,10 @@ module ALT
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    #internationalization
+    I18n.available_locales = [:en, :fr]
+    config.i18n.default_locale = :fr
+    config.time_zone = 'Paris'
   end
 end

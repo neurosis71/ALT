@@ -1,0 +1,167 @@
+---
+fr:
+  activerecord:
+      attributes:
+        about:
+          about_fr:         "A propos"
+          about_en:         "About"
+          career_fr:        "Carrière"
+          career_en:        "Career"
+          interests_fr:     "Interêts"
+          interests_en :   "Interests"
+
+        albums:
+          name_fr:          "Nom"
+          name_en:          "Name"
+          description_fr:   "Description"
+          description_en:   "Description"
+          main_image:       "Image"
+
+        cursus:
+          date:             "Date"
+          school:           "Ecole"
+          location_fr:      "Ville"
+          location_en:      "City"
+          description_fr:   "Description"
+          description_en:   "Description"
+
+        locations:
+          name_fr:          "Nom"
+          name_en:          "Name"
+          description_fr:   "Description"
+          description_en:   "Description"
+          main_image:       "Image"
+
+        professional_experiences:
+          date:             "Date"
+          company:          "Entreprise"
+          location_fr:      "Ville"
+          location_en:      "City"
+          description_fr:   "Description"
+          description_en:   "Description"
+
+        skills:
+          description_fr:   "Description"
+          description_en:   "Description"
+
+  #####################################
+
+  admin:
+    layout:
+      title:              "A.L.T. Administration"
+      nav:
+        about:            "A propos"
+        resume:           "CV"
+        book:             "Book"
+        albums:           "Albums"
+      session:
+        logout:           "Déconnexion"
+
+    forms:
+      message:
+        error:            "erreurs sont apparues"
+
+
+    about:
+      show:
+        title:            "A Propos"
+      edit:
+         title:           "A propos - Edition"
+
+    albums:
+      index:
+        title:            "Albums"
+      new:
+        title:            "Albums - Nouveau"
+      show:
+        title:            "Album"
+      edit:
+        title:            "Album - Edition"
+      delete:
+        title:            "Album - Suppression"
+
+    cursus:
+      new:
+        title:            "Cursus Scolaire - Nouveau"
+      show:
+        title:            "Cursus Scolaire"
+      edit:
+        title:            "Cursus Scolaire - Edition"
+      delete:
+        title:            "Cursus Scolaire - Suppression"
+
+    experience:
+      new:
+        title:            "Expérience Professionelle - Nouveau"
+      show:
+        title:            "Expérience Professionelle"
+      edit:
+        title:            "Expérience Professionelle - Edition"
+      delete:
+        title:            "Expérience Professionelle - Suppression"
+
+    locations:
+      index:
+        title:            "Lieux"
+      new:
+        title:            "Lieu - Nouveau"
+      show:
+        title:            "Lieu"
+      edit:
+        title:            "Lieu - Edition"
+      delete:
+        title:            "Lieu - Suppression"
+
+    photo:
+      new:
+        title:            "Photos"
+
+    projects:
+      new:
+        title:            "Projet - Nouveau"
+      show:
+        title:            "Projet"
+      edit:
+        title:            "Projet - Edition"
+      delete:
+        title:            "Projet - Suppression"
+
+    resume:
+      index:
+        title:            "CV"
+
+    skills:
+      new:
+        title:            "Compétence - Nouveau"
+      show:
+        title:            "Compétence"
+      edit:
+        title:            "Compétence - Edition"
+      delete:
+        title:            "Compétence - Suppression"
+
+
+    buttons:
+      new:                "Créer"
+      show:               "Afficher"
+      edit:               "Editer"
+      delete:             "Supprimer"
+      back:               "Retour"
+      save:               "Sauvegarder"
+      add_photo:          "Ajouter des photos"
+
+    language:
+      fr:                 "Français"
+      en:                 "Anglais"
+
+#########################################
+
+  app:
+    layout:
+      title:              "A.L.T."
+
+      nav:
+        about:            "A propos"
+        resume:           "CV"
+        book:             "Book"
+        albums:           "Photos"
