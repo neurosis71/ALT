@@ -1,8 +1,8 @@
-<h1>Edit Album View</h1>
+<h1><%=t('admin.albums.edit.title')%></h1>
 
 <% if @album.errors.any? %>
     <div class="error_explanation small-8 small-centered columns">
-      <h6><%= pluralize(@album.errors.count, "erreur") %> sont apparues :</h6>
+      <h6><%= @album.errors.count %> <%=t('admin.forms.message.error')%> :</h6>
 
       <ul>
         <% @album.errors.full_messages.each do |msg| %>
@@ -15,13 +15,13 @@
 <%= form_for(@album, url: admin_album_path) do |f| %>
 
     <div class="main_image">
-      <%= f.label :main_image%>
+      <%= f.label t('activerecord.attributes.albums.main_image')%>
       <%= f.file_field :main_image %>
     </div>
 
     <ul class="tabs" data-tab>
-      <li class="tab-title active"><a href="#panel1">Francais</a></li>
-      <li class="tab-title"><a href="#panel2">Anglais</a></li>
+      <li class="tab-title active"><a href="#panel1"><%=t('admin.language.fr')%></a></li>
+      <li class="tab-title"><a href="#panel2"><%=t('admin.language.en')%></a></li>
     </ul>
 
     <div class="tabs-content">
@@ -29,7 +29,7 @@
       <div class="content contained active" id="panel1">
 
         <table>
-          <tr><td class="cell1"><%= f.label :name_fr%></td>
+          <tr><td class="cell1"><%= f.label t('activerecord.attributes.albums.name_fr')%></td>
             <td class="cell2"><%= f.text_field :name_fr %></td>
           </tr>
           <tr>
@@ -40,7 +40,7 @@
             </td>
           </tr>
           <tr>
-            <td class="cell1"><%= f.label :description_fr%></td>
+            <td class="cell1"><%= f.label t('activerecord.attributes.albums.description_fr')%></td>
             <td class="cell2"><%= f.text_area :description_fr, :class => 'ckeditor' %></td>
           </tr>
         </table>
@@ -51,7 +51,7 @@
 
         <table>
           <tr>
-            <td class="cell1"><%= f.label :name_en%></td>
+            <td class="cell1"><%= f.label t('activerecord.attributes.albums.name_en')%></td>
             <td class="cell2"><%= f.text_field :name_en%></td>
           </tr>
           <tr>
@@ -62,7 +62,7 @@
             </td>
           </tr>
           <tr>
-            <td class="cell1"><%= f.label :description_en%></td>
+            <td class="cell1"><%= f.label t('activerecord.attributes.albums.description_en')%></td>
             <td class="cell2"><%= f.text_area :description_en, :class => 'ckeditor' %></td>
           </tr>
         </table>
@@ -72,6 +72,6 @@
     </div>
 
     <div class="submit">
-      <%= f.submit :class => 'button radius tiny info' %>
+      <%= f.submit t('admin.buttons.save') ,:class => 'button radius tiny info' %>
     </div>
 <% end %>

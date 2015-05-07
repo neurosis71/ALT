@@ -72,7 +72,7 @@ fr:
       index:
         title:            "Albums"
       new:
-        title:            "Albums - Nouveau"
+        title:            "Album - Nouveau"
       show:
         title:            "Album"
       edit:
@@ -81,6 +81,8 @@ fr:
         title:            "Album - Suppression"
 
     cursus:
+      index:
+        title:            "Cursus Scolaire"
       new:
         title:            "Cursus Scolaire - Nouveau"
       show:
@@ -91,6 +93,8 @@ fr:
         title:            "Cursus Scolaire - Suppression"
 
     experience:
+      index:
+        title:            "Expériences Professionelles"
       new:
         title:            "Expérience Professionelle - Nouveau"
       show:
@@ -133,6 +137,8 @@ fr:
         title:            "CV"
 
     skills:
+      index:
+        title:            "Compétences"
       new:
         title:            "Compétence - Nouveau"
       show:

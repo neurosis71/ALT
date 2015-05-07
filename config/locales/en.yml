@@ -71,7 +71,7 @@ en:
       index:
         title:            "Albums"
       new:
-        title:            "Albums - New"
+        title:            "Album - New"
       show:
         title:            "Album"
       edit:
