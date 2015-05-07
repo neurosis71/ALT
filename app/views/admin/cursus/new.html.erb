@@ -1,8 +1,8 @@
-<h1>New cursus entry</h1>
+<h1><%=t('admin.cursus.new.title')%></h1>
 
 <% if @cursu.errors.any? %>
     <div class="error_explanation small-8 small-centered columns">
-      <h6><%= pluralize(@cursu.errors.count, "erreur") %> sont apparues :</h6>
+      <h6><%= @cursu.errors.count %> <%=t('admin.forms.message.error')%> :</h6>
 
       <ul>
         <% @cursu.errors.full_messages.each do |msg| %>
@@ -15,18 +15,18 @@
 <%= form_for(@cursu, url: admin_cursus_path) do |f| %>
 
     <div class="date">
-      <%= f.label :date%>
+      <%= f.label t('activerecord.attributes.cursus.date')%>
       <%= f.text_field :date, :class => 'datepicker' %>
     </div>
 
     <div class="school">
-      <%= f.label :school%>
+      <%= f.label t('activerecord.attributes.cursus.school')%>
       <%= f.text_field :school %>
     </div>
 
     <ul class="tabs" data-tab>
-      <li class="tab-title active"><a href="#panel1">Francais</a></li>
-      <li class="tab-title"><a href="#panel2">Anglais</a></li>
+      <li class="tab-title active"><a href="#panel1"><%=t('admin.language.fr')%></a></li>
+      <li class="tab-title"><a href="#panel2"><%=t('admin.language.en')%></a></li>
     </ul>
 
     <div class="tabs-content">
@@ -35,7 +35,7 @@
 
         <table>
           <tr>
-            <td><%= f.label :location_fr%></td>
+            <td><%= f.label t('activerecord.attributes.cursus.location_fr')%></td>
             <td><%= f.text_field :location_fr %></td>
           </tr>
 
@@ -48,7 +48,7 @@
           </tr>
 
           <tr>
-            <td><%= f.label :description_fr%></td>
+            <td><%= f.label t('activerecord.attributes.cursus.description_fr')%></td>
             <td><%= f.text_area :description_fr, :class => 'ckeditor' %></td>
           </tr>
         </table>
@@ -59,7 +59,7 @@
 
         <table>
           <tr>
-            <td><%= f.label :location_en%></td>
+            <td><%= f.label t('activerecord.attributes.cursus.location_en')%></td>
             <td><%= f.text_field :location_en%></td>
           </tr>
 
@@ -72,7 +72,7 @@
           </tr>
 
           <tr>
-            <td><%= f.label :description_en%></td>
+            <td><%= f.label t('activerecord.attributes.cursus.description_en')%></td>
             <td><%= f.text_area :description_en, :class => 'ckeditor' %></td>
           </tr>
         </table>
@@ -82,6 +82,6 @@
     </div>
 
     <div class="submit">
-      <%= f.submit :class => 'button radius tiny info' %>
+      <%= f.submit t('admin.buttons.save'), :class => 'button radius tiny info' %>
     </div>
 <% end %>

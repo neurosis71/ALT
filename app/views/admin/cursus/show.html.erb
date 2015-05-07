@@ -1,21 +1,21 @@
-<h1>Cursus Show View</h1>
+<h1><%=t('admin.cursus.show.title')%></h1>
 
-<%= link_to 'Edit', edit_admin_cursu_path(@cursu), :class => 'button radius tiny secondary' %>
-<%= link_to 'Back', admin_resume_index_path, :class => 'button radius tiny ' %>
+<%= link_to t('admin.buttons.edit'), edit_admin_cursu_path(@cursu), :class => 'button radius tiny secondary' %>
+<%= link_to t('admin.buttons.back'), admin_resume_index_path, :class => 'button radius tiny ' %>
 
 <p>
-  <strong>Date:</strong>
+  <strong><%=t('activerecord.attributes.cursus.date')%>:</strong>
   <%= @cursu.date %>
 </p>
 
 <p>
-  <strong>School:</strong>
+  <strong><%=t('activerecord.attributes.cursus.school')%>:</strong>
   <%= @cursu.school.html_safe %>
 </p>
 
 <ul class="tabs" data-tab>
-  <li class="tab-title active"><a href="#panel1">Francais</a></li>
-  <li class="tab-title"><a href="#panel2">Anglais</a></li>
+  <li class="tab-title active"><a href="#panel1"><%=t('admin.language.fr')%></a></li>
+  <li class="tab-title"><a href="#panel2"><%=t('admin.language.en')%></a></li>
 </ul>
 
 <div class="tabs-content">
@@ -24,7 +24,7 @@
 
     <table>
       <tr>
-        <td><strong>Location_fr:</strong></td>
+        <td><strong><%=t('activerecord.attributes.cursus.location_fr')%>:</strong></td>
         <td><%= @cursu.location_fr.html_safe %></td>
       </tr>
 
@@ -37,7 +37,7 @@
       </tr>
 
       <tr>
-        <td><strong>Description_fr:</strong></td>
+        <td><strong><%=t('activerecord.attributes.cursus.description_fr')%>:</strong></td>
         <td><%= @cursu.description_fr.html_safe %></td>
       </tr>
     </table>
@@ -48,7 +48,7 @@
 
     <table>
       <tr>
-        <td> <strong>Location_en:</strong></td>
+        <td> <strong><%=t('activerecord.attributes.cursus.location_en')%>:</strong></td>
         <td><%= @cursu.location_en.html_safe %></td>
       </tr>
 
@@ -61,7 +61,7 @@
       </tr>
 
       <tr>
-        <td><strong>Description_en:</strong></td>
+        <td><strong><%=t('activerecord.attributes.cursus.description_en')%>:</strong></td>
         <td><%= @cursu.description_en.html_safe %></td>
       </tr>
     </table>
@@ -70,5 +70,5 @@
 
 </div>
 
-<%= link_to 'Edit', edit_admin_cursu_path(@cursu), :class => 'button radius tiny secondary' %>
-<%= link_to 'Back', admin_resume_index_path, :class => 'button radius tiny ' %>
+<%= link_to t('admin.buttons.edit'), edit_admin_cursu_path(@cursu), :class => 'button radius tiny secondary' %>
+<%= link_to t('admin.buttons.back'), admin_resume_index_path, :class => 'button radius tiny ' %>
