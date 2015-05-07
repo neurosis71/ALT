@@ -1,23 +1,23 @@
-<h1>Experience Delete View</h1>
+<h1><%=t('admin.experience.delete.title')%></h1>
 
 
-<%= link_to 'Delete', admin_experience_destroy_path(:id => @experience.id), :class => 'button radius tiny alert' %>
-<%= link_to 'Edit', edit_admin_experience_path(@experience), :class => 'button radius tiny secondary' %>
-<%= link_to 'Back', admin_resume_index_path, :class => 'button radius tiny'  %>
+<%= link_to t('admin.buttons.delete'), admin_experience_destroy_path(:id => @experience.id), :class => 'button radius tiny alert' %>
+<%= link_to t('admin.buttons.edit'), edit_admin_experience_path(@experience), :class => 'button radius tiny secondary' %>
+<%= link_to t('admin.buttons.back'), admin_resume_index_path, :class => 'button radius tiny'  %>
 
 <p>
-  <strong>Date:</strong>
+  <strong><%=t('activerecord.attributes.professional_experiences.date')%>:</strong>
   <%= @experience.date %>
 </p>
 
 <p>
-  <strong>Company:</strong>
+  <strong><%=t('activerecord.attributes.professional_experiences.company')%>:</strong>
   <%= @experience.company.html_safe %>
 </p>
 
 <ul class="tabs" data-tab>
-  <li class="tab-title active"><a href="#panel1">Francais</a></li>
-  <li class="tab-title"><a href="#panel2">Anglais</a></li>
+  <li class="tab-title active"><a href="#panel1"><%=t('admin.language.fr')%></a></li>
+  <li class="tab-title"><a href="#panel2"><%=t('admin.language.en')%></a></li>
 </ul>
 
 <div class="tabs-content">
@@ -26,7 +26,7 @@
 
     <table>
       <tr>
-        <td class="cell1"><strong>Location_fr:</strong></td>
+        <td class="cell1"><strong><%=t('activerecord.attributes.professional_experiences.location_fr')%>:</strong></td>
         <td class="cell2"><%= @experience.location_fr.html_safe %></td>
       </tr>
       <tr>
@@ -37,7 +37,7 @@
         </td>
       </tr>
       <tr>
-        <td class="cell1"><strong>Description_fr:</strong></td>
+        <td class="cell1"><strong><%=t('activerecord.attributes.professional_experiences.description_fr')%>:</strong></td>
         <td class="cell2"><%= @experience.description_fr.html_safe %></td>
       </tr>
     </table>
@@ -48,7 +48,7 @@
 
     <table>
       <tr>
-        <td class="cell1"><strong>Location_en:</strong></td>
+        <td class="cell1"><strong><%=t('activerecord.attributes.professional_experiences.location_en')%>:</strong></td>
         <td class="cell2"><%= @experience.location_en.html_safe %></td>
       </tr>
       <tr>
@@ -59,7 +59,7 @@
         </td>
       </tr>
       <tr>
-        <td class="cell1"><strong>Description_en:</strong></td>
+        <td class="cell1"><strong><%=t('activerecord.attributes.professional_experiences.description_en')%>:</strong></td>
         <td class="cell2"><%= @experience.description_en.html_safe %></td>
       </tr>
     </table>
@@ -68,6 +68,6 @@
 
 
 
-  <%= link_to 'Delete', admin_experience_destroy_path(:id => @experience.id), :class => 'button radius tiny alert' %>
-<%= link_to 'Edit', edit_admin_experience_path(@experience), :class => 'button radius tiny secondary' %>
-<%= link_to 'Back', admin_resume_index_path, :class => 'button radius tiny'  %>
+  <%= link_to t('admin.buttons.delete'), admin_experience_destroy_path(:id => @experience.id), :class => 'button radius tiny alert' %>
+<%= link_to t('admin.buttons.edit'), edit_admin_experience_path(@experience), :class => 'button radius tiny secondary' %>
+<%= link_to t('admin.buttons.back'), admin_resume_index_path, :class => 'button radius tiny'  %>
