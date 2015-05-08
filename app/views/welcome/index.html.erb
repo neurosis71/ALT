@@ -1,2 +1,31 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="row">
+  <div class="home-logo">
+    <%= image_tag "admin/logo.png", :class => 'no-border' %>
+  </div>
+</div>
+
+<div class="home-title row">
+
+  <div class="home-name">
+    Audrey Lepers-Tassy
+  </div>
+
+  <div class="separator">
+    <div class="mask-small"></div>
+  </div>
+
+  <div class="profession">
+    Architecte diplomee d'etat - HMONP
+  </div>
+</div>
+
+<div class="link-list row">
+  <%= link_to t('app.layout.nav.about'), controller: "about", action: "index" %>
+  <%= link_to t('app.layout.nav.book'), controller: "book", action: "index" %>
+  <%= link_to t('app.layout.nav.resume'), controller: "resume", action: "index" %>
+  <%= link_to t('app.layout.nav.photos'), controller: "photos", action: "index" %>
+</div>
+
+<div class="language-select row">
+Francais - English
+</div>

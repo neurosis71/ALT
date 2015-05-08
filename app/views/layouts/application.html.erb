@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= t('app.layout.title') %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -14,6 +14,13 @@
 
   <body>
 
+    <div class="app_header">
+        <div class="row">
+          <%= render 'shared/appnav' %>
+        </div>
+    </div>
+
+    <div class="app-body">
       <div class="row">
         <div class="small-12 small-centered columns">
           <% flash.each do |key, value| %>
@@ -22,6 +29,8 @@
           <%= yield %>
         </div>
       </div>
+    </div>
+
 
   </body>
 </html>

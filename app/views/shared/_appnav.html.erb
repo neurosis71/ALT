@@ -1,0 +1,16 @@
+<div class="app_nav small-12 small-centered columns">
+  <%= image_tag "admin/logo.png", :class => 'admin_logo no-border' %>
+
+  <%= link_to t('app.layout.nav.about'), controller: "about", action: "index" %>
+  <%= link_to t('app.layout.nav.book'), controller: "book", action: "index" %>
+  <%= link_to t('app.layout.nav.resume'), controller: "resume", action: "index" %>
+  <%= link_to t('app.layout.nav.photos'), controller: "photos", action: "index" %>
+
+  <div class="nav-right">
+    <a href="#" class="button tiny radius" data-dropdown="drop"><%=t('admin.language.lang')%> &raquo;</a>
+    <ul id="drop" class=" tiny f-dropdown" data-dropdown-content>
+      <li><%= link_to t('admin.language.fr'), change_locale_path(:fr) %></li>
+      <li><%= link_to t('admin.language.en'), change_locale_path(:en) %></li>
+    </ul>
+  </div>
+</div>
