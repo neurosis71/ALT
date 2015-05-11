@@ -15,7 +15,7 @@
   </div>
 
   <div class="profession">
-    Architecte diplomee d'etat - HMONP
+    <%=t('app.welcome.profession')%>
   </div>
 </div>
 
@@ -27,5 +27,5 @@
 </div>
 
 <div class="language-select row">
-Francais - English
+<%= link_to t('app.welcome.lang_fr'), change_locale_path(:fr)%> - <%= link_to t('app.welcome.lang_en'), change_locale_path(:en)%>
 </div>

@@ -1,0 +1,56 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home-logo{
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.home-logo > img{
+  width: 150px;
+  height: 150px;
+}
+
+.home-title{
+  text-align: center;
+}
+
+.home-name{
+  margin-top: 30px;
+}
+
+.profession{
+  margin-top: -10px;
+}
+
+.link-list{
+  text-align: center;
+}
+
+.language-select{
+  text-align: center;
+}
+
+
+//separator
+.separator {
+  padding: 10px;
+  position: relative;
+
+  .mask-small {
+    overflow: hidden;
+    height: 10px;
+    &:after {
+      content: '';
+      display: block;
+      margin: -13px auto 0;
+      width: 320px;
+      height: 13px;
+      border-radius: 125px / 12px;
+      box-shadow: 0 0 1px #000000;
+    }
+  }
+}
