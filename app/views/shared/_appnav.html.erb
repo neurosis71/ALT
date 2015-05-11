@@ -1,5 +1,5 @@
 <div class="app_nav small-12 small-centered columns">
-  <%= image_tag "admin/logo.png", :class => 'admin_logo no-border' %>
+  <%= image_tag "admin/logo.png", :class => 'app_logo no-border' %>
 
   <%= link_to t('app.layout.nav.about'), controller: "about", action: "index" %>
   <%= link_to t('app.layout.nav.book'), controller: "book", action: "index" %>
@@ -12,5 +12,9 @@
       <li><%= link_to t('admin.language.fr'), change_locale_path(:fr) %></li>
       <li><%= link_to t('admin.language.en'), change_locale_path(:en) %></li>
     </ul>
+  </div>
+
+  <div class="page-title small-5">
+    <span><%= @page_title %></span>
   </div>
 </div>

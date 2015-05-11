@@ -169,6 +169,18 @@ en:
         photos:           "Photos"
 
     welcome:
-          profession:         "Architecte diplomée d'état - HMONP"
-          lang_fr:            "Français"
-          lang_en:            "English"
+      profession:         "Architecte diplomée d'état - HMONP"
+      lang_fr:            "Français"
+      lang_en:            "English"
+
+    about:
+      title:              "About"
+
+    book:
+      title:              "Book"
+
+    resume:
+      title:              "Resume"
+
+    photos:
+      title:              "Photos"

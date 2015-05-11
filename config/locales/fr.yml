@@ -179,3 +179,15 @@ fr:
       profession:         "Architecte diplomée d'état - HMONP"
       lang_fr:            "Français"
       lang_en:            "English"
+
+    about:
+      title:              "A Propos"
+
+    book:
+      title:              "Book"
+
+    resume:
+      title:              "CV"
+
+    photos:
+      title:              "Photos"
