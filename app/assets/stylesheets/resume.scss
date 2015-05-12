@@ -1,3 +1,16 @@
 // Place all the styles related to the resume controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.resume-section{
+  margin-top: 20px;
+}
+
+.resume-section > span{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.resume-desc{
+  margin-left: 20px;
+}

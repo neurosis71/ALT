@@ -22,3 +22,6 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+//removes autoparagraph behavior for CKEditor (<p> tags not added automatically)
+CKEDITOR.config.autoParagraph = false;

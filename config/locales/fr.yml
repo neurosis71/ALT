@@ -191,6 +191,9 @@ fr:
 
     resume:
       title:              "CV"
+      cursus:             "Cursus Scolaire"
+      experience:         "Expériences Professionelles"
+      skills:             "Compétences"
 
     photos:
       title:              "Photos"

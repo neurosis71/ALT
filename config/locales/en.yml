@@ -184,6 +184,9 @@ en:
 
     resume:
       title:              "Resume"
+      cursus:             "Curriculum"
+      experience:         "Professional Experiences"
+      skills:             "Skills"
 
     photos:
       title:              "Photos"

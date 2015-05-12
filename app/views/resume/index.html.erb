@@ -1,2 +1,77 @@
-<h1>Resume#index</h1>
-<p>Find me in app/views/resume/index.html.erb</p>
+<div class="row">
+  <div class="small-12 small-centered columns resume-section">
+    <span><%=t('app.resume.cursus')%></span>
+    <% @cursus.each do |cursu|%>
+        <div>
+          <div>
+              <span><%=cursu.date%></span>
+              ///
+              <span><%=cursu.school.html_safe%></span>
+              -
+              <span>
+                  <% if @lang == :fr %> <!-- location language handling -->
+                      <%= cursu.location_fr ? cursu.location_fr.html_safe : '' %>
+                  <% else %>
+                      <%= cursu.location_en ? cursu.location_en.html_safe : '' %>
+                  <% end %>
+              </span>
+          </div>
+
+          <div class="resume-desc">
+            <% if @lang == :fr %> <!-- description language handling -->
+                <%= cursu.description_fr ? cursu.description_fr.html_safe : '' %>
+            <% else %>
+                <%= cursu.description_en ? cursu.description_en.html_safe : '' %>
+            <% end %>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 small-centered columns resume-section">
+    <span><%=t('app.resume.experience')%></span>
+    <% @professional_experiences.each do |exp|%>
+        <div>
+          <div>
+              <span><%=exp.date%></span>
+              ///
+              <span><%=exp.company.html_safe%></span>
+              -
+              <span>
+                  <% if @lang == :fr %> <!-- location language handling -->
+                    <%= exp.location_fr ? exp.location_fr.html_safe : '' %>
+                  <% else %>
+                      <%= exp.location_en ? exp.location_en.html_safe : '' %>
+                  <% end %>
+              </span>
+          </div>
+
+          <div class="resume-desc">
+            <% if @lang == :fr %> <!-- description language handling -->
+                <%= exp.description_fr ? exp.description_fr.html_safe : '' %>
+            <% else %>
+                <%= exp.description_en ? exp.description_en.html_safe : '' %>
+            <% end %>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 small-centered columns resume-section">
+    <span><%=t('app.resume.skills')%></span>
+    <% @skills.each do |skill|%>
+        <div>
+          <div>
+            <% if @lang == :fr %> <!-- description language handling -->
+                <%= skill.description_fr ? skill.description_fr.html_safe : '' %>
+            <% else %>
+                <%= skill.description_en ? skill.description_en.html_safe : '' %>
+            <% end %>
+          </div>
+        </div>
+    <% end %>
+  </div>
