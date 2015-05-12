@@ -147,6 +147,10 @@ img.no-border{
     width: 150px;
     float: left;
     margin-right: 20px;
+    z-index: 2;
+    position: relative;
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
 }
 
 .app_nav{
@@ -162,8 +166,17 @@ img.no-border{
     font-size: 45px;
     margin-top: 80px;
     text-align: left;
+    z-index: 3;
+    position: relative;
 }
 
 .page-title > span {
     margin-left: -80px;
+}
+
+
+/**************** Styling for app body *****************/
+
+.app-body{
+    margin-top: 30px;
 }

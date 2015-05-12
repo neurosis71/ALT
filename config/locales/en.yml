@@ -175,6 +175,9 @@ en:
 
     about:
       title:              "About"
+      about:              "About"
+      career:             "Career"
+      interests:          "Interests"
 
     book:
       title:              "Book"

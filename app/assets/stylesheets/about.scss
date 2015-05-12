@@ -1,3 +1,25 @@
 // Place all the styles related to the about controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.map-img{
+
+}
+
+.map-img > img{
+  width: 100%;
+  max-height: 400px;
+  margin-top: -140px;
+  z-index: 1;
+  position: relative;
+}
+
+.about-section{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about-section > span{
+  font-weight: bold;
+  font-size: 30px;
+}

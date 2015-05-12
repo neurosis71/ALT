@@ -182,6 +182,9 @@ fr:
 
     about:
       title:              "A Propos"
+      about:              "A Propos"
+      career:             "Parcours"
+      interests:          "Intérêts"
 
     book:
       title:              "Book"
