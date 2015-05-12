@@ -51,6 +51,9 @@ gem 'rails-i18n'
 #user localization for locales
 gem 'geocoder'
 
+#masonry for image display
+gem 'masonry-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
