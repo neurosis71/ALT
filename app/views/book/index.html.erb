@@ -1,2 +1,14 @@
-<h1>Book#index</h1>
-<p>Find me in app/views/book/index.html.erb</p>
+<div class="map-img row">
+  <%= image_tag 'book/map.jpg', class: 'no-border' %>
+</div>
+
+<% @locations.each do |loc|%>
+    <% I18n.locale == :fr ? title = loc.name_fr : title = loc.name_en %>
+    <div class="small-3 left">
+        <div class="circular no-border">
+          <%= link_to image_tag(loc.main_image(:medium), alt: title), :controller => 'locations', :action => 'show', :id => loc.id %>
+
+          <p class="loc-title"><%=title%></p>
+        </div>
+    </div>
+<% end %>
