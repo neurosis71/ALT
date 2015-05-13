@@ -186,3 +186,9 @@ img.no-border{
 .app-body{
     margin-top: 30px;
 }
+
+/*************** global *****************/
+.centered {
+    margin: 0 auto;
+    text-align: center;
+}

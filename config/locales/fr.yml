@@ -189,6 +189,9 @@ fr:
     book:
       title:              "Book"
 
+    projects:
+      desc:               "Description"
+
     resume:
       title:              "CV"
       cursus:             "Cursus Scolaire"

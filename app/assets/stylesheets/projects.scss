@@ -1,0 +1,20 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.project-img > img{
+  width: 100%;
+  max-height: 400px;
+}
+
+.project-desc  .small-12  .title{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.box-margin-bottom{
+  margin-bottom: 10px;
+}
