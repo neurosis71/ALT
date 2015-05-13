@@ -1,0 +1,22 @@
+<div class="row album-img">
+  <%= image_tag @album.main_image, class: 'no-border' %>
+</div>
+
+<div class="album-desc row">
+  <div class="small-12 small-centered columns">
+    <div class="title"><span><%=t("app.photos.desc")%></span></div>
+    <div class="desc-content"><%=@description.html_safe%></div>
+  </div>
+</div>
+
+
+<div class="centered">
+  <div id="masonry-container" class="transitions-enabled has-gutter small-11 small-centered inline">
+    <% @photos.each do |photo|%>
+        <div class="box col3 box-margin-bottom">
+          <%=image_tag(photo.image(:medium), class: 'no-border')%>
+        </div>
+    <% end %>
+  </div>
+</div>
+

@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'projects/show'
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -17,12 +15,15 @@ Rails.application.routes.draw do
   get 'about/index', to: 'about#index', as: :about
 
   get 'photos/index', to: 'photos#index', as: :photos
+  get 'photos/show', to: 'photos#show', as: :album
 
   get 'resume/index', to: 'resume#index', as: :resume
 
   get 'book/index', to: 'book#index', as: :book
 
   get 'locations/show', to: 'locations#show', as: :location
+
+  get 'projects/show'
 
   #admin routes
   namespace :admin do

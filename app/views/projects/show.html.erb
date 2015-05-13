@@ -10,10 +10,12 @@
 </div>
 
 
-<div id="masonry-container" class="transitions-enabled has-gutter centered">
-  <% @photos.each do |photo|%>
-      <div class="box col3 box-margin-bottom">
-        <%=image_tag(photo.image(:medium), class: 'no-border')%>
-      </div>
-  <% end %>
+<div class="centered">
+    <div id="masonry-container" class="transitions-enabled has-gutter small-11 small-centered inline">
+      <% @photos.each do |photo|%>
+          <div class="box col3 box-margin-bottom">
+            <%=image_tag(photo.image(:medium), class: 'no-border')%>
+          </div>
+      <% end %>
+    </div>
 </div>

@@ -1,3 +1,29 @@
 // Place all the styles related to the photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.box .alb-title{
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  font-size: 30px;
+  text-shadow: 0px 0px 2px #8E8E8E;
+  color: #ffffff;
+}
+
+.album-img > img{
+  width: 100%;
+  max-height: 400px;
+}
+
+.album-desc  .small-12  .title{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.box-margin-bottom{
+  margin-bottom: 10px;
+}

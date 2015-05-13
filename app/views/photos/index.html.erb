@@ -1,2 +1,11 @@
-<h1>Photos#index</h1>
-<p>Find me in app/views/photos/index.html.erb</p>
+<div id="masonry-container" class="transitions-enabled centered">
+  <% @albums.each do |alb|%>
+
+      <div class="box col3">
+        <% I18n.locale == :fr ? title = alb.name_fr : title = alb.name_en %>
+        <%= link_to image_tag(alb.main_image, alt: title), controller: "photos", action: "show", id: alb.id %>
+        <p class="alb-title"><%=title%></p>
+        <div class="overlay-container"><div class="overlay"></div></div>
+      </div>
+  <% end %>
+</div>
