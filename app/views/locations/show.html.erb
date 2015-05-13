@@ -1,0 +1,11 @@
+
+<div id="masonry-container" class="transitions-enabled has-gutters centered"></div>
+<% @projects.each do |project|%>
+
+    <div class="box col3">
+        <% I18n.locale == :fr ? title = project.name_fr : title = project.name_en %>
+        <%= link_to image_tag(project.main_image, alt: title), controller: "project", action: "show", id: project.id %>
+        <p class="project-title"><%=title%></p>
+        <div class="overlay-container"><div class="overlay"></div></div>
+    </div>
+<% end %>

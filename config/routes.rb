@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -21,6 +19,8 @@ Rails.application.routes.draw do
   get 'resume/index', to: 'resume#index', as: :resume
 
   get 'book/index', to: 'book#index', as: :book
+
+  get 'locations/show', to: 'locations#show', as: :location
 
   #admin routes
   namespace :admin do
