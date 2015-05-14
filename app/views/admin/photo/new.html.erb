@@ -27,11 +27,13 @@
 
 <% end %>
 
-<ul class="row" id="container">
+<div class="centered">
+  <div id="masonry-container" class="transitions-enabled small-11 small-centered inline">
   <% @photos.each do |t| %>
-     <div class="item"> <%= image_tag t.image(:medium) %> </div>
+     <div class="box col3"> <%= image_tag t.image(:medium) %> </div>
   <% end %>
-</ul>
+  </div>
+</div>
 
 <% if @project %>
     <%= link_to t('admin.buttons.back'), admin_project_path(:id => @album_id), :class => 'button radius tiny ' %>

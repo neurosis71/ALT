@@ -32,7 +32,7 @@ gem 'jquery-fileupload-rails'
 gem 'remotipart'
 
 #foundation
-gem 'foundation-rails', '~> 5.5.1.2'
+gem 'foundation-rails', '~> 5.5.2.1'
 
 #ckeditor wysiwyg
 gem 'ckeditor'

@@ -17,12 +17,15 @@
 //= require jquery.remotipart
 //= require jquery-ui/datepicker
 //= require masonry/masonry.min
-//= require foundation
 //= require ckeditor/init
 //= require turbolinks
 //= require_tree .
+//= require foundation
 
-$(function(){ $(document).foundation(); });
+//$(function(){ $(document).foundation(); });
+$(document).ready(function(){
+    $(document).foundation();
+});
 
 //removes autoparagraph behavior for CKEditor (<p> tags not added automatically)
 CKEDITOR.config.autoParagraph = false;
