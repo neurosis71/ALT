@@ -67,29 +67,29 @@
   <h1><%=t('admin.projects.index.title')%></h1>
 
   <%= link_to t('admin.buttons.new'), new_admin_project_path(:location_id => @location.id), :class => 'button radius tiny success' %>
-
-  <table class="small-12 columns">
-    <thead>
-    <tr>
-      <th><%=t('activerecord.attributes.albums.name_fr')%></th>
-      <th><%=t('activerecord.attributes.albums.name_en')%></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-    </thead>
-
-    <tbody>
-    <% @projects.each do |project| %>
+  <div class="table-container">
+      <table>
+        <thead>
         <tr>
-          <td><%= project.name_fr %></td>
-          <td><%= project.name_en %></td>
-          <td><%= link_to t('admin.buttons.show'), admin_project_path(project), :class => 'button radius tiny info' %></td>
-          <td><%= link_to t('admin.buttons.edit'), edit_admin_project_path(project), :class => 'button radius tiny secondary' %></td>
-          <td><%= link_to t('admin.buttons.delete'), admin_project_delete_path(project), :class => 'button radius tiny alert' %></td>
+          <th><%=t('activerecord.attributes.albums.name_fr')%></th>
+          <th><%=t('activerecord.attributes.albums.name_en')%></th>
+          <th></th>
+          <th></th>
+          <th></th>
         </tr>
-    <% end %>
-    </tbody>
-  </table>
+        </thead>
 
+        <tbody>
+        <% @projects.each do |project| %>
+            <tr>
+              <td><%= project.name_fr %></td>
+              <td><%= project.name_en %></td>
+              <td><%= link_to t('admin.buttons.show'), admin_project_path(project), :class => 'button radius tiny info' %></td>
+              <td><%= link_to t('admin.buttons.edit'), edit_admin_project_path(project), :class => 'button radius tiny secondary' %></td>
+              <td><%= link_to t('admin.buttons.delete'), admin_project_delete_path(project), :class => 'button radius tiny alert' %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
 </div>

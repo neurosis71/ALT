@@ -97,7 +97,7 @@ $include-html-global-classes: $include-html-classes;
 // $font-weight-normal: normal;
 // $font-weight-bold: bold;
 
-// $white       : #FFFFFF;
+ $white       : #FFFFFF;
 // $ghost       : #FAFAFA;
 // $snow        : #F9F9F9;
 // $vapor       : #F6F6F6;
@@ -116,6 +116,8 @@ $include-html-global-classes: $include-html-classes;
 // $oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
+$website-blue   : #64c7c4;
+$website-table-color : #E9F7F7;
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;
@@ -1273,8 +1275,8 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-table-classes: $include-html-classes;
 
 // These control the background color for the table and even rows
-// $table-bg: $white;
-// $table-even-row-bg: $snow;
+ $table-bg: $white;
+ $table-even-row-bg: $website-table-color;
 
 // These control the table cell border style
 // $table-border-style: solid;
@@ -1282,7 +1284,7 @@ $include-html-global-classes: $include-html-classes;
 // $table-border-color: $gainsboro;
 
 // These control the table head styles
-// $table-head-bg: $white-smoke;
+//$table-head-bg: $website-table-color;
 // $table-head-font-size: rem-calc(14);
 // $table-head-font-color: $jet;
 // $table-head-font-weight: $font-weight-bold;
