@@ -20,10 +20,14 @@
 
 .home-name{
   margin-top: 30px;
+  font-family: 'Lobster-ALT';
+  font-weight: 400;
+  font-size: 35px;
 }
 
 .profession{
   margin-top: -10px;
+  font-family: Caviar-ALT;
 }
 
 .link-list{
@@ -32,6 +36,8 @@
 
 .language-select{
   text-align: center;
+  font-family: Lobster-ALT;
+  font-size: 25px;
 }
 
 
@@ -47,7 +53,7 @@
       content: '';
       display: block;
       margin: -13px auto 0;
-      width: 320px;
+      width: 380px;
       height: 13px;
       border-radius: 125px / 12px;
       box-shadow: 0 0 1px #000000;

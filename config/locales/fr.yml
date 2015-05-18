@@ -8,7 +8,7 @@ fr:
           career_fr:        "Carrière"
           career_en:        "Career"
           interests_fr:     "Interêts"
-          interests_en :   "Interests"
+          interests_en :    "Interests"
 
         albums:
           name_fr:          "Nom"
@@ -176,15 +176,15 @@ fr:
         photos:           "Photos"
 
     welcome:
-      profession:         "Architecte diplomée d'état - HMONP"
+      profession:         "ARCHITECTE DIPLÔMÉE D'ÉTAT - HMONP"
       lang_fr:            "Français"
       lang_en:            "English"
 
     about:
       title:              "A Propos"
-      about:              "A Propos"
-      career:             "Parcours"
-      interests:          "Intérêts"
+      about:              "A PROPOS"
+      career:             "PARCOURS"
+      interests:          "INTÉRÊTS"
 
     book:
       title:              "Book"
