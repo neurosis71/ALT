@@ -4,46 +4,52 @@
 <%= link_to t('admin.buttons.edit'), edit_admin_location_path(@location), :class => 'button radius tiny secondary' %>
 <%= link_to t('admin.buttons.back'), admin_locations_path, :class => 'button radius tiny' %>
 
-<p>
-  <strong><%=t('activerecord.attributes.locations.main_image')%>:</strong>
-  <%= image_tag @location.main_image(:medium) %>
-</p>
 
-<ul class="tabs" data-tab>
-  <li class="tab-title active"><a href="#panel1"><%=t('admin.language.fr')%></a></li>
-  <li class="tab-title"><a href="#panel2"><%=t('admin.language.en')%></a></li>
-</ul>
+<div class="row">
 
-<div class="tabs-content">
+  <div class="infos small-9 columns">
+    <ul class="tabs" data-tab>
+      <li class="tab-title active"><a href="#panel1"><%=t('admin.language.fr')%></a></li>
+      <li class="tab-title"><a href="#panel2"><%=t('admin.language.en')%></a></li>
+    </ul>
 
-  <div class="content contained active" id="panel1">
+    <div class="tabs-content">
 
-    <table>
-      <tr>
-        <td class="cell1"><strong><%=t('activerecord.attributes.locations.name_fr')%>:</strong></td>
-        <td class="cell2"><%= @location.name_fr %></td>
-      </tr>
-      <tr>
-        <td class="cell1"><strong><%=t('activerecord.attributes.locations.description_fr')%>:</strong></td>
-        <td class="cell2"><%= @location.description_fr %></td>
-      </tr>
-    </table>
+      <div class="content contained active" id="panel1">
 
+        <table>
+          <tr>
+            <td class="cell1"><strong><%=t('activerecord.attributes.locations.name_fr')%>:</strong></td>
+            <td class="cell2"><%= @location.name_fr %></td>
+          </tr>
+          <tr>
+            <td class="cell1"><strong><%=t('activerecord.attributes.locations.description_fr')%>:</strong></td>
+            <td class="cell2"><%= @location.description_fr %></td>
+          </tr>
+        </table>
+
+      </div>
+
+      <div class="content contained" id="panel2">
+
+        <table>
+          <tr>
+            <td class="cell1"><strong><%=t('activerecord.attributes.locations.name_en')%>:</strong></td>
+            <td class="cell2"><%= @location.name_en %></td>
+          </tr>
+          <tr>
+            <td class="cell1"><strong><%=t('activerecord.attributes.locations.description_en')%>:</strong></td>
+            <td class="cell2"><%= @location.description_en %></td>
+          </tr>
+        </table>
+
+      </div>
+
+    </div>
   </div>
 
-  <div class="content contained" id="panel2">
-
-    <table>
-      <tr>
-        <td class="cell1"><strong><%=t('activerecord.attributes.locations.name_en')%>:</strong></td>
-        <td class="cell2"><%= @location.name_en %></td>
-      </tr>
-      <tr>
-        <td class="cell1"><strong><%=t('activerecord.attributes.locations.description_en')%>:</strong></td>
-        <td class="cell2"><%= @location.description_en %></td>
-      </tr>
-    </table>
-
+  <div class="info-image small-3 columns">
+    <%= image_tag @location.main_image(:medium) %>
   </div>
 
 </div>

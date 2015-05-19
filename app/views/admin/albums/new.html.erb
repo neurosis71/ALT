@@ -14,62 +14,70 @@
 
 <%= form_for(@album, url: admin_albums_path) do |f| %>
 
-    <div class="main_image">
-      <%= f.label t('activerecord.attributes.albums.main_image')%>
-      <%= f.file_field :main_image %>
-    </div>
 
-    <ul class="tabs" data-tab>
-      <li class="tab-title active"><a href="#panel1"><%=t('admin.language.fr')%></a></li>
-      <li class="tab-title"><a href="#panel2"><%=t('admin.language.en')%></a></li>
-    </ul>
+    <div class="row">
 
-    <div class="tabs-content">
+      <div class="infos small-9 columns">
+        <ul class="tabs" data-tab>
+          <li class="tab-title active"><a href="#panel1"><%=t('admin.language.fr')%></a></li>
+          <li class="tab-title"><a href="#panel2"><%=t('admin.language.en')%></a></li>
+        </ul>
 
-      <div class="content contained active" id="panel1">
+        <div class="tabs-content">
 
-        <table>
-          <tr><td class="cell1"><%= f.label t('activerecord.attributes.albums.name_fr')%></td>
-            <td class="cell2"><%= f.text_field :name_fr %></td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <div class="separator small-12 columns">
-                <div class="mask-small"></div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td class="cell1"><%= f.label t('activerecord.attributes.albums.description_fr')%></td>
-            <td class="cell2"><%= f.text_area :description_fr, :class => 'ckeditor' %></td>
-          </tr>
-        </table>
+          <div class="content contained active" id="panel1">
 
+            <table>
+              <tr><td class="cell1"><%= f.label t('activerecord.attributes.albums.name_fr')%></td>
+                <td class="cell2"><%= f.text_field :name_fr %></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <div class="separator small-12 columns">
+                    <div class="mask-small"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell1"><%= f.label t('activerecord.attributes.albums.description_fr')%></td>
+                <td class="cell2"><%= f.text_area :description_fr, :class => 'ckeditor' %></td>
+              </tr>
+            </table>
+
+          </div>
+
+          <div class="content contained" id="panel2">
+
+            <table>
+              <tr>
+                <td class="cell1"><%= f.label t('activerecord.attributes.albums.name_en')%></td>
+                <td class="cell2"><%= f.text_field :name_en%></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <div class="separator small-12 columns">
+                    <div class="mask-small"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell1"><%= f.label t('activerecord.attributes.albums.description_en')%></td>
+                <td class="cell2"><%= f.text_area :description_en, :class => 'ckeditor' %></td>
+              </tr>
+            </table>
+
+          </div>
+
+        </div>
       </div>
 
-      <div class="content contained" id="panel2">
-
-        <table>
-          <tr>
-            <td class="cell1"><%= f.label t('activerecord.attributes.albums.name_en')%></td>
-            <td class="cell2"><%= f.text_field :name_en%></td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <div class="separator small-12 columns">
-                <div class="mask-small"></div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td class="cell1"><%= f.label t('activerecord.attributes.albums.description_en')%></td>
-            <td class="cell2"><%= f.text_area :description_en, :class => 'ckeditor' %></td>
-          </tr>
-        </table>
-
+      <div class="info-image small-3 columns">
+        <%= f.label t('activerecord.attributes.albums.main_image')%>
+        <%= f.file_field :main_image %>
       </div>
 
     </div>
+
 
     <div>
       <%= f.hidden_field :project, :value => 0 %>

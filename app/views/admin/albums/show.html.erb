@@ -4,63 +4,71 @@
 <%= link_to t('admin.buttons.back'), admin_albums_path, :class => 'button radius tiny ' %>
 <%= link_to t('admin.buttons.add_photo'), new_admin_photo_path(:album_id => @album.id, :project => false), :class => 'button radius tiny success' %>
 
-<p>
-  <strong><%=t('activerecord.attributes.albums.main_image')%>:</strong>
-  <%= image_tag @album.main_image(:medium) %>
-</p>
+<div class="row">
 
-<ul class="tabs" data-tab>
-  <li class="tab-title active"><a href="#panel1"><%=t('admin.language.fr')%></a></li>
-  <li class="tab-title"><a href="#panel2"><%=t('admin.language.en')%></a></li>
-</ul>
+  <div class="infos small-9 columns">
 
-<div class="tabs-content">
+    <ul class="tabs" data-tab>
+      <li class="tab-title active"><a href="#panel1"><%=t('admin.language.fr')%></a></li>
+      <li class="tab-title"><a href="#panel2"><%=t('admin.language.en')%></a></li>
+    </ul>
 
-  <div class="content contained active" id="panel1">
+    <div class="tabs-content">
 
-    <table>
-      <tr>
-        <td class="cell1"><strong><%=t('activerecord.attributes.albums.name_fr')%>:</strong></td>
-        <td class="cell2"><%= @album.name_fr %></td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <div class="separator small-12 columns">
-            <div class="mask-small"></div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="cell1"><strong><%=t('activerecord.attributes.albums.description_fr')%>:</strong></td>
-        <td class="cell2"><%= @album.description_fr %></td>
-      </tr>
-    </table>
+      <div class="content contained active" id="panel1">
 
+        <table>
+          <tr>
+            <td class="cell1"><strong><%=t('activerecord.attributes.albums.name_fr')%>:</strong></td>
+            <td class="cell2"><%= @album.name_fr.html_safe %></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div class="separator small-12 columns">
+                <div class="mask-small"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="cell1"><strong><%=t('activerecord.attributes.albums.description_fr')%>:</strong></td>
+            <td class="cell2"><%= @album.description_fr.html_safe %></td>
+          </tr>
+        </table>
+
+      </div>
+
+      <div class="content contained" id="panel2">
+
+        <table>
+          <tr>
+            <td class="cell1"><strong><%=t('activerecord.attributes.albums.name_en')%>:</strong></td>
+            <td class="cell2"><%= @album.name_en.html_safe %></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div class="separator small-12 columns">
+                <div class="mask-small"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="cell1"><strong><%=t('activerecord.attributes.albums.description_en')%>:</strong></td>
+            <td class="cell2"><%= @album.description_en.html_safe %></td>
+          </tr>
+        </table>
+
+      </div>
+
+    </div>
   </div>
 
-  <div class="content contained" id="panel2">
-
-    <table>
-      <tr>
-        <td class="cell1"><strong><%=t('activerecord.attributes.albums.name_en')%>:</strong></td>
-        <td class="cell2"><%= @album.name_en %></td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <div class="separator small-12 columns">
-            <div class="mask-small"></div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="cell1"><strong><%=t('activerecord.attributes.albums.description_en')%>:</strong></td>
-        <td class="cell2"><%= @album.description_en %></td>
-      </tr>
-    </table>
-
+  <div class="info-image small-3 columns">
+    <%= image_tag @album.main_image(:medium) %>
   </div>
 
 </div>
+
+
 
 <%= link_to t('admin.buttons.edit'), edit_admin_album_path(@album), :class => 'button radius tiny secondary' %>
 <%= link_to t('admin.buttons.back'), admin_albums_path, :class => 'button radius tiny ' %>
