@@ -67,6 +67,19 @@
 
 </div>
 
+<div class="row">
+  <div class="small-12 small-centered">
+    <div class="picture-gallery inline">
+      <% @photos.each do |p|%>
+          <div class="picture" image-id="<%= p.id %>">
+            <span class="delete-image"><%= image_tag 'delete/delete.png', :class => "no-border" %></span>
+            <%=image_tag(p.image(:thumb))%>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 
 <%= link_to t('admin.buttons.delete'), admin_project_destroy_path(:id => @project.id), :class => 'button radius tiny alert' %>
 <%= link_to t('admin.buttons.edit'), edit_admin_project_path(@project), :class => 'button radius tiny secondary' %>

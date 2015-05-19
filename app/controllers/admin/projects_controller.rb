@@ -9,6 +9,7 @@ class Admin::ProjectsController < ApplicationController
 
   def show
     @project = Album.find(params[:id])
+    @photos = @project.photos
   end
 
   def new
@@ -29,6 +30,7 @@ class Admin::ProjectsController < ApplicationController
 
   def edit
     @project = Album.find(params[:id])
+    @photos = @project.photos
   end
 
   def update
@@ -43,6 +45,7 @@ class Admin::ProjectsController < ApplicationController
 
   def delete
     @project = Album.find(params[:id])
+    @photos = @project.photos
   end
 
   def destroy

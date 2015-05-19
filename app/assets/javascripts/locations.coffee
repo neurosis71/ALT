@@ -2,9 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$ ->
-  $('#masonry-container').masonry
-    itemSelector: '.box',
-    columnWidth: 100,
-    gutter: -3,
+$(document).ready ->
+  $('#masonry-container').masonry(
+    columnWidth: 200
+    itemSelector: '.box')
   return
