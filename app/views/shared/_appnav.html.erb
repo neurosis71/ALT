@@ -7,11 +7,8 @@
   <%= link_to t('app.layout.nav.photos'), photos_path %>
 
   <div class="nav-right">
-    <a href="#" class="button tiny radius" data-dropdown="drop"><%=t('admin.language.lang')%> &raquo;</a>
-    <ul id="drop" class=" tiny f-dropdown" data-dropdown-content>
-      <li><%= link_to t('admin.language.fr'), change_locale_path(:fr) %></li>
-      <li><%= link_to t('admin.language.en'), change_locale_path(:en) %></li>
-    </ul>
+    <%= link_to image_tag('flags/french.png', :alt => t('admin.language.fr'), :class => 'lang_thumb'), change_locale_path(:fr) %>
+    <%= link_to image_tag('flags/english.png', :alt => t('admin.language.en'), :class => 'lang_thumb'), change_locale_path(:en) %>
   </div>
 
   <div class="page-title small-5">

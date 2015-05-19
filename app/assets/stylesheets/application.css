@@ -247,3 +247,9 @@ img.no-border{
 body{
     font-family: Caviar-ALT;
 }
+
+/************* language selection flags ***************/
+.lang_thumb{
+    height: 50px;
+    width: 50px;
+}
