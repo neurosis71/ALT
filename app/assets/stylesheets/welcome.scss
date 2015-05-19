@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .home-logo{
-  margin-top: 5%;
+  margin-top: -20px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -19,7 +19,7 @@
 }
 
 .home-name{
-  margin-top: 30px;
+  margin-top: 10px;
   font-family: 'Lobster-ALT';
   font-weight: 400;
   font-size: 35px;
@@ -32,6 +32,10 @@
 
 .link-list{
   text-align: center;
+}
+
+.link-list > div {
+  margin-top: 30px;
 }
 
 .language-select{
@@ -59,4 +63,63 @@
       box-shadow: 0 0 1px #000000;
     }
   }
+}
+
+/********** link images ***************/
+.welcome_thumb{
+  width: 120px;
+  height: 350px;
+  font-family: Lobster-ALT;
+  font-size: 25px;
+  color: #ffffff;
+  float: left;
+  margin-right: 10px;
+}
+
+.about_thumb{
+  background-image: url("welcome/about_nb.jpg");
+  background-repeat: no-repeat;
+  background-position: -420px;
+}
+
+.about_thumb:hover {
+  background-image: url("welcome/about.JPG");
+  background-repeat: no-repeat;
+  background-position: -420px;
+}
+
+.book_thumb{
+  background-image: url("welcome/book_nb.jpg");
+  background-repeat: no-repeat;
+  background-position: -220px;
+}
+
+.book_thumb:hover {
+  background-image: url("welcome/book.JPG");
+  background-repeat: no-repeat;
+  background-position: -220px;
+}
+
+.resume_thumb{
+  background-image: url("welcome/cv_nb.jpg");
+  background-repeat: no-repeat;
+  background-position: -100px;
+}
+
+.resume_thumb:hover {
+  background-image: url("welcome/cv.JPG");
+  background-repeat: no-repeat;
+  background-position: -100px;
+}
+
+.photos_thumb{
+  background-image: url("welcome/photos_nb.jpg");
+  background-repeat: no-repeat;
+  background-position: -360px;
+}
+
+.photos_thumb:hover {
+  background-image: url("welcome/photos.JPG");
+  background-repeat: no-repeat;
+  background-position: -360px;
 }

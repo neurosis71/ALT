@@ -20,10 +20,28 @@
 </div>
 
 <div class="link-list row">
-  <%= link_to t('app.layout.nav.about'), controller: "about", action: "index" %>
-  <%= link_to t('app.layout.nav.book'), controller: "book", action: "index" %>
-  <%= link_to t('app.layout.nav.resume'), controller: "resume", action: "index" %>
-  <%= link_to t('app.layout.nav.photos'), controller: "photos", action: "index" %>
+  <div class="inline">
+      <%= link_to about_path do %>
+          <div class="about_thumb welcome_thumb">
+            <span><%= t('app.layout.nav.about') %></span>
+          </div>
+      <% end %>
+      <%= link_to book_path do %>
+          <div class="book_thumb welcome_thumb">
+            <span><%= t('app.layout.nav.book') %></span>
+          </div>
+      <% end %>
+      <%= link_to resume_path do %>
+          <div class="resume_thumb welcome_thumb">
+            <span><%= t('app.layout.nav.resume') %></span>
+          </div>
+      <% end %>
+      <%= link_to photos_path do %>
+          <div class="photos_thumb welcome_thumb">
+            <span><%= t('app.layout.nav.photos') %></span>
+          </div>
+      <% end %>
+  </div>
 </div>
 
 <div class="language-select row">
