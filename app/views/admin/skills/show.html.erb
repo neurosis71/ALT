@@ -3,6 +3,21 @@
 <%= link_to t('admin.buttons.edit'), edit_admin_skill_path(@skill), :class => 'button radius tiny secondary' %>
 <%= link_to t('admin.buttons.back'), admin_resume_index_path, :class => 'button radius tiny ' %>
 
+<p>
+  <strong><%=t('activerecord.attributes.skills.rank')%>:</strong>
+  <% case @skill.rank %>
+    <% when 1 %>
+        <%= image_tag "rank/1.png", :class => "no-border"%>
+    <% when 2 %>
+        <%= image_tag "rank/2.png", :class => "no-border" %>
+    <% when 3 %>
+        <%= image_tag "rank/3.png", :class => "no-border" %>
+    <% when 4 %>
+        <%= image_tag "rank/4.png", :class => "no-border" %>
+    <% when 5 %>
+        <%= image_tag "rank/5.png", :class => "no-border" %>
+  <%end%>
+</p>
 
 <ul class="tabs" data-tab>
   <li class="tab-title active"><a href="#panel1"><%=t('admin.language.fr')%></a></li>

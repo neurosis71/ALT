@@ -52,6 +52,6 @@ class Admin::SkillsController < ApplicationController
   private
 
   def skill_params
-    params.require(:skill).permit(:description_fr, :description_en)
+    params.require(:skill).permit(:description_fr, :description_en, :rank)
   end
 end

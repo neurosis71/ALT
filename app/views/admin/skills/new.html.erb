@@ -14,6 +14,11 @@
 
 <%= form_for(@skill, url: admin_skills_path) do |f| %>
 
+    <div class="rank">
+      <%= f.label t('activerecord.attributes.skills.rank')%>
+      <%= f.select :rank, [1,2,3,4,5] %>
+    </div>
+
     <ul class="tabs" data-tab>
       <li class="tab-title active"><a href="#panel1"><%=t('admin.language.fr')%></a></li>
       <li class="tab-title"><a href="#panel2"><%=t('admin.language.en')%></a></li>

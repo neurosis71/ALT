@@ -80,6 +80,7 @@
     <tr>
       <th><%=t('activerecord.attributes.skills.description_fr')%></th>
       <th><%=t('activerecord.attributes.skills.description_en')%></th>
+      <td><%=t('activerecord.attributes.skills.rank')%></td>
       <th></th>
       <th></th>
       <th></th>
@@ -91,6 +92,20 @@
         <tr>
           <td><%= skill.description_fr.html_safe %></td>
           <td><%= skill.description_en.html_safe %></td>
+
+          <% case skill.rank %>
+            <% when 1 %>
+              <td><%= image_tag "rank/1.png", :class => "no-border rank-display"%></td>
+            <% when 2 %>
+              <td><%= image_tag "rank/2.png", :class => "no-border rank-display" %></td>
+            <% when 3 %>
+              <td><%= image_tag "rank/3.png", :class => "no-border rank-display" %></td>
+            <% when 4 %>
+              <td><%= image_tag "rank/4.png", :class => "no-border rank-display" %></td>
+            <% when 5 %>
+              <td><%= image_tag "rank/5.png", :class => "no-border rank-display" %></td>
+          <%end%>
+
           <td><%= link_to t('admin.buttons.show'), admin_skill_path(skill), :class => 'button radius tiny info' %></td>
           <td><%= link_to t('admin.buttons.edit'), edit_admin_skill_path(skill), :class => 'button radius tiny secondary' %></td>
           <td><%= link_to t('admin.buttons.delete'), admin_skill_delete_path(skill), :class => 'button radius tiny alert' %></td>

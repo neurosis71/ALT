@@ -65,11 +65,6 @@ img {
     border: solid 2px #e7e7e7;
 }
 
-img.no-border{
-    padding: 0px;
-    border: none;
-}
-
 
 /********************** styling for form errors **********************/
 .field_with_errors input{
@@ -201,6 +196,11 @@ img.no-border{
     display: inline-block;
 }
 
+.no-border{
+    padding: 0px;
+    border: none;
+}
+
 /*************** masonry ****************/
 .box {
     background: #ffffff;
@@ -240,4 +240,9 @@ body{
     background-color: #DEDEDE;
     height: auto;
     min-height: 300px;
+}
+
+/********* rank display ************/
+.rank-display{
+    width: 100px;
 }

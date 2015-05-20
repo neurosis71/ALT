@@ -43,6 +43,7 @@ fr:
         skills:
           description_fr:   "Description"
           description_en:   "Description"
+          rank:             "Niveau"
 
   #####################################
 
