@@ -19,6 +19,7 @@
  *= require 'masonry/infinitescroll'
  *= require 'masonry/right-to-left'
  *= require 'masonry/transitions'
+ *= require 'slick/slick-theme'
  *= require_tree .
  *= require_self
  */
@@ -252,4 +253,11 @@ body{
 .lang_thumb{
     height: 50px;
     width: 50px;
+}
+
+/*************** modal ****************/
+.reveal-modal{
+    background-color: #DEDEDE;
+    height: auto;
+    min-height: 300px;
 }

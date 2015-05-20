@@ -19,12 +19,37 @@
 //= require masonry/masonry.min
 //= require ckeditor/init
 //= require turbolinks
+//= require slick/slick.min
 //= require_tree .
 //= require foundation
 
 //$(function(){ $(document).foundation(); });
 $(document).ready(function(){
     $(document).foundation();
+
+    var position;
+    //modal caroussel handler
+    $('a.open-modal').on('click', function() {
+        position = $(this).attr('position');
+    });
+
+    $(document).on('open.fndtn.reveal', '[data-reveal]', function() {
+        console.log(position);
+        $('.slider').slick({
+            infinite: true,
+            adaptiveHeight: true,
+            speed: 300,
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 0
+        });
+        $('.slider').slick('slickGoTo', position);
+    });
+
+    $(document).on('close.fndtn.reveal', '[data-reveal]', function () {
+        $('.slider').slick('unslick');
+    });
 });
 
 //removes autoparagraph behavior for CKEditor (<p> tags not added automatically)

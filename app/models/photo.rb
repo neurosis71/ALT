@@ -3,7 +3,7 @@ class Photo < ActiveRecord::Base
 
   #main image upload definition for paperclip
   has_attached_file :image,
-                    :styles => {:medium => "300x300", :thumb => "100x100"},
+                    :styles => {:large => "800x800" ,:medium => "300x300", :thumb => "100x100"},
                     :path => ":rails_root/public/images/photos/:id/:style_:basename.:extension",
                     :url => ":class/:id/:style_:basename.:extension",
                     :default_url => "/images/errors/no_pic_available.jpg"
