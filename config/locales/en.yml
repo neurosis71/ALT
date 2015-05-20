@@ -80,6 +80,8 @@ en:
         title:            "Album - Delete"
 
     cursus:
+      index:
+        title:            "Cursus"
       new:
         title:            "Cursus - New"
       show:
@@ -90,6 +92,8 @@ en:
         title:            "Cursus - Delete"
 
     experience:
+      index:
+        title:            "Professional Experiences"
       new:
         title:            "Professional Experience - New"
       show:
@@ -132,6 +136,8 @@ en:
         title:            "Resume"
 
     skills:
+      index:
+        title:            "Skills"
       new:
         title:            "Skill - New"
       show:
