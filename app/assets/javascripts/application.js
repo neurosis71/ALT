@@ -27,14 +27,19 @@
 $(document).ready(function(){
     $(document).foundation();
 
+
+    //******* modal caroussel handler *********/
+
+    //stores position attributes of links
     var position;
-    //modal caroussel handler
+
+    //retrieve the position attribute to know where to position the carousel
     $('a.open-modal').on('click', function() {
         position = $(this).attr('position');
     });
 
+    //open modal and initilaize carousel
     $(document).on('open.fndtn.reveal', '[data-reveal]', function() {
-        console.log(position);
         $('.slider').slick({
             infinite: true,
             adaptiveHeight: true,
@@ -44,12 +49,36 @@ $(document).ready(function(){
             slidesToScroll: 1,
             initialSlide: 0
         });
-        $('.slider').slick('slickGoTo', position);
+        $('.slider').slick('slickGoTo', position);//go to selected image
     });
 
+    //destroy carousel instance on modal close
     $(document).on('close.fndtn.reveal', '[data-reveal]', function () {
         $('.slider').slick('unslick');
     });
+
+    /********** B&W to color image on hover handling for locations, projects and albums ********/
+    $(".BWtoColor").hover(
+        function(){//mouse in
+            if($(this).is("img")){
+                var path = $(this).attr("src");
+                path = path.replace("grey", "medium");
+                $(this).attr("src", path);
+            }else{//handle hover span titles
+                var img = $(this).prev().children();
+                var path = img.attr("src");
+                path = path.replace("grey", "medium");
+                img.attr("src", path);
+            }
+        },
+        function(){//mouse out
+            if($(this).is("img")) {
+                var path = $(this).attr("src");
+                path = path.replace("medium", "grey");
+                $(this).attr("src", path);
+            }
+        }
+    );
 });
 
 //removes autoparagraph behavior for CKEditor (<p> tags not added automatically)

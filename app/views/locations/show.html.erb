@@ -1,12 +1,11 @@
 <div class="centered">
-    <div id="masonry-container" class="transitions-enabled has-gutter small-11 small-centered inline">
+    <div id="masonry-container" class="small-11 has-gutters inline">
         <% @projects.each do |project|%>
 
             <div class="box col3">
                 <% I18n.locale == :fr ? title = project.name_fr : title = project.name_en %>
-                <%= link_to image_tag(project.main_image, alt: title), controller: "projects", action: "show", id: project.id %>
-                <p class="project-title"><%=title%></p>
-                <div class="overlay-container"><div class="overlay"></div></div>
+                <%= link_to image_tag(project.main_image(:grey), alt: title, class: "BWtoColor"), controller: "projects", action: "show", id: project.id %>
+                <p class="project-title BWtoColor"><%=title%></p>
             </div>
         <% end %>
     </div>

@@ -9,7 +9,8 @@ class Album < ActiveRecord::Base
 
   #main image upload definition for paperclip
   has_attached_file :main_image,
-                    :styles => {:medium => "300x300", :thumb => "100x100"},
+                    :styles => {:medium => "300x300", :thumb => "100x100", :grey => "300x300"},
+                    :convert_options => {:grey => "-colorspace Gray"},
                     :path => ":rails_root/public/images/albums/:id/:style_:basename.:extension",
                     :url => ":class/:id/:style_:basename.:extension",
                     :default_url => "/images/errors/no_pic_available.jpg"
