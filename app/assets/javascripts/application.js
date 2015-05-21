@@ -16,7 +16,6 @@
 //= require jquery-fileupload/vendor/tmpl
 //= require jquery.remotipart
 //= require jquery-ui/datepicker
-//= require masonry/masonry.min
 //= require ckeditor/init
 //= require turbolinks
 //= require slick/slick.min

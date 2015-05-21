@@ -12,13 +12,6 @@
  *
  *= require foundation_and_overrides
  *= require jquery-ui/datepicker
- *= require 'masonry/basic'
- *= require 'masonry/centered'
- *= require 'masonry/fluid'
- *= require 'masonry/gutters'
- *= require 'masonry/infinitescroll'
- *= require 'masonry/right-to-left'
- *= require 'masonry/transitions'
  *= require 'slick/slick-theme'
  *= require_tree .
  *= require_self
@@ -199,13 +192,6 @@ img {
 .no-border{
     padding: 0px;
     border: none;
-}
-
-/*************** masonry ****************/
-.box {
-    background: #ffffff;
-    position: relative;
-    padding: 0px;
 }
 
 /*********** Fonts **************/
