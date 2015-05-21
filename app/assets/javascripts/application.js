@@ -19,6 +19,9 @@
 //= require ckeditor/init
 //= require turbolinks
 //= require slick/slick.min
+//= require collage/jquery.collagePlus.min
+//= require collage/jquery.collageCaption.min
+//= require collage/jquery.removeWhitespace.min
 //= require_tree .
 //= require foundation
 
@@ -63,7 +66,7 @@ $(document).ready(function(){
                 var path = $(this).attr("src");
                 path = path.replace("grey", "medium");
                 $(this).attr("src", path);
-            }else{//handle hover span titles
+            }else{//handle hover caption
                 var img = $(this).prev().children();
                 var path = img.attr("src");
                 path = path.replace("grey", "medium");

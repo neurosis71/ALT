@@ -10,12 +10,10 @@
 </div>
 
 
-<div class="centered">
-    <div id="masonry-container" class="transitions-enabled has-gutter small-11 small-centered inline">
-      <% @photos.each_with_index do |photo, index|%>
-          <div class="box col3 box-margin-bottom">
-            <%= link_to(image_tag(photo.image(:medium), class: 'no-border'), "#", { "data-reveal-id" => "carousselModal", "position" => index, "class" => "open-modal"})%>
-          </div>
-      <% end %>
-    </div>
+<div class="Collage effect-parent row">
+  <% @photos.each_with_index do |photo, index|%>
+      <div class="Image_Wrapper">
+        <%= link_to(image_tag(photo.image(:medium), class: 'no-border'), "#", { "data-reveal-id" => "carousselModal", "position" => index, "class" => "open-modal"})%>
+      </div>
+  <% end %>
 </div>

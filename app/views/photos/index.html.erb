@@ -1,11 +1,8 @@
-<div class="centered">
-    <div id="masonry-container" class="transitions-enabled small-11 small-centered inline">
-      <% @albums.each do |alb|%>
-          <div class="box col3">
-            <% I18n.locale == :fr ? title = alb.name_fr : title = alb.name_en %>
-            <%= link_to image_tag(alb.main_image(:grey), alt: title, class: "BWtoColor"), controller: "photos", action: "show", id: alb.id %>
-            <p class="alb-title BWtoColor"><%=title%></p>
-          </div>
-      <% end %>
-    </div>
+<div class="Collage effect-parent">
+  <% @albums.each do |alb|%>
+      <% I18n.locale == :fr ? title = alb.name_fr : title = alb.name_en %>
+      <div class="Image_Wrapper" data-caption="<%=title%>">
+        <%= link_to image_tag(alb.main_image(:grey), alt: title, class: "BWtoColor"), controller: "photos", action: "show", id: alb.id %>
+      </div>
+  <% end %>
 </div>
