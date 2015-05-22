@@ -47,6 +47,23 @@ fr:
 
   #####################################
 
+  mail_form:
+    models:
+      contact:              "Formulaire de contact"
+    attributes:
+      contact:
+        name:               "Nom"
+        email:              "E-mail"
+        subject:            "Sujet"
+        message:            "Message"
+
+  mail:
+    flash:
+      error:                "Une erreur est apparue. Impossible d'envoyer le message."
+      success:              "Merci pour votre message. Nous vous contacterons bientôt!"
+
+  #####################################
+
   admin:
     layout:
       title:              "A.L.T. Administration"
@@ -56,6 +73,7 @@ fr:
         book:             "Book"
         perso:            "Projets personels"
         albums:           "Albums"
+        contact:          "Contact"
       session:
         logout:           "Déconnexion"
 
@@ -162,6 +180,10 @@ fr:
       delete:
         title:            "Compétence - Suppression"
 
+    contact:
+      title:              "Email de contact - Edition"
+      email:              "Email"
+
 
     buttons:
       new:                "Créer"
@@ -171,6 +193,7 @@ fr:
       back:               "Retour"
       save:               "Sauvegarder"
       add_photo:          "Ajouter des photos"
+      send:               "Envoyer"
 
     language:
       lang:               "Langue"
@@ -189,6 +212,7 @@ fr:
         book:             "Book"
         photos:           "Photos"
         perso:            "Projets personels"
+        contact:          "Contact"
 
     welcome:
       profession:         "ARCHITECTE DIPLÔMÉE D'ÉTAT - HMONP"
@@ -220,3 +244,10 @@ fr:
     photos:
       title:              "Photos"
       desc:               "Description"
+
+    contact:
+       title:             "Contact"
+       name:               "Nom (obligatoire)"
+       email:              "Email (obligatoire)"
+       subject:            "Sujet (obligatoire)"
+       content:            "Message (obligatoire)"

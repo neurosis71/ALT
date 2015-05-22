@@ -135,3 +135,15 @@
   background-repeat: no-repeat;
   background-position: -360px;
 }
+
+.contact_thumb{
+  background-image: url("welcome/contact_nb.jpg");
+  background-repeat: no-repeat;
+  background-position: -360px;
+}
+
+.contact_thumb:hover {
+  background-image: url("welcome/contact.JPG");
+  background-repeat: no-repeat;
+  background-position: -360px;
+}

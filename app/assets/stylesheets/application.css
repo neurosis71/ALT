@@ -96,6 +96,12 @@ img {
     color: #C15354;
 }
 
+.alert-error{
+    border: solid 1px #C15354;
+    background-color: #F4E2E2;
+    color: #C15354;
+}
+
 
 /********************** Styling login page **********************/
 
@@ -194,6 +200,8 @@ img {
     padding: 0px;
     border: none;
 }
+
+.hidden { display: none; }
 
 /*********** Fonts **************/
 

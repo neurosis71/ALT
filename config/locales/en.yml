@@ -47,6 +47,24 @@ en:
 
 #####################################
 
+  mail_form:
+    models:
+      contact:              "Contact form"
+    attributes:
+      contact:
+        name:               "Name"
+        email:              "E-mail"
+        subject:            "Subject"
+        message:            "Message"
+
+  mail:
+    flash:
+      error:                "An error occured. Cannot send message."
+      success:              "Thank you for your message. We will contact you soon!"
+
+
+  #####################################
+
   admin:
     layout:
       title:              "A.L.T. Administration"
@@ -56,6 +74,7 @@ en:
         book:             "Book"
         perso:            "Personal projects"
         albums:           "Albums"
+        contact:          "Contact"
       session:
         logout:           "Sign out"
 
@@ -161,6 +180,10 @@ en:
       delete:
         title:            "Skill - Delete"
 
+    contact:
+      title:              "Contact email - Edit"
+      email:              "Email"
+
 
     buttons:
       new:                "New"
@@ -170,6 +193,7 @@ en:
       back:               "Back"
       save:               "Save"
       add_photo:          "Add photos"
+      send:               "Send"
 
     language:
       lang:               "Language"
@@ -188,6 +212,7 @@ en:
         book:             "Book"
         photos:           "Photos"
         perso:            "Personal projects"
+        contact:           "Contact"
 
     welcome:
       profession:         "ARCHITECTE DIPLÔMÉE D'ÉTAT - HMONP"
@@ -219,3 +244,10 @@ en:
     photos:
       title:              "Photos"
       desc:               "Description"
+
+    contact:
+      title:              "Contact"
+      name:               "Name (mandatory)"
+      email:              "Email (mandatory)"
+      subject:            "Subject (mandatory)"
+      content:            "Message (mandatory)"

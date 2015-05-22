@@ -1,0 +1,13 @@
+<h1><%=t('admin.contact.title')%></h1>
+
+<%= form_tag(admin_update_contact_path, :method => 'get') do %>
+    <p>
+      <%= t('admin.contact.email') + ' :'%>
+      <%= text_field_tag "email" , @email %>
+    </p>
+
+    <p>
+      <%= submit_tag t('admin.buttons.save'), :class => 'button radius tiny info' %>
+    </p>
+
+<% end %>

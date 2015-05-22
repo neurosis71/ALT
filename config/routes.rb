@@ -26,6 +26,9 @@ Rails.application.routes.draw do
 
   get 'locations/show', to: 'locations#show', as: :location
 
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
+
   get 'projects/show'
 
   #admin routes
@@ -79,6 +82,10 @@ Rails.application.routes.draw do
     resources :albums
     get 'albums/:id/delete' => 'albums#delete', :as => :album_delete
     get 'albums/:id/destroy' => 'albums#destroy', :as => :album_destroy
+
+    #contact
+    get 'contact/index' => 'contact#index', :as => :contacts
+    get 'contact/update' => 'contact#update', :as => :update_contact
 
   end
 
