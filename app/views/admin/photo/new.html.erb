@@ -1,7 +1,9 @@
 <h1><%=t('admin.photo.new.title')%></h1>
 
-<% if @project == 'true' %>
+<% if @project == "1" %>
     <%= link_to t('admin.buttons.back'), admin_project_path(:id => @album_id), :class => 'button radius tiny ' %>
+<% elsif @project == "2" %>
+    <%= link_to t('admin.buttons.back'), admin_perso_project_path(:id => @album_id), :class => 'button radius tiny ' %>
 <% else %>
     <%= link_to t('admin.buttons.back'), admin_album_path(:id => @album_id), :class => 'button radius tiny ' %>
 <% end %>
@@ -33,8 +35,10 @@
   <% end %>
 </div>
 
-<% if @project %>
+<% if @project == "1"%>
     <%= link_to t('admin.buttons.back'), admin_project_path(:id => @album_id), :class => 'button radius tiny ' %>
+<% elsif @project == "2" %>
+    <%= link_to t('admin.buttons.back'), admin_perso_project_path(:id => @album_id), :class => 'button radius tiny ' %>
 <% else %>
     <%= link_to t('admin.buttons.back'), admin_album_path(:id => @album_id), :class => 'button radius tiny ' %>
 <% end %>

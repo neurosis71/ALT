@@ -54,6 +54,7 @@ fr:
         about:            "A propos"
         resume:           "CV"
         book:             "Book"
+        perso:            "Projets personels"
         albums:           "Albums"
       session:
         logout:           "Déconnexion"
@@ -133,6 +134,18 @@ fr:
       delete:
         title:            "Projet - Suppression"
 
+    perso:
+      index:
+        title:            "Projets personels"
+      new:
+        title:            "Projet personels - Nouveau"
+      show:
+        title:            "Projet personels"
+      edit:
+        title:            "Projet personels - Edition"
+      delete:
+        title:            "Projet personels - Suppression"
+
     resume:
       index:
         title:            "CV"
@@ -175,6 +188,7 @@ fr:
         resume:           "CV"
         book:             "Book"
         photos:           "Photos"
+        perso:            "Projets personels"
 
     welcome:
       profession:         "ARCHITECTE DIPLÔMÉE D'ÉTAT - HMONP"
@@ -191,6 +205,10 @@ fr:
       title:              "Book"
 
     projects:
+      desc:               "Description"
+
+    perso:
+      title:              "Projets personels"
       desc:               "Description"
 
     resume:

@@ -112,6 +112,18 @@
   background-position: -100px;
 }
 
+.perso_thumb{
+  background-image: url("welcome/perso_nb.jpg");
+  background-repeat: no-repeat;
+  background-position: -250px -20px;
+}
+
+.perso_thumb:hover {
+  background-image: url("welcome/perso.JPG");
+  background-repeat: no-repeat;
+  background-position: -250px -20px;
+}
+
 .photos_thumb{
   background-image: url("welcome/photos_nb.jpg");
   background-repeat: no-repeat;

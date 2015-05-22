@@ -1,8 +1,9 @@
-<h1><%=t('admin.projects.show.title')%></h1>
+<h1><%=t('admin.perso.delete.title')%></h1>
 
-<%= link_to t('admin.buttons.edit'), edit_admin_project_path(@project), :class => 'button radius tiny secondary' %>
-<%= link_to t('admin.buttons.back'), edit_admin_location_path(:id => @project.location_id), :class => 'button radius tiny ' %>
-<%= link_to t('admin.buttons.add_photo'), new_admin_photo_path(:album_id => @project.id, :project => 1), :class => 'button radius tiny success' %>
+<%= link_to t('admin.buttons.delete'), admin_perso_project_destroy_path(:id => @project.id), :class => 'button radius tiny alert' %>
+<%= link_to t('admin.buttons.edit'), edit_admin_perso_project_path(@project), :class => 'button radius tiny secondary' %>
+<%= link_to t('admin.buttons.back'), admin_perso_projects_path, :class => 'button radius tiny' %>
+
 
 <div class="row">
 
@@ -19,7 +20,7 @@
         <table>
           <tr>
             <td class="cell1"><strong><%=t('activerecord.attributes.albums.name_fr')%>:</strong></td>
-            <td class="cell2"><%= @project.name_fr %></td>
+            <td class="cell2"><%= @project.name_fr.html_safe %></td>
           </tr>
           <tr>
             <td colspan="2">
@@ -30,7 +31,7 @@
           </tr>
           <tr>
             <td class="cell1"><strong><%=t('activerecord.attributes.albums.description_fr')%>:</strong></td>
-            <td class="cell2"><%= @project.description_fr %></td>
+            <td class="cell2"><%= @project.description_fr.html_safe %></td>
           </tr>
         </table>
 
@@ -41,7 +42,7 @@
         <table>
           <tr>
             <td class="cell1"><strong><%=t('activerecord.attributes.albums.name_en')%>:</strong></td>
-            <td class="cell2"><%= @project.name_en %></td>
+            <td class="cell2"><%= @project.name_en.html_safe %></td>
           </tr>
           <tr>
             <td colspan="2">
@@ -52,7 +53,7 @@
           </tr>
           <tr>
             <td class="cell1"><strong><%=t('activerecord.attributes.albums.description_en')%>:</strong></td>
-            <td class="cell2"><%= @project.description_en %></td>
+            <td class="cell2"><%= @project.description_en.html_safe %></td>
           </tr>
         </table>
 
@@ -71,7 +72,8 @@
   <div class="small-12 small-centered">
     <div class="picture-gallery inline">
       <% @photos.each do |p|%>
-          <div class="picture">
+          <div class="picture" image-id="<%= p.id %>">
+            <span class="delete-image"><%= image_tag 'delete/delete.png', :class => "no-border" %></span>
             <%=image_tag(p.image(:thumb))%>
           </div>
       <% end %>
@@ -79,6 +81,7 @@
   </div>
 </div>
 
-<%= link_to t('admin.buttons.edit'), edit_admin_project_path(@project), :class => 'button radius tiny secondary' %>
-<%= link_to t('admin.buttons.back'), edit_admin_location_path(:id => @project.location_id), :class => 'button radius tiny ' %>
-<%= link_to t('admin.buttons.add_photo'), new_admin_photo_path(:album_id => @project.id, :project => 1), :class => 'button radius tiny success' %>
+
+<%= link_to t('admin.buttons.delete'), admin_perso_project_destroy_path(:id => @project.id), :class => 'button radius tiny alert' %>
+<%= link_to t('admin.buttons.edit'), edit_admin_perso_project_path(@project), :class => 'button radius tiny secondary' %>
+<%= link_to t('admin.buttons.back'), admin_perso_projects_path, :class => 'button radius tiny' %>

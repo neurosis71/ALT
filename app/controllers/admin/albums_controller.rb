@@ -4,7 +4,7 @@ class Admin::AlbumsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @albums = Album.all.where("project = ?", 0)
+    @albums = Album.all.where("project = ?", 0).where("perso = ?", 0)
   end
 
   def show
@@ -56,6 +56,6 @@ class Admin::AlbumsController < ApplicationController
   private
 
   def album_params
-    params.require(:album).permit(:name_fr, :name_en, :main_image, :description_fr, :description_en, :project)
+    params.require(:album).permit(:name_fr, :name_en, :main_image, :description_fr, :description_en, :project, :perso)
   end
 end

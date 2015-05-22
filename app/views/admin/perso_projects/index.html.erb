@@ -1,0 +1,27 @@
+<div class="table-container">
+  <h1><%=t('admin.perso.index.title')%></h1>
+  <%= link_to t('admin.buttons.new'), new_admin_perso_project_path, :class => 'button radius tiny success' %>
+  <table>
+    <thead>
+    <tr>
+      <th><%=t('activerecord.attributes.albums.name_fr')%></th>
+      <th><%=t('activerecord.attributes.albums.name_en')%></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @projects.each do |project| %>
+        <tr>
+          <td><%= project.name_fr %></td>
+          <td><%= project.name_en %></td>
+          <td><%= link_to t('admin.buttons.show'), admin_perso_project_path(project), :class => 'button radius tiny info' %></td>
+          <td><%= link_to t('admin.buttons.edit'), edit_admin_perso_project_path(project), :class => 'button radius tiny secondary' %></td>
+          <td><%= link_to t('admin.buttons.delete'), admin_perso_project_delete_path(project), :class => 'button radius tiny alert' %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

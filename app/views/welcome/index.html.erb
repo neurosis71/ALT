@@ -36,6 +36,11 @@
             <span><%= t('app.layout.nav.resume') %></span>
           </div>
       <% end %>
+    <%= link_to perso_projects_path do %>
+        <div class="perso_thumb welcome_thumb">
+          <span><%= t('app.layout.nav.perso') %></span>
+        </div>
+    <% end %>
       <%= link_to photos_path do %>
           <div class="photos_thumb welcome_thumb">
             <span><%= t('app.layout.nav.photos') %></span>

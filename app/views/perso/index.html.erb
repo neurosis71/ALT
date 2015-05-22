@@ -1,0 +1,8 @@
+<div class="Collage effect-parent">
+  <% @projects.each do |alb|%>
+      <% I18n.locale == :fr ? title = alb.name_fr : title = alb.name_en %>
+      <div class="Image_Wrapper" data-caption="<%=title%>">
+        <%= link_to image_tag(alb.main_image(:grey), alt: title, class: "BWtoColor"), controller: "photos", action: "show", id: alb.id %>
+      </div>
+  <% end %>
+</div>

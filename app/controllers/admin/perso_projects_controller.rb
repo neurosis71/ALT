@@ -1,10 +1,10 @@
-class Admin::ProjectsController < ApplicationController
+class Admin::PersoProjectsController < ApplicationController
 
   layout 'admin'
   before_action :authenticate_user!
 
   def index
-    @projects = Album.all.where("project = ?",1)
+    @projects = Album.all.where("perso = ?",1)
   end
 
   def show
@@ -14,15 +14,13 @@ class Admin::ProjectsController < ApplicationController
 
   def new
     @project = Album.new
-    @location_id = params[:location_id]
   end
 
   def create
-
     @project = Album.new(project_params)
     if @project.save
       flash[:notice] = "Le projet à été créé"
-      redirect_to(admin_project_path(:id => @project.id))
+      redirect_to(admin_perso_project_path(:id => @project.id))
     else
       render('new')
     end
@@ -37,7 +35,7 @@ class Admin::ProjectsController < ApplicationController
     @project = Album.find(params[:id])
     if @project.update_attributes(project_params)
       flash[:notice] = "Le projet est mis à jour"
-      redirect_to(admin_project_path(:id => @project.id))
+      redirect_to(admin_perso_project_path(:id => @project.id))
     else
       render('edit')
     end
@@ -49,11 +47,9 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def destroy
-    @project = Album.find(params[:id])
-    @location_id = @project.location_id
-    @project.destroy
+    Album.find(params[:id]).destroy
     flash[:notice] = "Le projet à été supprimé"
-    redirect_to(:controller => 'locations', :action => 'edit', :id => @location_id)
+    redirect_to(admin_perso_projects_path)
   end
 
   private
@@ -61,5 +57,4 @@ class Admin::ProjectsController < ApplicationController
   def project_params
     params.require(:album).permit(:name_fr, :name_en, :main_image, :description_fr, :description_en, :location_id, :project, :perso)
   end
-
 end

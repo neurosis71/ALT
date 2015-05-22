@@ -1,8 +1,8 @@
-<h1><%=t('admin.projects.new.title')%></h1>
+<h1><%=t('admin.perso.new.title')%></h1>
 
-<% if @project.errors.any? %>
+<% if @project.errors.any? %>`
     <div class="error_explanation small-8 small-centered columns">
-      <h6><%= @project.errors.count %> <%=t('admin.forms.message.error')%> :</h6>
+      <h6><%= @project.errors.count %> <%= t('admin.forms.message.error')%> :</h6>
 
       <ul>
         <% @project.errors.full_messages.each do |msg| %>
@@ -12,7 +12,8 @@
     </div>
 <% end %>
 
-<%= form_for(@project, url: admin_projects_path) do |f| %>
+<%= form_for(@project, url: admin_perso_projects_path) do |f| %>
+
 
     <div class="row">
 
@@ -77,16 +78,13 @@
 
     </div>
 
+
     <div>
-      <%= f.hidden_field :location_id, :value => @location_id %>
+      <%= f.hidden_field :project, :value => 0 %>
     </div>
 
     <div>
-      <%= f.hidden_field :project, :value => 1 %>
-    </div>
-
-    <div>
-      <%= f.hidden_field :perso, :value => 0 %>
+      <%= f.hidden_field :perso, :value => 1 %>
     </div>
 
     <div class="submit">

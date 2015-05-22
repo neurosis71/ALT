@@ -2,7 +2,7 @@
 
 <%= link_to t('admin.buttons.edit'), edit_admin_album_path(@album), :class => 'button radius tiny secondary' %>
 <%= link_to t('admin.buttons.back'), admin_albums_path, :class => 'button radius tiny ' %>
-<%= link_to t('admin.buttons.add_photo'), new_admin_photo_path(:album_id => @album.id, :project => false), :class => 'button radius tiny success' %>
+<%= link_to t('admin.buttons.add_photo'), new_admin_photo_path(:album_id => @album.id, :project => 0), :class => 'button radius tiny success' %>
 
 <div class="row">
 
@@ -82,5 +82,5 @@
 
 <%= link_to t('admin.buttons.edit'), edit_admin_album_path(@album), :class => 'button radius tiny secondary' %>
 <%= link_to t('admin.buttons.back'), admin_albums_path, :class => 'button radius tiny ' %>
-<%= link_to t('admin.buttons.add_photo'), new_admin_photo_path(:album_id => @album.id, :project => false), :class => 'button radius tiny success' %>
+<%= link_to t('admin.buttons.add_photo'), new_admin_photo_path(:album_id => @album.id, :project => 0), :class => 'button radius tiny success' %>
 

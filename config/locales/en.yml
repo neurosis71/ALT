@@ -54,6 +54,7 @@ en:
         about:            "About"
         resume:           "Resume"
         book:             "Book"
+        perso:            "Personal projects"
         albums:           "Albums"
       session:
         logout:           "Sign out"
@@ -132,6 +133,18 @@ en:
       delete:
         title:            "Project - Delete"
 
+    projects:
+      index:
+        title:            "Personal projects"
+      new:
+        title:            "Personal project - New"
+      show:
+        title:            "Personal project"
+      edit:
+        title:            "Personal project - Edit"
+      delete:
+        title:            "Personal project - Delete"
+
     resume:
       index:
         title:            "Resume"
@@ -174,6 +187,7 @@ en:
         resume:           "Resume"
         book:             "Book"
         photos:           "Photos"
+        perso:            "Personal projects"
 
     welcome:
       profession:         "ARCHITECTE DIPLÔMÉE D'ÉTAT - HMONP"
@@ -190,6 +204,10 @@ en:
       title:              "Book"
 
     projects:
+      desc:               "Description"
+
+    perso:
+      title:              "Personal projects"
       desc:               "Description"
 
     resume:

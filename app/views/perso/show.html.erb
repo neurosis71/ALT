@@ -1,0 +1,20 @@
+<div class="row album-img">
+  <%= image_tag @project.main_image, class: 'no-border' %>
+</div>
+
+<div class="album-desc row">
+  <div class="small-12 small-centered columns">
+    <div class="title"><span><%=t("app.photos.desc")%></span></div>
+    <div class="desc-content"><%=@description.html_safe%></div>
+  </div>
+</div>
+
+
+<div class="Collage effect-parent row">
+  <% @photos.each_with_index do |photo, index|%>
+      <div class="Image_Wrapper">
+        <%= link_to(image_tag(photo.image(:medium), class: 'no-border'), "#", { "data-reveal-id" => "carousselModal", "position" => index, "class" => "open-modal"})%>
+      </div>
+  <% end %>
+</div>
+

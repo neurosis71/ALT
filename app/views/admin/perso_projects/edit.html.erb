@@ -1,4 +1,4 @@
-<h1><%=t('admin.projects.new.title')%></h1>
+<h1><%=t('admin.perso.edit.title')%></h1>
 
 <% if @project.errors.any? %>
     <div class="error_explanation small-8 small-centered columns">
@@ -12,7 +12,7 @@
     </div>
 <% end %>
 
-<%= form_for(@project, url: admin_projects_path) do |f| %>
+<%= form_for(@project, url: admin_perso_project_path) do |f| %>
 
     <div class="row">
 
@@ -77,19 +77,20 @@
 
     </div>
 
-    <div>
-      <%= f.hidden_field :location_id, :value => @location_id %>
-    </div>
-
-    <div>
-      <%= f.hidden_field :project, :value => 1 %>
-    </div>
-
-    <div>
-      <%= f.hidden_field :perso, :value => 0 %>
+    <div class="row">
+      <div class="small-12 small-centered">
+        <div class="picture-gallery inline">
+          <% @photos.each do |p|%>
+              <div class="picture" image-id="<%= p.id %>">
+                <span class="delete-image"><%= image_tag 'delete/delete.png', :class => "no-border" %></span>
+                <%=image_tag(p.image(:thumb))%>
+              </div>
+          <% end %>
+        </div>
+      </div>
     </div>
 
     <div class="submit">
-      <%= f.submit t('admin.buttons.save'), :class => 'button radius tiny info' %>
+      <%= f.submit t('admin.buttons.save') ,:class => 'button radius tiny info' %>
     </div>
 <% end %>

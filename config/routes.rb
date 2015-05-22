@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   get 'photos/index', to: 'photos#index', as: :photos
   get 'photos/show', to: 'photos#show', as: :album
 
+  get 'perso/index', to: 'perso#index', as: :perso_projects
+  get 'perso/show', to: 'perso#show', as: :perso_project
+
   get 'resume/index', to: 'resume#index', as: :resume
 
   get 'book/index', to: 'book#index', as: :book
@@ -61,6 +64,11 @@ Rails.application.routes.draw do
     resources :projects
     get 'projects/:id/delete' => 'projects#delete', :as => :project_delete
     get 'projects/:id/destroy' => 'projects#destroy', :as => :project_destroy
+
+    #personal projects
+    resources :perso_projects
+    get 'perso_projects/:id/delete' => 'perso_projects#delete', :as => :perso_project_delete
+    get 'perso_projects/:id/destroy' => 'perso_projects#destroy', :as => :perso_project_destroy
 
     #photos
     resources :photo
