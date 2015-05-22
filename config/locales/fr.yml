@@ -167,6 +167,7 @@ fr:
     resume:
       index:
         title:            "CV"
+        upload:           "Uploader un CV"
 
     skills:
       index:

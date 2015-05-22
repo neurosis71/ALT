@@ -167,6 +167,7 @@ en:
     resume:
       index:
         title:            "Resume"
+        upload:           "Upload a resume"
 
     skills:
       index:

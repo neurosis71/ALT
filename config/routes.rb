@@ -42,6 +42,7 @@ Rails.application.routes.draw do
 
     #resume
     resources :resume
+    post 'resume/resume_upload' => 'resume#resume_upload', :as => :resume_upload
 
     #cursus
     resources :cursus
@@ -84,7 +85,7 @@ Rails.application.routes.draw do
     get 'albums/:id/destroy' => 'albums#destroy', :as => :album_destroy
 
     #contact
-    get 'contact/index' => 'contact#index', :as => :contacts
+    get 'contact/index' => 'contact#index', :as => :contact
     get 'contact/update' => 'contact#update', :as => :update_contact
 
   end

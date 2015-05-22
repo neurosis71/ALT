@@ -1,4 +1,21 @@
 
+<div class="resume upload">
+  <h1><%=t('admin.resume.index.upload')%></h1>
+  <% if @file_modified%>
+      <p>Le dernier fichier à été uploadé le <%= @file_modified.strftime("%d-%m-%Y") %> à <%= @file_modified.strftime("%H:%M") %> </p>
+  <% end %>
+  <%= form_tag(admin_resume_upload_path, :multipart => true) do %>
+      <div class="field">
+        <%= label_tag :file %>
+        <%= file_field_tag :file %>
+      </div>
+      <div class="actions">
+        <%= submit_tag t('admin.buttons.save'), :class => "button radius tiny info" %>
+      </div>
+  <% end %>
+</div>
+
+
 <div class="table-container">
   <h1><%=t('admin.cursus.index.title')%></h1>
   <%= link_to t('admin.buttons.new'), new_admin_cursu_path, :class => 'button radius tiny success' %>
