@@ -15,7 +15,7 @@ class Admin::ResumeController < ApplicationController
   def resume_upload
     type = params[:file].content_type
     if type == "application/pdf"
-      name =  "Audrey LEPERS-TASSY.pdf"
+      name =  "CV - Audrey LEPERS-TASSY.pdf"
       directory = "public/resume"
       # create the file path
       path = File.join(directory, name)

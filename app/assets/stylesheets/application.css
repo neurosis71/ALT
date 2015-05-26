@@ -169,14 +169,14 @@ img {
 
 .page-title{
     font-size: 45px;
-    margin-top: 80px;
+    margin-top: 76px;
     text-align: left;
     z-index: 3;
     position: relative;
 }
 
 .page-title > span {
-    margin-left: -80px;
+    margin-left: -90px;
 }
 
 
@@ -203,6 +203,22 @@ img {
 
 .hidden { display: none; }
 
+a {
+    color: #A7A7A7;
+}
+
+a:visited{
+    color: #A7A7A7;
+}
+
+a:hover{
+    color: #64c7c4;
+}
+
+a:active{
+    color: #64c7c4;
+}
+
 /*********** Fonts **************/
 
 @font-face {
@@ -226,8 +242,8 @@ body{
 
 /************* language selection flags ***************/
 .lang_thumb{
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
 }
 
 /*************** modal ****************/

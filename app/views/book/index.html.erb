@@ -1,13 +1,17 @@
-<div class="map-img row">
+<div class="map-img row centered">
   <%= image_tag 'book/map.png', class: 'no-border' %>
 </div>
 
-<% @locations.each do |loc|%>
-    <% I18n.locale == :fr ? title = loc.name_fr : title = loc.name_en %>
-    <div class="small-3 left">
-        <div class="circular no-border">
-          <%= link_to image_tag(loc.main_image(:grey), alt: title, class: "BWtoColor"), :controller => 'locations', :action => 'show', :id => loc.id %>
-          <p class="loc-title BWtoColor"><%=title%></p>
+<div class="row centered">
+  <div class="location_list centered">
+    <% @locations.each do |loc|%>
+        <% I18n.locale == :fr ? title = loc.name_fr : title = loc.name_en %>
+        <div class="small-3 left">
+          <div class="circular no-border">
+            <%= link_to image_tag(loc.main_image(:grey), alt: title, class: "BWtoColor"), :controller => 'locations', :action => 'show', :id => loc.id %>
+            <p class="loc-title BWtoColor"><%=title%></p>
+          </div>
         </div>
-    </div>
-<% end %>
+    <% end %>
+  </div>
+</div>

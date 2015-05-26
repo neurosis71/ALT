@@ -26,7 +26,7 @@
 }
 
 .profession{
-  margin-top: -10px;
+  margin-top: -15px;
   font-family: Caviar-ALT;
 }
 
@@ -39,9 +39,11 @@
 }
 
 .language-select{
+  margin-top: 20px;
   text-align: center;
   font-family: Lobster-ALT;
   font-size: 25px;
+  color: #A7A7A7;
 }
 
 
@@ -49,6 +51,7 @@
 .separator {
   padding: 10px;
   position: relative;
+  margin-top: -10px;
 
   .mask-small {
     overflow: hidden;
