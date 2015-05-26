@@ -8,7 +8,7 @@ class Location < ActiveRecord::Base
 
   #main image upload definition for paperclip
   has_attached_file :main_image,
-                    :styles => {:medium => "300x300", :thumb => "100x100", :grey => "300x300"},
+                    :styles => {:medium => "300x300", :thumb => "100x100", :grey => "300x300", :large => "800x800"},
                     :convert_options => {:grey => "-colorspace Gray"},
                     :path => ":rails_root/public/images/locations/:id/:style_:basename.:extension",
                     :url => ":class/:id/:style_:basename.:extension",
