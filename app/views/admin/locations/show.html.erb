@@ -20,11 +20,11 @@
         <table>
           <tr>
             <td class="cell1"><strong><%=t('activerecord.attributes.locations.name_fr')%>:</strong></td>
-            <td class="cell2"><%= @location.name_fr %></td>
+            <td class="cell2"><%= @location.name_fr.html_safe %></td>
           </tr>
           <tr>
             <td class="cell1"><strong><%=t('activerecord.attributes.locations.description_fr')%>:</strong></td>
-            <td class="cell2"><%= @location.description_fr %></td>
+            <td class="cell2"><%= @location.description_fr.html_safe %></td>
           </tr>
         </table>
 
@@ -35,11 +35,11 @@
         <table>
           <tr>
             <td class="cell1"><strong><%=t('activerecord.attributes.locations.name_en')%>:</strong></td>
-            <td class="cell2"><%= @location.name_en %></td>
+            <td class="cell2"><%= @location.name_en.html_safe %></td>
           </tr>
           <tr>
             <td class="cell1"><strong><%=t('activerecord.attributes.locations.description_en')%>:</strong></td>
-            <td class="cell2"><%= @location.description_en %></td>
+            <td class="cell2"><%= @location.description_en.html_safe %></td>
           </tr>
         </table>
 

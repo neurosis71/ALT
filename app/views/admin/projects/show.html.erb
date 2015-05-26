@@ -19,7 +19,7 @@
         <table>
           <tr>
             <td class="cell1"><strong><%=t('activerecord.attributes.albums.name_fr')%>:</strong></td>
-            <td class="cell2"><%= @project.name_fr %></td>
+            <td class="cell2"><%= @project.name_fr.html_safe %></td>
           </tr>
           <tr>
             <td colspan="2">
@@ -30,7 +30,7 @@
           </tr>
           <tr>
             <td class="cell1"><strong><%=t('activerecord.attributes.albums.description_fr')%>:</strong></td>
-            <td class="cell2"><%= @project.description_fr %></td>
+            <td class="cell2"><%= @project.description_fr.html_safe %></td>
           </tr>
         </table>
 
@@ -41,7 +41,7 @@
         <table>
           <tr>
             <td class="cell1"><strong><%=t('activerecord.attributes.albums.name_en')%>:</strong></td>
-            <td class="cell2"><%= @project.name_en %></td>
+            <td class="cell2"><%= @project.name_en.html_safe %></td>
           </tr>
           <tr>
             <td colspan="2">
@@ -52,7 +52,7 @@
           </tr>
           <tr>
             <td class="cell1"><strong><%=t('activerecord.attributes.albums.description_en')%>:</strong></td>
-            <td class="cell2"><%= @project.description_en %></td>
+            <td class="cell2"><%= @project.description_en.html_safe %></td>
           </tr>
         </table>
 
