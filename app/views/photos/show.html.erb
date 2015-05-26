@@ -1,13 +1,11 @@
-<div class="row album-img">
-  <%= image_tag @album.main_image(:large), class: 'no-border' %>
-</div>
-
-<div class="album-desc row">
-  <div class="small-12 small-centered columns">
-    <div class="title"><span><%=t("app.photos.desc")%></span></div>
-    <div class="desc-content"><%=@description.html_safe%></div>
-  </div>
-</div>
+<% if defined?(@description) && @description != '' %>
+    <div class="album-desc row">
+      <div class="small-12 small-centered columns">
+        <div class="title"><span><%=t("app.photos.desc")%></span></div>
+        <div class="desc-content"><%=@description.html_safe%></div>
+      </div>
+    </div>
+<% end %>
 
 
 <div class="Collage effect-parent row">
