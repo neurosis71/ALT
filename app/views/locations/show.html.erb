@@ -1,3 +1,11 @@
+<% if defined?(@description) && @description != '' %>
+    <div class="album-desc row">
+      <div class="small-12 small-centered columns">
+        <div class="desc-content"><%=@description.html_safe%></div>
+      </div>
+    </div>
+<% end %>
+
 <div class="Collage effect-parent">
     <% @projects.each do |project|%>
       <% I18n.locale == :fr ? title = project.name_fr : title = project.name_en %>
