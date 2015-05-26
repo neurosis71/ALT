@@ -1,18 +1,36 @@
-
-<div class="resume upload">
+<div class="resume upload row">
   <h1><%=t('admin.resume.index.upload')%></h1>
-  <% if @file_modified%>
-      <p>Le dernier fichier à été uploadé le <%= @file_modified.strftime("%d-%m-%Y") %> à <%= @file_modified.strftime("%H:%M") %> </p>
-  <% end %>
-  <%= form_tag(admin_resume_upload_path, :multipart => true) do %>
-      <div class="field">
-        <%= label_tag :file %>
-        <%= file_field_tag :file %>
-      </div>
-      <div class="actions">
-        <%= submit_tag t('admin.buttons.save'), :class => "button radius tiny info" %>
-      </div>
-  <% end %>
+  <div class="cv-fr small-6 columns">
+    <% if @file_modified_fr%>
+        <p>Le dernier fichier à été uploadé le <%= @file_modified_fr.strftime("%d-%m-%Y") %> à <%= @file_modified_fr.strftime("%H:%M") %> </p>
+    <% end %>
+    <%= form_tag(admin_resume_upload_path, :multipart => true) do %>
+        <div class="field">
+          <%= label_tag t('admin.language.fr') %>
+          <%= file_field_tag :file %>
+          <%= hidden_field_tag "lang", "fr"%>
+        </div>
+        <div class="actions">
+          <%= submit_tag t('admin.buttons.save'), :class => "button radius tiny info" %>
+        </div>
+    <% end %>
+  </div>
+
+  <div class="cv-en small-6 columns">
+    <% if @file_modified_en%>
+        <p>Le dernier fichier à été uploadé le <%= @file_modified_en.strftime("%d-%m-%Y") %> à <%= @file_modified_en.strftime("%H:%M") %> </p>
+    <% end %>
+    <%= form_tag(admin_resume_upload_path, :multipart => true) do %>
+        <div class="field">
+          <%= label_tag t('admin.language.en') %>
+          <%= file_field_tag :file %>
+          <%= hidden_field_tag "lang", "en"%>
+        </div>
+        <div class="actions">
+          <%= submit_tag t('admin.buttons.save'), :class => "button radius tiny info" %>
+        </div>
+    <% end %>
+  </div>
 </div>
 
 

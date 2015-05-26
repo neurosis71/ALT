@@ -15,5 +15,12 @@
 
   <div class="page-title small-5">
     <span><%= @page_title %></span>
+    <% if params[:controller] == 'resume' %>
+          <% if @lang == :fr && File.exist?( Rails.root + "public/files/CV - Audrey LEPERS-TASSY.pdf")%> <!-- location language handling -->
+              <%= link_to image_tag("download/download.png", :class => "download-icon" ), '/files/CV - Audrey LEPERS-TASSY.pdf', { target: '_blank', :class => "download-link" } %>
+          <% elsif @lang == :en && File.exist?( Rails.root + "public/files/resume - Audrey LEPERS-TASSY.pdf") %>
+              <%= link_to image_tag("download/download.png", :class => "download-icon" ), '/files/resume - Audrey LEPERS-TASSY.pdf', { target: '_blank', :class => "download-link" } %>
+          <% end %>
+    <% end %>
   </div>
 </div>
