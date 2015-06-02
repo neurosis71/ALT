@@ -20,7 +20,7 @@ class Admin::ResumeController < ApplicationController
     if type == "application/pdf"
       if params[:lang] == "fr"
         name =  "CV - Audrey LEPERS-TASSY.pdf"
-      elsif
+      else
         name =  "resume - Audrey LEPERS-TASSY.pdf"
       end
 
