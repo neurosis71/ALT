@@ -12,6 +12,19 @@ default: &default
     port: 5432
     encoding: UTF8
 
+
+prod: &prod
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+  login: &login
+    username: rails
+    password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+    host: localhost
+    port: 5432
+    encoding: UTF8
+
 development:
   <<: *default
   <<: *login
@@ -25,7 +38,7 @@ test:
   database: ALT-test
 
 production:
-  <<: *default
+  <<: *prod
   database: ALT-prod
 
 
