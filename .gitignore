@@ -13,6 +13,7 @@ pickle-email-*.html
 /public/images/locations
 /public/images/albums
 /public/images/photos
+Gemfile.lock
 
 # TODO Comment out these rules if you are OK with secrets being uploaded to the repo
 #config/initializers/secret_token.rb
