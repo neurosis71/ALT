@@ -12,3 +12,8 @@ Rails.application.config.assets.version = '1.0'
 
 #for foundation
 Rails.application.config.assets.precompile += %w( vendor/modernizr.js )
+
+config.assets.paths << "#{Rails.root}/assets/javascripts"
+config.assets.paths << "#{Rails.root}/assets/images"
+config.assets.paths << "#{Rails.root}/assets/stylesheets"
+config.assets.precompile += %w( .css .scss .coffee .js .JPG .jpg .png)
