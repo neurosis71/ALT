@@ -13,17 +13,6 @@ default: &default
   username: neurosis71
   password:
 
-prod: &prod
-  adapter: postgresql
-  encoding: UTF8
-  port: 5432
-  pool: 5
-  timeout: 5000
-
-  host: localhost
-  username: rails
-  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
-
 
 development:
   <<: *default
@@ -37,7 +26,7 @@ test:
   database: ALT_test
 
 production:
-  <<: *prod
+  <<: *default
   database: ALT_production
   username: rails
   password: <%= ENV['APP_DATABASE_PASSWORD'] %>
