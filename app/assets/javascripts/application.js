@@ -22,8 +22,9 @@
 //= require collage/jquery.collagePlus.min
 //= require collage/jquery.collageCaption.min
 //= require collage/jquery.removeWhitespace.min
-//= require_tree .
 //= require foundation
+//= require_tree .
+
 
 //$(function(){ $(document).foundation(); });
 $(document).ready(function(){
