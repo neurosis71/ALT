@@ -11,7 +11,7 @@
 <div class="Collage effect-parent row">
     <% @photos.each_with_index do |photo, index|%>
         <div class="Image_Wrapper">
-          <%= link_to(image_tag(photo.image(:medium), class: 'no-border'), "#", { "data-reveal-id" => "carousselModal", "position" => index, "class" => "open-modal"})%>
+          <%= link_to(image_tag(photo.album_image(:medium), class: 'no-border'), "#", { "data-reveal-id" => "carousselModal", "position" => index, "class" => "open-modal"})%>
         </div>
     <% end %>
 </div>

@@ -83,7 +83,7 @@
           <% @photos.each do |p|%>
               <div class="picture" image-id="<%= p.id %>">
                 <span class="delete-image"><%= image_tag 'delete/delete.png', :class => "no-border" %></span>
-                <%=image_tag(p.image(:thumb))%>
+                <%=image_tag(p.album_image(:thumb))%>
               </div>
           <% end %>
         </div>

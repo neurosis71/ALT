@@ -73,7 +73,7 @@
     <div class="picture-gallery inline">
       <% @photos.each do |p|%>
           <div class="picture">
-            <%=image_tag(p.image(:thumb))%>
+            <%=image_tag(p.album_image(:thumb))%>
           </div>
       <% end %>
     </div>
