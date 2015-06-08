@@ -2,7 +2,7 @@ class PersoController < ApplicationController
   def index
     @page_title = t('app.perso.title')
 
-    @projects = Album.all.where("perso = ?", 1)
+    @projects = Album.all.where("perso = ?", true)
   end
 
   def show

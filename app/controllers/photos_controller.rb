@@ -2,7 +2,7 @@ class PhotosController < ApplicationController
   def index
     @page_title = t('app.photos.title')
 
-    @albums = Album.all.where("project = ?", 0).where("perso = ?", 0)
+    @albums = Album.all.where("project = ?", false).where("perso = ?", false)
   end
 
   def show
