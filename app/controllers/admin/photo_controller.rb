@@ -49,6 +49,6 @@ class Admin::PhotoController < ApplicationController
   private
 
   def photo_params
-    params.require(:image).permit(:image, :album_id)
+    params.require(:album_image).permit(:album_image, :album_id)
   end
 end

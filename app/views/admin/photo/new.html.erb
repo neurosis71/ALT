@@ -12,11 +12,11 @@
 
     <div class="form-group">
       <%= f.label t('activerecord.attributes.albums.main_image') %>
-      <%= f.file_field :image, required: true, multiple: true, name: 'image[image]' %>
+      <%= f.file_field :album_image, required: true, multiple: true, name: 'album_image[image]' %>
     </div>
 
     <div>
-      <%= f.hidden_field :album_id, :value => @album_id , :name => 'image[album_id]' %>
+      <%= f.hidden_field :album_id, :value => @album_id , :name => 'album_image[album_id]' %>
     </div>
 
     <div class="progress-wrapper">
@@ -31,7 +31,7 @@
 
 <div class="Collage effect-parent">
   <% @photos.each do |t| %>
-     <div class="Image_Wrapper"> <%= image_tag t.image(:medium) %> </div>
+     <div class="Image_Wrapper"> <%= image_tag t.album_image(:medium) %> </div>
   <% end %>
 </div>
 
