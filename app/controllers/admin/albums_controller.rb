@@ -4,7 +4,7 @@ class Admin::AlbumsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @albums = Album.all.where("project = ?", 0).where("perso = ?", 0)
+    @albums = Album.all.where("project = ?", false).where("perso = ?", false)
   end
 
   def show
