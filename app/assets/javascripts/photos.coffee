@@ -24,7 +24,7 @@ $(window).load ->
 resizeTimer = null
 $(window).bind 'resize', ->
   # hide all the images until we resize them
-  $('.Collage .Image_Wrapper').css 'opacity', 0
+  #$('.Collage .Image_Wrapper').css 'opacity', 0
   # set a timer to re-apply the plugin
   if resizeTimer
     clearTimeout resizeTimer
