@@ -35,7 +35,7 @@
     <div id="carousselModal" class="reveal-modal" data-reveal aria-labelledby="photos" aria-hidden="true" role="dialog">
         <div class="slider">
           <% @photos.each do |p| %>
-              <div><%= image_tag(p.image(:large), class: 'no-border') %></div>
+              <div><%= image_tag(p.album_image(:large), class: 'no-border') %></div>
           <% end %>
         </div>
     </div>

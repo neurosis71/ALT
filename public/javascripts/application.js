@@ -25106,22 +25106,6 @@ if(!(b.options.swipe===!1||"ontouchend"in document&&b.options.swipe===!1||b.opti
 
 
 (function() {
-
-
-}).call(this);
-(function() {
-
-
-}).call(this);
-(function() {
-
-
-}).call(this);
-(function() {
-
-
-}).call(this);
-(function() {
   jQuery(function() {
     return $(".datepicker").datepicker({
       dateFormat: "yy-mm-dd"
@@ -25129,22 +25113,8 @@ if(!(b.options.swipe===!1||"ontouchend"in document&&b.options.swipe===!1||b.opti
   });
 
 }).call(this);
-(function() {
-  jQuery(function() {
-    return $(".datepicker").datepicker({
-      dateFormat: "yy-mm-dd"
-    });
-  });
-
-}).call(this);
-(function() {
 
 
-}).call(this);
-(function() {
-
-
-}).call(this);
 (function() {
   jQuery(function() {});
 
@@ -25179,34 +25149,8 @@ if(!(b.options.swipe===!1||"ontouchend"in document&&b.options.swipe===!1||b.opti
   return;
 
 }).call(this);
-(function() {
 
 
-}).call(this);
-(function() {
-
-
-}).call(this);
-(function() {
-
-
-}).call(this);
-(function() {
-
-
-}).call(this);
-(function() {
-
-
-}).call(this);
-(function() {
-
-
-}).call(this);
-(function() {
-
-
-}).call(this);
 (function() {
   var collage, resizeTimer;
 
@@ -25237,22 +25181,7 @@ if(!(b.options.swipe===!1||"ontouchend"in document&&b.options.swipe===!1||b.opti
   });
 
 }).call(this);
-(function() {
 
-
-}).call(this);
-(function() {
-
-
-}).call(this);
-(function() {
-
-
-}).call(this);
-(function() {
-
-
-}).call(this);
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -25273,15 +25202,6 @@ if(!(b.options.swipe===!1||"ontouchend"in document&&b.options.swipe===!1||b.opti
 
 
 
-
-
-
-
-
-
-
-
-//$(function(){ $(document).foundation(); });
 $(document).ready(function(){
     $(document).foundation();
 
