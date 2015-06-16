@@ -39,7 +39,8 @@ class Admin::ProjectsController < ApplicationController
       flash[:notice] = "Le projet est mis à jour"
       redirect_to(admin_project_path(:id => @project.id))
     else
-      render('edit')
+      flash[:error] = "Une erreur est survenue lors de la mise a jour."
+      redirect_to(edit_admin_project_path(:id => @project.id))
     end
   end
 
