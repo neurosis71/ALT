@@ -63,6 +63,9 @@ gem 'simple_form'
 # Use Unicorn as the app server
 gem 'unicorn'
 
+#newRelic
+gem 'newrelic_rpm'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
