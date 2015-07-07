@@ -11,6 +11,11 @@
   <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="google-site-verification" content="TbEeTJCzJzwFa9xVnc5yQ85pZsBHP7wXkoMeQx__ucE" />
+  <% if @lang == :fr %> <!-- location language handling -->
+      <link rel="alternate" hreflang="fr" href="http://www.audrey-lepers.com" />
+  <% else %>
+      <link rel="alternate" hreflang="en" href="http://www.audrey-lepers.com" />
+  <% end %>
 </head>
 
 <body>

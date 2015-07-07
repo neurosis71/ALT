@@ -29,6 +29,7 @@ class ApplicationController < ActionController::Base
       end
     end
     I18n.locale = l
+    @lang = I18n.locale
   end
 
 end
