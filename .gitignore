@@ -15,6 +15,7 @@ pickle-email-*.html
 /public/images/photos
 Gemfile.lock
 config/database.yml
+config/secrets.yml
 db/migrate/20150605140906_seed_credentials.rb
 
 # TODO Comment out these rules if you are OK with secrets being uploaded to the repo
