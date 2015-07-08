@@ -220,6 +220,14 @@ a:active{
     color: #64c7c4;
 }
 
+.blue{
+    color: #64c7c4;
+}
+
+.bold{
+    font-weight: bold;
+}
+
 /*********** Fonts **************/
 
 @font-face {
