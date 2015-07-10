@@ -4,7 +4,11 @@ class Admin::LocationsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @locations = Location.all
+    if I18n.locale == "fr"
+      @locations = Location.all.order(name_fr: :asc)
+    else
+      @locations = Location.all.order(name_en: :asc)
+    end
   end
 
   def show

@@ -4,7 +4,11 @@ class Admin::SkillsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @skills = Skill.all
+    if I18n.locale == "fr"
+      @skills = Skill.all.order(description_fr: :asc)
+    else
+      @skills = Skill.all.order(description_en: :asc)
+    end
   end
 
   def show

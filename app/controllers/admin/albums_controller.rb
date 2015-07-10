@@ -4,7 +4,11 @@ class Admin::AlbumsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @albums = Album.all.where("project = ?", false).where("perso = ?", false)
+    if I18n.locale == "fr"
+      @albums = Album.all.where("project = ?", false).where("perso = ?", false).order(name_fr: :asc)
+    else
+      @albums = Album.all.where("project = ?", false).where("perso = ?", false).order(name_en: :asc)
+    end
   end
 
   def show

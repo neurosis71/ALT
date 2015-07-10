@@ -4,7 +4,7 @@ class Admin::ExperienceController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @experiences = ProfessionalExperience.all
+      @experiences = ProfessionalExperience.all.order(date: :asc)
   end
 
   def show

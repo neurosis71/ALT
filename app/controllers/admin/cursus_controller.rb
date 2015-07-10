@@ -4,7 +4,7 @@ class Admin::CursusController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @cursus = Cursu.all
+    @cursus = Cursu.all.order(date: :asc)
   end
 
   def show
