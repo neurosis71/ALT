@@ -33,9 +33,6 @@ gem 'jquery-fileupload-rails'
 #for AJAX file upload
 gem 'remotipart'
 
-#foundation
-gem 'foundation-rails', '~> 5.5.2.1'
-
 #ckeditor wysiwyg
 gem 'ckeditor'
 
