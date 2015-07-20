@@ -12,3 +12,4 @@ Rails.application.config.assets.version = '1.0'
 
 #for foundation
 Rails.application.config.assets.precompile += %w( vendor/modernizr.js )
+Rails.application.config.assets.precompile += %w( foundation.js )

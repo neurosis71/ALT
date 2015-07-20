@@ -7,8 +7,14 @@
     <title><%= t('app.layout.title') %><%if @page_title %><%= " - " + @page_title %><%end%></title>
 
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "foundation" %>
+    <%= javascript_include_tag "foundation/foundation.reveal" %>
+    <%= javascript_include_tag "foundation/foundation.slider" %>
+    <%= javascript_include_tag "foundation/foundation.clearing" %>
+    <%= javascript_include_tag "foundation/foundation.alert" %>
+
     <%= csrf_meta_tags %>
     <meta name="google-site-verification" content="TbEeTJCzJzwFa9xVnc5yQ85pZsBHP7wXkoMeQx__ucE" />
     <% if @lang == :fr %> <!-- location language handling -->

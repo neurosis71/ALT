@@ -7,8 +7,10 @@
   <title><%= t('app.layout.title') %></title>
 
   <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "vendor/modernizr" %>
   <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "vendor/modernizr" %>
+  <%= javascript_include_tag "foundation"%>
+
   <%= csrf_meta_tags %>
   <meta name="google-site-verification" content="TbEeTJCzJzwFa9xVnc5yQ85pZsBHP7wXkoMeQx__ucE" />
   <% if @lang == :fr %> <!-- location language handling -->
