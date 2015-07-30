@@ -26,7 +26,7 @@
 
 <div class="admin_body">
   <div class="row">
-    <div class="small-12 small-centered columns">
+    <div class="small-12 small-centered columns" data-no-turbolink>
       <% flash.each do |key, value| %>
           <div class="notice alert-<%= key %>"><%= value %></div>
       <% end %>
