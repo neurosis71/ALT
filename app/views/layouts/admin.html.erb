@@ -3,6 +3,10 @@
 <head>
   <title><%=t('admin.layout.title')%></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <script>
+      var CKEDITOR_BASEPATH = '/javascripts/ckeditor/';
+  </script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "vendor/modernizr" %>
   <%= javascript_include_tag "foundation" %>
@@ -10,6 +14,7 @@
   <%= javascript_include_tag "foundation/foundation.dropdown" %>
   <%= javascript_include_tag "foundation/foundation.clearing" %>
   <%= javascript_include_tag "foundation/foundation.alert" %>
+  <%= javascript_include_tag "ckeditor/ckeditor.js" %>
 
   <%= csrf_meta_tags %>
 

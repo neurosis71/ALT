@@ -34,7 +34,7 @@ gem 'jquery-fileupload-rails'
 gem 'remotipart'
 
 #ckeditor wysiwyg
-gem 'ckeditor'
+#gem 'ckeditor'
 
 #jquery ui for datepickers and drag/drop
 gem 'jquery-ui-rails'

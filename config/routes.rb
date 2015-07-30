@@ -94,9 +94,6 @@ Rails.application.routes.draw do
   get '/change_locale/:locale', to: 'settings#change_locale', as: :change_locale
 
 
-  # ASSETS
-  mount Ckeditor::Engine => '/ckeditor'
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

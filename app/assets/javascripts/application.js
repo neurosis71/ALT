@@ -16,7 +16,6 @@
 //= require jquery-fileupload/vendor/tmpl
 //= require jquery.remotipart
 //= require jquery-ui/datepicker
-//= require ckeditor/init
 //= require turbolinks
 //= require slick/slick.min
 //= require collage/jquery.collagePlus.min
@@ -85,6 +84,3 @@ var initialization = function (){
 //We use those two lines to prevent having a javascript loading problem due to turbolinks
 $(document).ready(initialization);//classic call for initailization
 $(document).on('page:load', initialization);//turbolink call for initialization
-
-//removes autoparagraph behavior for CKEditor (<p> tags not added automatically)
-CKEDITOR.config.autoParagraph = false;
