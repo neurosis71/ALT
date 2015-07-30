@@ -3,7 +3,7 @@
 </div>
 
 <div class="row centered">
-  <div class="location_list centered">
+  <div class="location_list centered" data-no-turbolink>
     <% @locations.each do |loc|%>
         <% I18n.locale == :fr ? title = loc.name_fr : title = loc.name_en %>
         <div class="small-3 left">

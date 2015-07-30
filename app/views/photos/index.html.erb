@@ -1,4 +1,4 @@
-<div class="Collage effect-parent">
+<div class="Collage effect-parent" data-no-turbolink>
   <% @albums.each do |alb|%>
       <% I18n.locale == :fr ? title = alb.name_fr : title = alb.name_en %>
       <div class="Image_Wrapper" data-caption="<%=title%>">

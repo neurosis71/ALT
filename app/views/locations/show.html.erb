@@ -6,7 +6,7 @@
     </div>
 <% end %>
 
-<div class="Collage effect-parent">
+<div class="Collage effect-parent" data-no-turbolink>
     <% @projects.each do |project|%>
       <% I18n.locale == :fr ? title = project.name_fr : title = project.name_en %>
         <div class="Image_Wrapper" data-caption="<%=title%>">

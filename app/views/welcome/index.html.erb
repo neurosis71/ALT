@@ -19,7 +19,7 @@
   </div>
 </div>
 
-<div class="link-list row">
+<div class="link-list row" data-no-turbolink>
   <div class="inline">
       <%= link_to about_path do %>
           <div class="about_thumb welcome_thumb">
@@ -55,7 +55,7 @@
 </div>
 
 <div class="row">
-  <div class="language-select">
+  <div class="language-select" data-no-turbolink>
     <%= link_to t('app.welcome.lang_fr'), change_locale_path(:fr)%> - <%= link_to t('app.welcome.lang_en'), change_locale_path(:en)%>
   </div>
 </div>
