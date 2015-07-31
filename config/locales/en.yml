@@ -18,7 +18,8 @@ en:
         main_image:       "Image"
 
       cursus:
-        date:             "Date"
+        startdate:        "Start date"
+        enddate:          "End date"
         school:           "Ecole"
         location_fr:      "Ville"
         location_en:      "City"
@@ -33,7 +34,8 @@ en:
         main_image:       "Image"
 
       professional_experiences:
-        date:             "Date"
+        startdate:        "Start date"
+        enddate:          "End date"
         company:          "Entreprise"
         location_fr:      "Ville"
         location_en:      "City"

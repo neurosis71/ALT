@@ -1,5 +1,5 @@
 class ProfessionalExperience < ActiveRecord::Base
-  validates :date, presence: true
+  validates :start_date, presence: true
   validates :company, presence: true, length: { maximum: 300, too_long: "%{count} charactères autorisés"}
   validates :location_fr, length: { maximum: 300, too_long: "%{count} charactères autorisés"}
   validates :location_en, length: { maximum: 300, too_long: "%{count} charactères autorisés"}

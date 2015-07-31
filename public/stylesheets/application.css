@@ -10781,9 +10781,26 @@ A library of transitions for revealing the loaded images
 }
 
 /* line 24, /Volumes/Data/GitHub/ALT/app/assets/stylesheets/resume.scss */
-.resume-desc {
-  margin-left: 20px;
+.resume-desc{
+    margin-left: 100px;
 }
+
+.resume-date{
+    float: left;
+    width: 100px;
+    max-width: 100px;
+}
+
+.resume-location{
+    position: relative;
+}
+
+
+.ui-datepicker-calendar{
+    display: none;
+}
+
+
 /* Slider */
 /* line 4, /Volumes/Data/GitHub/ALT/app/assets/stylesheets/slick/slick.scss */
 .slick-slider {

@@ -40,7 +40,8 @@
   <table>
     <thead>
     <tr>
-      <th><%=t('activerecord.attributes.cursus.date')%></th>
+      <th><%=t('activerecord.attributes.cursus.startdate')%></th>
+      <th><%=t('activerecord.attributes.cursus.enddate')%></th>
       <th><%=t('activerecord.attributes.cursus.school')%></th>
       <th><%=t('activerecord.attributes.cursus.location_fr')%></th>
       <th><%=t('activerecord.attributes.cursus.location_en')%></th>
@@ -53,7 +54,8 @@
     <tbody>
     <% @cursus.each do |cursu| %>
         <tr>
-          <td><%= cursu.date %></td>
+          <td><%= cursu.start_date %></td>
+          <td><%= cursu.end_date %></td>
           <td><%= cursu.school %></td>
           <td><%= cursu.location_fr %></td>
           <td><%= cursu.location_en %></td>
@@ -76,7 +78,8 @@
   <table>
     <thead>
     <tr>
-      <th><%=t('activerecord.attributes.professional_experiences.date')%></th>
+      <th><%=t('activerecord.attributes.professional_experiences.startdate')%></th>
+      <th><%=t('activerecord.attributes.professional_experiences.enddate')%></th>
       <th><%=t('activerecord.attributes.professional_experiences.company')%></th>
       <th><%=t('activerecord.attributes.professional_experiences.location_fr')%></th>
       <th><%=t('activerecord.attributes.professional_experiences.location_en')%></th>
@@ -89,7 +92,8 @@
     <tbody>
     <% @professional_experiences.each do |professional_experience| %>
         <tr>
-          <td><%= professional_experience.date %></td>
+          <td><%= professional_experience.start_date %></td>
+          <td><%= professional_experience.end_date %></td>
           <td><%= professional_experience.company %></td>
           <td><%= professional_experience.location_fr %></td>
           <td><%= professional_experience.location_en %></td>

@@ -4,8 +4,13 @@
 <%= link_to t('admin.buttons.back'), admin_resume_index_path, :class => 'button radius tiny ' %>
 
 <p>
-  <strong><%=t('activerecord.attributes.professional_experiences.date')%>:</strong>
-  <%= @experience.date %>
+  <strong><%=t('activerecord.attributes.professional_experiences.startdate')%>:</strong>
+  <%= @experience.start_date %>
+</p>
+
+<p>
+  <strong><%=t('activerecord.attributes.professional_experiences.enddate')%>:</strong>
+  <%= @experience.end_date %>
 </p>
 
 <p>

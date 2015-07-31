@@ -10,8 +10,8 @@ class Admin::ResumeController < ApplicationController
     if File.exist?("public/files/resume - Audrey LEPERS-TASSY.pdf")
       @file_modified_en = File.mtime("public/files/resume - Audrey LEPERS-TASSY.pdf")
     end
-    @cursus = Cursu.all.order(date: :asc)
-    @professional_experiences = ProfessionalExperience.all.order(date: :asc)
+    @cursus = Cursu.all.order(start_date: :asc)
+    @professional_experiences = ProfessionalExperience.all.order(start_date: :asc)
     if I18n.locale == "fr"
       @skills = Skill.all.order(description_fr: :asc)
     else

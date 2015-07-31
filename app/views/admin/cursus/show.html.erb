@@ -4,8 +4,13 @@
 <%= link_to t('admin.buttons.back'), admin_resume_index_path, :class => 'button radius tiny ' %>
 
 <p>
-  <strong><%=t('activerecord.attributes.cursus.date')%>:</strong>
-  <%= @cursu.date %>
+  <strong><%=t('activerecord.attributes.cursus.startdate')%>:</strong>
+  <%= @cursu.start_date %>
+</p>
+
+<p>
+  <strong><%=t('activerecord.attributes.cursus.enddate')%>:</strong>
+  <%= @cursu.end_date %>
 </p>
 
 <p>

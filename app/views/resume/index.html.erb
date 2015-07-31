@@ -8,17 +8,24 @@
     <% @cursus.each do |cursu|%>
         <div>
           <div>
-              <span><%=cursu.date%></span>
-              <span class="blue bold">///</span>
-              <span><%=cursu.school.html_safe%></span>
-              -
-              <span>
-                  <% if @lang == :fr %> <!-- location language handling -->
-                      <%= cursu.location_fr ? cursu.location_fr.html_safe : '' %>
-                  <% else %>
-                      <%= cursu.location_en ? cursu.location_en.html_safe : '' %>
+              <div class="resume-date">
+                  <span><%=cursu.start_date.strftime("%Y")%></span>
+                  <% if cursu.end_date%>
+                    - <span><%=cursu.end_date.strftime("%Y")%></span>
                   <% end %>
-              </span>
+              </div>
+              <div class="resume-location">
+                  <span class="blue bold">///</span>
+                  <span><%=cursu.school.html_safe%></span>
+                  -
+                  <span>
+                      <% if @lang == :fr %> <!-- location language handling -->
+                          <%= cursu.location_fr ? cursu.location_fr.html_safe : '' %>
+                      <% else %>
+                          <%= cursu.location_en ? cursu.location_en.html_safe : '' %>
+                      <% end %>
+                  </span>
+              </div>
           </div>
 
           <div class="resume-desc">
@@ -39,17 +46,24 @@
     <% @professional_experiences.each do |exp|%>
         <div>
           <div>
-              <span><%=exp.date%></span>
-              <span class="blue bold">///</span>
-              <span><%=exp.company.html_safe%></span>
-              -
-              <span>
-                  <% if @lang == :fr %> <!-- location language handling -->
-                    <%= exp.location_fr ? exp.location_fr.html_safe : '' %>
-                  <% else %>
-                      <%= exp.location_en ? exp.location_en.html_safe : '' %>
+              <div class="resume-date">
+                  <span><%=exp.start_date.strftime("%Y")%></span>
+                  <% if exp.end_date%>
+                      - <span><%=exp.end_date.strftime("%Y")%></span>
                   <% end %>
-              </span>
+              </div>
+              <div class="resume-location">
+                  <span class="blue bold">///</span>
+                  <span><%=exp.company.html_safe%></span>
+                  -
+                  <span>
+                      <% if @lang == :fr %> <!-- location language handling -->
+                        <%= exp.location_fr ? exp.location_fr.html_safe : '' %>
+                      <% else %>
+                          <%= exp.location_en ? exp.location_en.html_safe : '' %>
+                      <% end %>
+                  </span>
+              </div>
           </div>
 
           <div class="resume-desc">
