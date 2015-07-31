@@ -4,15 +4,8 @@
 
 jQuery ->
   $(".datepicker").datepicker(
-    dateFormat: "MM yy",
+    dateFormat: "YY-mm-dd",
     changeMonth: true,
     changeYear: true,
     showButtonPanel: true,
-    onClose: getValue(dateText, inst)
   );
-
-  getValue = (dateText, inst) ->
-    month = $('#ui-datepicker-div .ui-datepicker-month :selected').val()
-    year = $('#ui-datepicker-div .ui-datepicker-year :selected').val()
-    $(this).datepicker 'setDate', new Date(year, month, 1)
-    return
