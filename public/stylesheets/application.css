@@ -11320,6 +11320,14 @@ body{
     font-family: Caviar-ALT;
 }
 
+.blue{
+    color: #64c7c4;
+}
+
+.bold{
+    font-weight: bold;
+}
+
 /************* language selection flags ***************/
 .lang_thumb{
     height: 30px;
@@ -11367,3 +11375,6 @@ body{
     color:#FFF;
     padding:20px;
 }
+
+
+
