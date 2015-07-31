@@ -61,6 +61,7 @@ fr:
     flash:
       error:                "Une erreur est apparue. Impossible d'envoyer le message."
       success:              "Merci pour votre message. Nous vous contacterons bientôt!"
+      spam:                 "Désolé, ce message semble être un spam et n'a pas été envoyé."
 
   #####################################
 

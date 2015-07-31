@@ -61,6 +61,7 @@ en:
     flash:
       error:                "An error occured. Cannot send message."
       success:              "Thank you for your message. We will contact you soon!"
+      spam:                 "Sorry, this message appears to be spam and was not delivered."
 
 
   #####################################

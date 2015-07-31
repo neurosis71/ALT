@@ -6,13 +6,18 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(params[:contacts])
-    @contact.request = request
-    if @contact.deliver
-      flash.now[:notice] = t('mail.flash.success')
-    else
-      flash.now[:error] = t('mail.flash.error')
-      render :new
+    begin
+      @contact = Contact.new(params[:contact])
+      @contact.request = request
+      if @contact.deliver
+        flash.now[:notice] = t('mail.flash.success')
+        render :new
+      else
+        flash.now[:error] = t('mail.flash.error')
+        render :new
+      end
+    rescue ScriptError
+      flash[:error] = t('mail.flash.spam')
     end
   end
 end
