@@ -8,7 +8,7 @@ jQuery ->
     changeMonth: true,
     changeYear: true,
     showButtonPanel: true,
-    onClose: getValue
+    onClose: getValue(dateText, inst)
   );
 
   getValue = (dateText, inst) ->
