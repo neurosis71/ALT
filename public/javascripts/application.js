@@ -17075,6 +17075,6 @@ $(document).ready(function(){
         changeMonth: true,
         changeYear: true,
         showButtonPanel: true,
-        dateFormat: 'YY-mm-dd'
+        dateFormat: 'yy-mm-dd'
     });
 });

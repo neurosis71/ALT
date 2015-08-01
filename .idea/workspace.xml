@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c3b3f0a4-0694-4413-a8ec-4a059d1704b3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/application.css" afterPath="$PROJECT_DIR$/public/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin/cursus.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/admin/cursus.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/application.js" afterPath="$PROJECT_DIR$/public/javascripts/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin/experience.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/admin/experience.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="ALT.iws" />
@@ -36,12 +34,12 @@
       <file leaf-file-name="application.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7580645" vertical-offset="255732" max-vertical-offset="256290">
-              <caret line="17077" column="30" selection-start-line="17077" selection-start-column="30" selection-end-line="17077" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.7663044" vertical-offset="255732" max-vertical-offset="256290">
+              <caret line="17077" column="23" selection-start-line="17077" selection-start-column="23" selection-end-line="17077" selection-end-column="23" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1438362426000" expanded="true" signature="340566:340579" placeholder="..." />
-                <marker date="1438362426000" expanded="true" signature="584661:584679" placeholder="..." />
+                <marker date="1438362876000" expanded="true" signature="340566:340579" placeholder="..." />
+                <marker date="1438362876000" expanded="true" signature="584661:584679" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -100,12 +98,12 @@
         <option value="$PROJECT_DIR$/app/views/resume/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/resume.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/public/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/admin/experience.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/admin/cursus.coffee" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/admin/cursus.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/admin/experience.scss" />
         <option value="$PROJECT_DIR$/public/stylesheets/application.css" />
+        <option value="$PROJECT_DIR$/public/javascripts/application.js" />
       </list>
     </option>
   </component>
@@ -113,10 +111,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1920" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="818" />
+    <option name="height" value="812" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -580,13 +577,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="23" width="1440" height="818" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="812" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18484043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18632708" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -1056,12 +1053,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7580645" vertical-offset="255732" max-vertical-offset="256290">
-          <caret line="17077" column="30" selection-start-line="17077" selection-start-column="30" selection-end-line="17077" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.7663044" vertical-offset="255732" max-vertical-offset="256290">
+          <caret line="17077" column="23" selection-start-line="17077" selection-start-column="23" selection-end-line="17077" selection-end-column="23" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1438362426000" expanded="true" signature="340566:340579" placeholder="..." />
-            <marker date="1438362426000" expanded="true" signature="584661:584679" placeholder="..." />
+            <marker date="1438362876000" expanded="true" signature="340566:340579" placeholder="..." />
+            <marker date="1438362876000" expanded="true" signature="584661:584679" placeholder="..." />
           </folding>
         </state>
       </provider>
