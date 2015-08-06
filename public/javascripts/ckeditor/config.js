@@ -8,4 +8,5 @@ CKEDITOR.editorConfig = function( config ) {
 	config.language = 'fr';
     config.skin = 'moono';
 	// config.uiColor = '#AADC6E';
+    config.enterMode = CKEDITOR.ENTER_BR;
 };
