@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
     begin
       @contact = Contact.new(params[:contact])
       @contact.request = request
-      if @contact.deliver
+      if @contact.deliver_now
         flash.now[:notice] = t('mail.flash.success')
         render :new
       else

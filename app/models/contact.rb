@@ -12,7 +12,7 @@ class Contact < MailForm::Base
     data = YAML.load_file(Rails.root + 'config/contact.yml')
 
     {
-        :subject => %("#{subject}"),
+        :subject => %("[audrey-lepers.com] - #{subject}"),
         :to => data['email'],
         :from => %("#{name}" <#{email}>)
     }
