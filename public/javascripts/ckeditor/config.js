@@ -9,4 +9,5 @@ CKEDITOR.editorConfig = function( config ) {
     config.skin = 'moono';
 	// config.uiColor = '#AADC6E';
     config.enterMode = CKEDITOR.ENTER_BR;
+    config.autoParagraph = false;
 };
