@@ -4,15 +4,14 @@
 
 <div class="row">
   <div class="small-12 small-centered columns resume-section">
-    <span><%=t('app.resume.cursus')%></span
-    <br />
+    <p><span><%=t('app.resume.cursus')%></span</p>
     <% @cursus.each do |cursu|%>
         <div>
           <div>
               <div class="resume-date">
                   <span><%=cursu.start_date.strftime("%Y")%></span>
                   <% if cursu.end_date%>
-                    - <span><%=cursu.end_date.strftime("%Y")%></span>
+                    - <span><%=cursu.end_date.strftime("%y")%></span>
                   <% end %>
               </div>
               <div class="resume-location">
@@ -43,15 +42,14 @@
 
 <div class="row">
   <div class="small-12 small-centered columns resume-section">
-    <span><%=t('app.resume.experience')%></span>
-    <br />
+    <p><span><%=t('app.resume.experience')%></span></p>
     <% @professional_experiences.each do |exp|%>
         <div>
           <div>
               <div class="resume-date">
                   <span><%=exp.start_date.strftime("%Y")%></span>
                   <% if exp.end_date%>
-                      - <span><%=exp.end_date.strftime("%Y")%></span>
+                      - <span><%=exp.end_date.strftime("%y")%></span>
                   <% end %>
               </div>
               <div class="resume-location">
@@ -82,8 +80,7 @@
 
 <div class="row">
   <div class="small-12 small-centered columns resume-section">
-    <span><%=t('app.resume.skills')%></span>
-    <br />
+    <p><span><%=t('app.resume.skills')%></span></p>
     <table class="no-border">
         <% @skills.each do |skill|%>
 

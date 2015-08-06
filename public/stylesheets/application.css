@@ -10774,7 +10774,7 @@ A library of transitions for revealing the loaded images
 }
 
 /* line 18, /Volumes/Data/GitHub/ALT/app/assets/stylesheets/resume.scss */
-.resume-section > span {
+.resume-section > p > span {
   font-weight: bold;
   font-size: 30px;
   font-family: Lobster-ALT;
@@ -10782,13 +10782,13 @@ A library of transitions for revealing the loaded images
 
 /* line 24, /Volumes/Data/GitHub/ALT/app/assets/stylesheets/resume.scss */
 .resume-desc{
-    margin-left: 125px;
+    margin-left: 130px;
 }
 
 .resume-date{
     float: left;
-    width: 100px;
-    max-width: 100px;
+    width: 105px;
+    max-width: 105px;
 }
 
 .resume-location{
