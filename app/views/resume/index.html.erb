@@ -4,7 +4,8 @@
 
 <div class="row">
   <div class="small-12 small-centered columns resume-section">
-    <span><%=t('app.resume.cursus')%></span>
+    <span><%=t('app.resume.cursus')%></span
+    <br />
     <% @cursus.each do |cursu|%>
         <div>
           <div>
@@ -43,6 +44,7 @@
 <div class="row">
   <div class="small-12 small-centered columns resume-section">
     <span><%=t('app.resume.experience')%></span>
+    <br />
     <% @professional_experiences.each do |exp|%>
         <div>
           <div>
@@ -81,6 +83,7 @@
 <div class="row">
   <div class="small-12 small-centered columns resume-section">
     <span><%=t('app.resume.skills')%></span>
+    <br />
     <table class="no-border">
         <% @skills.each do |skill|%>
 
