@@ -10699,6 +10699,7 @@ A library of transitions for revealing the loaded images
 /* line 19, /Volumes/Data/GitHub/ALT/app/assets/stylesheets/book.scss */
 .circular > a > img {
   width: 200px;
+  padding: 0;
   height: 200px;
 }
 
